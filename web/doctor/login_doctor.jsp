@@ -1,134 +1,104 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Ma7MOoOD SHaRaF
+  Date: 05/04/2019
+  Time: 12:07 ص
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Student Registration</title>
-
-    <!------ Include the above in your HEAD tag ---------->
-    <link rel="stylesheet" href="bootstrapv4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrapv4/animate.css">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
-    <link rel="stylesheet" href="css/style_sinup.css">
-    <link rel="icon" href="assets/postgraduate.png">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no, width=device-width">
+    <title>Doctor Login</title>
+    <link rel="stylesheet" href="../bootstrapv4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrapv4/animate.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <link rel="stylesheet" href="../css/style_Login.css">
+    <link rel="icon" href="../assets/postgraduate.png">
 </head>
 
 <body>
-
-
 <nav class="navbar navbar-expand-lg navbar-dark py-0">
-    <a class="navbar-brand" href="index.html"><img src="assets/postgraduate.png" width="90" height="60"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
-            aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="../index.jsp"><img src="../assets/postgraduate.png" width="90" height="60"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarColor03">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="../index.jsp">Home</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Doctor</a>
                 <div class="dropdown-menu bg-secondary" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);">
-                    <a class="dropdown-item" href="#">Register</a>
-                    <a class="dropdown-item" href="login_doctor.html">Login</a>
+                    <a class="dropdown-item" href="signup_doctor.jsp">Register</a>
+                    <a class="dropdown-item" href="login_doctor.jsp">Login</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Student</a>
                 <div class="dropdown-menu bg-secondary" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);">
-                    <a class="dropdown-item" href="#">Register</a>
-                    <a class="dropdown-item" href="login_Student.html">Login</a>
+                    <a class="dropdown-item" href="../student/signup_student.jsp">Register</a>
+                    <a class="dropdown-item" href="../student/login_Student.jsp">Login</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Postgraduate Registration</a>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Staff</a>
                 <div class="dropdown-menu bg-secondary" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);">
-                    <a class="dropdown-item" href="Ph-D_registration.html">Ph.D. Postgraduate</a>
-                    <a class="dropdown-item" href="diploma_registration.html">Diploma Postgraduate</a>
+                    <a class="dropdown-item" href="../staff/signup_staff.jsp">Register</a>
+                    <a class="dropdown-item" href="../staff/login_staff.jsp">Login</a>
                 </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2 border-danger bg-transparent text-white" type="text"
-                   placeholder="Search">
-            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><img src="assets/search.png"></button>
-        </form>
-
-
     </div>
-
-
 </nav>
-
-
-
-
-
-
 <div class="limiter">
-
-
-    <div class="card bg-light">
-        <div class="container-login100">
-            <div class="wrap-login100">
+    <div class="container-login100">
+        <div class="wrap-login100">
 
 
             <form class="login100-form validate-form">
-                	<span class="login100-form-title">
-						Create Account
+					<span class="login100-form-title">
+						Doctor Login
 					</span>
                 <hr>
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                    </div>
-                    <input name="" class="form-control" placeholder="Full name" type="text">
-                </div>
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
-                    </div>
-                    <input name="" class="form-control" placeholder="Email address" type="email">
+                <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                    <input class="input100" type="text" name="email" placeholder="Email" required>
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
                 </div>
 
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-building"></i> </span>
-                    </div>
-                    <select class="form-control">
-                        <option selected=""> Select certificate</option>
-                        <option>Ph.D. Postgraduate</option>
-                        <option>Diploma Postgraduate</option>
-                        <option>Doctora Postgraduate</option>
-                    </select>
+                <div class="wrap-input100 validate-input" data-validate="Password is required">
+                    <input class="input100" type="password" name="pass" placeholder="Password" required>
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
                 </div>
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                    </div>
-                    <input class="form-control" placeholder="Create password" type="password">
-                </div> <!-- form-group// -->
 
-                    <!-- form-group// -->
                 <div class="container-login100-form-btn">
                     <button class="login100-form-btn">
-                        Create Account
+                        Login
                     </button>
                 </div>
+                <div class="text-center p-t-136">
+                    <a class="txt2" href="signup_doctor.jsp">
+                        Create your Account
+                        <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                    </a>
+                </div>
             </form>
-
+        </div>
     </div>
-    </div>
-    </div>
-
 </div>
-
-
-
 
 
 <footer class="footer">
@@ -183,9 +153,9 @@
         <div id="snackbar"></div>
     </div>
 </footer>
-<script src="bootstrapv4/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
-<script src="bootstrapv4/popper.min.js" type="text/javascript"></script>
-<script src="bootstrapv4/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../bootstrapv4/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
+<script src="../bootstrapv4/popper.min.js" type="text/javascript"></script>
+<script src="../bootstrapv4/js/bootstrap.min.js" type="text/javascript"></script>
 <script>
     (function () {
         'use strict';

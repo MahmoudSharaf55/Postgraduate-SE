@@ -28,7 +28,8 @@ a:hover{
     border-bottom: 2px solid #bd2130;
     transition: all 0.3s ease-in-out;
 }
-.form-registration .container h3:first-child{
+.form-registration .container h3:first-child,
+.store-and-continue .container h3{
     font-family: Baloo;
     margin: 15px auto;
     font-size: 50px;

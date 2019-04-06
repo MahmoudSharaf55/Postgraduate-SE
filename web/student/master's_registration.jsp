@@ -1,63 +1,65 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Ma7MOoOD SHaRaF
+  Date: 05/04/2019
+  Time: 12:10 ص
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no, width=device-width">
-    <title>Diploma Postgraduate</title>
-    <link rel="stylesheet" href="bootstrapv4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrapv4/animate.css">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="assets/postgraduate.png">
+    <title>M.A. Postgraduate</title>
+    <link rel="stylesheet" href="../bootstrapv4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrapv4/animate.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../assets/postgraduate.png">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark py-0">
-    <a class="navbar-brand" href="index.html"><img src="assets/postgraduate.png" width="90" height="60"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
-            aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="../index.jsp"><img src="../assets/postgraduate.png" width="90" height="60"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarColor03">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="../index.jsp">Home</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Doctor</a>
                 <div class="dropdown-menu bg-secondary" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);">
-                    <a class="dropdown-item" href="#">Register</a>
-                    <a class="dropdown-item" href="login_doctor.html">Login</a>
+                    <a class="dropdown-item" href="../doctor/signup_doctor.jsp">Register</a>
+                    <a class="dropdown-item" href="../doctor/login_doctor.jsp">Login</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Student</a>
                 <div class="dropdown-menu bg-secondary" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);">
-                    <a class="dropdown-item" href="#">Register</a>
-                    <a class="dropdown-item" href="login_Student.html">Login</a>
+                    <a class="dropdown-item" href="signup_student.jsp">Register</a>
+                    <a class="dropdown-item" href="login_Student.jsp">Login</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Postgraduate Registration</a>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Staff</a>
                 <div class="dropdown-menu bg-secondary" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);">
-                    <a class="dropdown-item" href="Ph-D_registration.html">Ph.D. Postgraduate</a>
-                    <a class="dropdown-item" href="diploma_registration.html">Diploma Postgraduate</a>
+                    <a class="dropdown-item" href="../staff/signup_staff.jsp">Register</a>
+                    <a class="dropdown-item" href="../staff/login_staff.jsp">Login</a>
                 </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2 border-danger bg-transparent text-white" type="text"
-                   placeholder="Search">
-            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><img src="assets/search.png"></button>
-        </form>
     </div>
 </nav>
 <section class="form-registration">
     <div class="container">
-        <h3>Diploma Registration Form</h3>
+        <h3>Magister Registration Form</h3>
         <hr>
         <h4>Menofia University</h4>
         <h6>Faculty Of Computers And Information</h6>
@@ -90,19 +92,6 @@
                         <label for="id-number">ID Number</label>
                         <input id="id-number" type="number" class="form-control bg-light" required
                                placeholder="ID Number" data-toggle="tooltip" data-placement="bottom" title="رقم القيد">
-                        <div class="invalid-feedback">
-                            <b>&Cross; Empty Field</b>
-                        </div>
-                        <div class="valid-feedback">
-                            <b>&check; Ok</b>
-                        </div>
-                    </div>
-                    <div class="dropdown-divider"></div>
-                    <div class="form-group">
-                        <label for="diploma-name">Postgraduate Diploma In</label>
-                        <input id="diploma-name" type="text" class="form-control bg-light" required
-                               placeholder="Diploma" data-toggle="tooltip" data-placement="bottom"
-                               title="دبلوم الدراسات العليا">
                         <div class="invalid-feedback">
                             <b>&Cross; Empty Field</b>
                         </div>
@@ -235,16 +224,15 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="army-image" data-toggle="tooltip"
-                                   data-placement="bottom" title="الموقف من التجنيد">
-                            <label class="custom-file-label" for="army-image">Position of recruitment</label>
-                            <div class="invalid-feedback">
-                                <b>&Cross; Empty Field</b>
-                            </div>
-                            <div class="valid-feedback">
-                                <b>&check; Ok</b>
-                            </div>
+                        <label for="army">Position of recruitment</label>
+                        <input id="army" type="text" class="form-control bg-light" required
+                               placeholder="Position of recruitment" data-toggle="tooltip" data-placement="bottom"
+                               title="الموقف من التجنيد">
+                        <div class="invalid-feedback">
+                            <b>&Cross; Empty Field</b>
+                        </div>
+                        <div class="valid-feedback">
+                            <b>&check; Ok</b>
                         </div>
                     </div>
                     <div class="row">
@@ -316,7 +304,7 @@
                     <div class="row">
                         <div class="form-group col-md-4">
                             <label for="gpa">Overall Rate</label>
-                            <input id="gpa" type="number" class="form-control bg-light" required
+                            <input id="gpa" type="text" class="form-control bg-light" required
                                    placeholder="Overall Rate" data-toggle="tooltip" data-placement="bottom"
                                    title="تقدير عام">
                             <div class="invalid-feedback">
@@ -379,10 +367,10 @@
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label for="diploma">Postgraduate Diploma In</label>
+                            <label for="diploma">Master Degree In</label>
                             <input id="diploma" type="text" class="form-control bg-light" required
-                                   placeholder="Postgraduate Diploma In" data-toggle="tooltip" data-placement="bottom"
-                                   title="دبلوم الدراسات العليا فى">
+                                   placeholder="Master In" data-toggle="tooltip" data-placement="bottom"
+                                   title="درجة الماجستير فى">
                             <div class="invalid-feedback">
                                 <b>&Cross; Empty Field</b>
                             </div>
@@ -406,7 +394,7 @@
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label for="d-sp">Specialization</label>
-                            <input id="d-sp" type="number" class="form-control bg-light" required
+                            <input id="d-sp" type="text" class="form-control bg-light" required
                                    placeholder="Specialization Rate" data-toggle="tooltip" data-placement="bottom"
                                    title="التخصص">
                             <div class="invalid-feedback">
@@ -418,7 +406,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="d-gpa">Rating</label>
-                            <input id="d-gpa" type="number" class="form-control bg-light" required
+                            <input id="d-gpa" type="text" class="form-control bg-light" required
                                    placeholder="Overall Rate" data-toggle="tooltip" data-placement="bottom"
                                    title="بتقدير">
                             <div class="invalid-feedback">
@@ -460,18 +448,6 @@
                         <input id="d-dept" type="text" class="form-control bg-light" required
                                placeholder="Science Department" data-toggle="tooltip" data-placement="bottom"
                                title="القسم العلمى المتقدم للقيد فيه">
-                        <div class="invalid-feedback">
-                            <b>&Cross; Empty Field</b>
-                        </div>
-                        <div class="valid-feedback">
-                            <b>&check; Ok</b>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="Signature">Student Signature</label>
-                        <input id="Signature" type="text" class="form-control bg-light" required
-                               placeholder="Signature" data-toggle="tooltip" data-placement="bottom"
-                               title="توقيع الطالب">
                         <div class="invalid-feedback">
                             <b>&Cross; Empty Field</b>
                         </div>
@@ -546,9 +522,9 @@
         <div id="snackbar"></div>
     </div>
 </footer>
-<script src="bootstrapv4/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
-<script src="bootstrapv4/popper.min.js" type="text/javascript"></script>
-<script src="bootstrapv4/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../bootstrapv4/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
+<script src="../bootstrapv4/popper.min.js" type="text/javascript"></script>
+<script src="../bootstrapv4/js/bootstrap.min.js" type="text/javascript"></script>
 <script>
     (function () {
         'use strict';
