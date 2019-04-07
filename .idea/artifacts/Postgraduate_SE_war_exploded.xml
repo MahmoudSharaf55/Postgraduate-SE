@@ -7,6 +7,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="Postgraduate-SE" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="E:/3 كليه/library/mysql-connector-java-5.1.23-bin.jar" />
+        </element>
       </element>
     </root>
   </artifact>

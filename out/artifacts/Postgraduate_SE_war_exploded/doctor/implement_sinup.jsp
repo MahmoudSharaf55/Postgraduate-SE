@@ -1,4 +1,9 @@
-<%--
+<%@ page import="Model.Doctor" %>
+<%@ page import="Util.DBConnection" %>
+<%@ page import="java.util.logging.Logger" %>
+<%@ page import="java.util.logging.Level" %>
+<%@ page import="Util.CipherEncryptionAndDecryption" %>
+<%@ page import="java.sql.*" %><%--
   Created by IntelliJ IDEA.
   User: Ma7MOoOD SHaRaF
   Date: 05/04/2019
@@ -60,82 +65,69 @@
         </ul>
     </div>
 </nav>
-<div class="limiter">
+<%
+    //session
+
+    String fName=request.getParameter("fname");
+    String email=request.getParameter("email");
+    String phone=request.getParameter("phone");
+    String password= CipherEncryptionAndDecryption.encrypt(request.getParameter("password"),"team");
+
+    Doctor doctor=new Doctor();
+
+    doctor.setFname(fName);
+    doctor.setEmail(email);
+    doctor.setPhone(phone);
+    doctor.setPassword(password);
+
+    session.setAttribute("doctor",doctor);
 
 
-    <div class="card bg-light">
-        <div class="container-login100">
-            <div class="wrap-login100">
-                <form class="login100-form needs-validation" novalidate action="implement_sinup.jsp">
-                	<span class="login100-form-title">
-						Doctor Registration
-					</span>
-                    <hr>
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                        </div>
-                        <input name="fname" class="form-control" placeholder="Full name" type="text" required>
-                        <div class="invalid-feedback">
-                            <b>&Cross; Empty Field</b>
-                        </div>
-                        <div class="valid-feedback">
-                            <b>&check; Ok</b>
-                        </div>
+%>
+<% int flag=0;
+    Connection c =DBConnection.getConnection();
+
+    Statement statement = c.createStatement();
+    ResultSet resultSet = statement.executeQuery("select email from doctor;");
+    while (resultSet.next()) {
+        if (resultSet.getString("email").equals(email)){
+            flag = 1;
+            break;
+        }
+    }
+    if(flag==0){
+    try {
+        PreparedStatement per=c.prepareStatement("insert into doctor (username,email,phone,password) values(?,?,?,?)");
+        per.setString(1,fName);
+        per.setString(2,email);
+        per.setString(3,phone);
+        per.setString(4,password);
+        per.executeUpdate();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    } %>
 
 
-                    </div>
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
-                        </div>
-                        <input name="email" class="form-control" placeholder="Email address" type="email" required>
-                        <div class="invalid-feedback">
-                            <b>&Cross; Empty Field</b>
-                        </div>
-                        <div class="valid-feedback">
-                            <b>&check; Ok</b>
-                        </div>
-                    </div>
 
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-                        </div>
-                        <input name="phone" class="form-control" placeholder="Phone number" type="text" required>
-                        <div class="invalid-feedback">
-                            <b>&Cross; Empty Field</b>
-                        </div>
-                        <div class="valid-feedback">
-                            <b>&check; Ok</b>
-                        </div>
-                    </div>
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                        </div>
-                        <input name="password" class="form-control" placeholder="Create password" type="password" required>
-                        <div class="invalid-feedback">
-                            <b>&Cross; Use 6 or more characters</b>
-                        </div>
-                        <div class="valid-feedback">
-                            <b>&check; Ok</b>
-                        </div>
-                    </div> <!-- form-group// -->
+<%
+    }
+  //  Doctor doctor1 = (Doctor) session.getAttribute("doctor");
+else { %>
 
-                    <!-- form-group// -->
-                    <div class="container-login100-form-btn">
-                        <button class="login100-form-btn">
-                            Create Account
-                        </button>
-                    </div>
-                </form>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.all.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script>
+    $(document).ready(function(){  swal ( 'incorrect id or password !' ,  ' ' ,  'error' );});
 
-            </div>
-        </div>
-    </div>
+</script>
+<%
+        System.out.println("email found");
+    RequestDispatcher requestDispatcher=request.getRequestDispatcher("signup_doctor.jsp");
+    requestDispatcher.forward(request,response);
 
-</div>
+    }
+
+%>
 
 
 

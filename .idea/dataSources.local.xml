@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="postgraduate@localhost" uuid="0188a1ed-ba1e-43e4-a2dc-dec16c061f5f">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="MARIADB" exact-version="0.0" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>root</user-name>
+    </data-source>
+  </component>
+</project>
