@@ -75,10 +75,10 @@
 
     Doctor doctor=new Doctor();
 
-    doctor.setFname(fName);
-    doctor.setEmail(email);
-    doctor.setPhone(phone);
-    doctor.setPassword(password);
+    doctor.setDoctorName(fName);
+    doctor.setDoctorEmail(email);
+    doctor.setDoctorphone(phone);
+    doctor.setDoctorPassword(password);
 
     session.setAttribute("doctor",doctor);
 
@@ -113,16 +113,18 @@ else {
     RequestDispatcher requestDispatcher=request.getRequestDispatcher("signup_doctor.jsp");
     requestDispatcher.forward(request,response);
 
-        Doctor doctor1 = (Doctor) session.getAttribute("doctor");
-        doctor1.getFname();
-        
+
+
+
     }
 
 
 %>
 
 
-
+<article style="height: 500px">
+your data sorted in database
+</article>
 
 
 

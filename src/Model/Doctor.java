@@ -1,37 +1,38 @@
 package Model;
 
 public  class Doctor {
-    String fname,email,phone,password;
+    String doctorName,doctorEmail,doctorphone,doctorPassword;
 
-    public String getFname() {
-        return fname;
+    public String getDoctorName() {
+        return doctorName;
     }
 
-    public void setFname(String fname) {
-        this.fname = fname;
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
     }
 
-    public String getEmail() {
-        return email;
+    public String getDoctorEmail() {
+        return doctorEmail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setDoctorEmail(String doctorEmail) {
+        this.doctorEmail = doctorEmail;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getDoctorphone() {
+        return doctorphone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setDoctorphone(String doctorphone) {
+        this.doctorphone = doctorphone;
     }
 
-    public String getPassword() {
-        return password;
+    public String getDoctorPassword() {
+        return doctorPassword;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setDoctorPassword(String doctorPassword) {
+        this.doctorPassword = doctorPassword;
     }
+
 }

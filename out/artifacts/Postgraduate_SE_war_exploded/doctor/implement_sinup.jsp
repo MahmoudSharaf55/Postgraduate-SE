@@ -75,10 +75,10 @@
 
     Doctor doctor=new Doctor();
 
-    doctor.setFname(fName);
-    doctor.setEmail(email);
-    doctor.setPhone(phone);
-    doctor.setPassword(password);
+    doctor.setDoctorName(fName);
+    doctor.setDoctorEmail(email);
+    doctor.setDoctorphone(phone);
+    doctor.setDoctorPassword(password);
 
     session.setAttribute("doctor",doctor);
 
@@ -105,29 +105,26 @@
         per.executeUpdate();
     } catch (SQLException e) {
         e.printStackTrace();
-    } %>
-
-
-
-<%
     }
-  //  Doctor doctor1 = (Doctor) session.getAttribute("doctor");
-else { %>
+    }
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.all.js'></script>
-<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script>
-    $(document).ready(function(){  swal ( 'incorrect id or password !' ,  ' ' ,  'error' );});
-
-</script>
-<%
+else {
         System.out.println("email found");
     RequestDispatcher requestDispatcher=request.getRequestDispatcher("signup_doctor.jsp");
     requestDispatcher.forward(request,response);
 
+
+
+
     }
 
+
 %>
+
+
+<article style="height: 500px">
+your data sorted in database
+</article>
 
 
 

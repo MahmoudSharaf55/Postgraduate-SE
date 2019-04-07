@@ -68,7 +68,7 @@
             <div class="wrap-login100">
 
 
-                <form class="login100-form needs-validation" novalidate>
+                <form class="login100-form needs-validation" novalidate action="implement_signup_stuff.jsp">
                 	<span class="login100-form-title">
 						Staff Registration
 					</span>
@@ -77,7 +77,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                         </div>
-                        <input name="" class="form-control" placeholder="Full name" type="text" required>
+                        <input name="fname" class="form-control" placeholder="Full name" type="text" required>
                         <div class="invalid-feedback">
                             <b>&Cross; Empty Field</b>
                         </div>
@@ -89,7 +89,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                         </div>
-                        <input name="" class="form-control" placeholder="Email address" type="email" required>
+                        <input name="email" class="form-control" placeholder="Email address" type="email" required>
                         <div class="invalid-feedback">
                             <b>&Cross; Empty Field</b>
                         </div>
@@ -103,7 +103,7 @@
                             <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                         </div>
 
-                        <input name="" class="form-control" placeholder="Phone number" type="text" required>
+                        <input name="phone" class="form-control" placeholder="Phone number" type="text" required>
                         <div class="invalid-feedback">
                             <b>&Cross; Empty Field</b>
                         </div>
@@ -115,7 +115,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                         </div>
-                        <input class="form-control" placeholder="Create password" type="password" required>
+                        <input name="password" class="form-control" placeholder="Create password" type="password" required>
                         <div class="invalid-feedback">
                             <b>&Cross; Use 6 or more characters</b>
                         </div>
