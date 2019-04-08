@@ -8,7 +8,11 @@
           <element id="module-output" name="Postgraduate-SE" />
         </element>
         <element id="directory" name="lib">
+<<<<<<< HEAD
           <element id="file-copy" path="$PROJECT_DIR$/src/Libs/mysql-connector-java-5.1.23-bin.jar" />
+=======
+          <element id="file-copy" path="E:/3 كليه/library/mysql-connector-java-5.1.23-bin.jar" />
+>>>>>>> master
         </element>
       </element>
     </root>

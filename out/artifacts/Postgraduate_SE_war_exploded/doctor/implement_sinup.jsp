@@ -1,8 +1,13 @@
-<%--
+<%@ page import="Model.Doctor" %>
+<%@ page import="Util.DBConnection" %>
+<%@ page import="java.util.logging.Logger" %>
+<%@ page import="java.util.logging.Level" %>
+<%@ page import="Util.CipherEncryptionAndDecryption" %>
+<%@ page import="java.sql.*" %><%--
   Created by IntelliJ IDEA.
   User: Ma7MOoOD SHaRaF
   Date: 05/04/2019
-  Time: 12:03 ص
+  Time: 12:07 ص
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -11,7 +16,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no, width=device-width">
-    <title>Staff Registration</title>
+    <title>Doctor Registration</title>
 
     <!------ Include the above in your HEAD tag ---------->
     <link rel="stylesheet" href="../bootstrapv4/css/bootstrap.min.css">
@@ -36,8 +41,8 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Doctor</a>
                 <div class="dropdown-menu bg-secondary" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);">
-                    <a class="dropdown-item" href="../doctor/signup_doctor.jsp">Register</a>
-                    <a class="dropdown-item" href="../doctor/login_doctor.jsp">Login</a>
+                    <a class="dropdown-item" href="signup_doctor.jsp">Register</a>
+                    <a class="dropdown-item" href="login_doctor.jsp">Login</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -50,8 +55,8 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Staff</a>
                 <div class="dropdown-menu bg-secondary" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);">
-                    <a class="dropdown-item" href="signup_staff.jsp">Register</a>
-                    <a class="dropdown-item" href="login_staff.jsp">Login</a>
+                    <a class="dropdown-item" href="../staff/signup_staff.jsp">Register</a>
+                    <a class="dropdown-item" href="../staff/login_staff.jsp">Login</a>
                 </div>
             </li>
             <li class="nav-item">
@@ -60,83 +65,66 @@
         </ul>
     </div>
 </nav>
-<div class="limiter">
+<%
+    //session
+
+    String fName=request.getParameter("fname");
+    String email=request.getParameter("email");
+    String phone=request.getParameter("phone");
+    String password= CipherEncryptionAndDecryption.encrypt(request.getParameter("password"),"team");
+
+    Doctor doctor=new Doctor();
+
+    doctor.setDoctorName(fName);
+    doctor.setDoctorEmail(email);
+    doctor.setDoctorphone(phone);
+    doctor.setDoctorPassword(password);
+
+    session.setAttribute("doctor",doctor);
 
 
-    <div class="card bg-light">
-        <div class="container-login100">
-            <div class="wrap-login100">
+%>
+<% int flag=0;
+    Connection c =DBConnection.getConnection();
+
+    Statement statement = c.createStatement();
+    ResultSet resultSet = statement.executeQuery("select email from doctor;");
+    while (resultSet.next()) {
+        if (resultSet.getString("email").equals(email)){
+            flag = 1;
+            break;
+        }
+    }
+    if(flag==0){
+    try {
+        PreparedStatement per=c.prepareStatement("insert into doctor (username,email,phone,password) values(?,?,?,?)");
+        per.setString(1,fName);
+        per.setString(2,email);
+        per.setString(3,phone);
+        per.setString(4,password);
+        per.executeUpdate();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+    }
+
+else {
+        System.out.println("email found");
+    RequestDispatcher requestDispatcher=request.getRequestDispatcher("signup_doctor.jsp");
+    requestDispatcher.forward(request,response);
 
 
-                <form class="login100-form needs-validation" novalidate action="implement_signup_stuff.jsp">
-                	<span class="login100-form-title">
-						Staff Registration
-					</span>
-                    <hr>
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                        </div>
-                        <input name="fname" class="form-control" placeholder="Full name" type="text" required>
-                        <div class="invalid-feedback">
-                            <b>&Cross; Empty Field</b>
-                        </div>
-                        <div class="valid-feedback">
-                            <b>&check; Ok</b>
-                        </div>
-                    </div>
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
-                        </div>
-                        <input name="email" class="form-control" placeholder="Email address" type="email" required>
-                        <div class="invalid-feedback">
-                            <b>&Cross; Empty Field</b>
-                        </div>
-                        <div class="valid-feedback">
-                            <b>&check; Ok</b>
-                        </div>
-                    </div>
 
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-                        </div>
 
-                        <input name="phone" class="form-control" placeholder="Phone number" type="text" required>
-                        <div class="invalid-feedback">
-                            <b>&Cross; Empty Field</b>
-                        </div>
-                        <div class="valid-feedback">
-                            <b>&check; Ok</b>
-                        </div>
-                    </div>
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                        </div>
-                        <input name="password" class="form-control" placeholder="Create password" type="password" required>
-                        <div class="invalid-feedback">
-                            <b>&Cross; Use 6 or more characters</b>
-                        </div>
-                        <div class="valid-feedback">
-                            <b>&check; Ok</b>
-                        </div>
-                    </div> <!-- form-group// -->
+    }
 
-                    <!-- form-group// -->
-                    <div class="container-login100-form-btn">
-                        <button class="login100-form-btn">
-                            Create Account
-                        </button>
-                    </div>
-                </form>
 
-            </div>
-        </div>
-    </div>
+%>
 
-</div>
+
+<article style="height: 500px">
+your data sorted in database
+</article>
 
 
 
