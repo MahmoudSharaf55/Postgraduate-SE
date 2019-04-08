@@ -74,7 +74,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                         </div>
-                        <input name="" class="form-control" placeholder="Full name" type="text" required>
+                        <input name="name" class="form-control" placeholder="Full name" type="text" required>
                         <div class="invalid-feedback">
                             <b>&Cross; Empty Field</b>
                         </div>
@@ -86,7 +86,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                         </div>
-                        <input name="" class="form-control" placeholder="Email address" type="email" required>
+                        <input name="email" class="form-control" placeholder="Email address" type="email" required>
                         <div class="invalid-feedback">
                             <b>&Cross; Empty Field</b>
                         </div>
@@ -99,8 +99,8 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-graduation-cap"></i> </span>
                         </div>
-                        <select class="form-control">
-                            <option value="" selected disabled hidden> Select certificate</option>
+                        <select class="form-control" name="certificate">
+                            <option value="null" selected disabled hidden> Select certificate</option>
                             <option value="1">Ph.D. Degree</option>
                             <option value="2">Diploma Degree</option>
                             <option value="3">Master Degree</option>
@@ -113,16 +113,14 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                         </div>
-                        <input class="form-control" placeholder="Create password" type="password" required minlength="6">
+                        <input class="form-control" placeholder="Create password" type="password" required minlength="6" name="password">
                         <div class="invalid-feedback">
                             <b>&Cross; Use 6 or more characters</b>
                         </div>
                         <div class="valid-feedback">
                             <b>&check; Ok</b>
                         </div>
-                    </div> <!-- form-group// -->
-
-                    <!-- form-group// -->
+                    </div>
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn">
                             Create Account

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../bootstrapv4/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrapv4/animate.css">
     <link rel="stylesheet" href="../fontawesome/css/all.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
     <link rel="icon" href="../assets/postgraduate.png">
 </head>
 <body>

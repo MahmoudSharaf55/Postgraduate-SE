@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="bootstrapv4/animate.css">
     <link rel="icon" href="assets/postgraduate.png">
     <link rel="stylesheet" href="fontawesome/css/all.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark py-0">
