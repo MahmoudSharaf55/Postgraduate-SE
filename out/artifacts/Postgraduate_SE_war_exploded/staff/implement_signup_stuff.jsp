@@ -72,7 +72,7 @@
     String stuffName=request.getParameter("fname");
     String stuffEmail=request.getParameter("email");
     String stuffPhone=request.getParameter("phone");
-    String stuffPassword= CipherEncryptionAndDecryption.encrypt(request.getParameter("password"),"team");
+    String stuffPassword= CipherEncryptionAndDecryption.encrypt(request.getParameter("password"),"nerds");
 
     Stuff stuff=new Stuff();
 
@@ -108,6 +108,7 @@
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        request.getRequestDispatcher("stuff_homePage.jsp").include(request, response);
     }
 
     else {
@@ -119,28 +120,6 @@
 
 
 %>
-<article style="height: 500px">
-
-    <section class="store-and-continue">
-        <div class="container">
-            <h3>Welcome <%=stuffName%>
-            </h3>
-            <hr>
-            <h4 class="text-center">The Initial page</h4>
-
-        </div>
-    </section>
-
-
-
-</article>
-
-
-
-
-
-
-
 <footer class="footer">
     <div class="container">
         <div class="subscribe">

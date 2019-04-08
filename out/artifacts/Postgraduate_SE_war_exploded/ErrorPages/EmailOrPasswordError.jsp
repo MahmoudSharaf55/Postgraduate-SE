@@ -12,7 +12,7 @@
     (function f() {
         swal({
             title: "Warning",
-            text: "This Email or Password not correct, Please Enter Another One",
+            text: "This Email or Password not correct, Please Try Again",
             icon: "warning",
             dangerMode: true,
         })

@@ -1,29 +1,25 @@
 <%@ page import="Model.Doctor" %>
+<%@ page import="java.sql.Connection" %>
 <%@ page import="Util.DBConnection" %>
-<%@ page import="java.util.logging.Logger" %>
-<%@ page import="java.util.logging.Level" %>
-<%@ page import="Util.CipherEncryptionAndDecryption" %>
-<%@ page import="java.sql.*" %>
-<%@ page import="Model.Stuff" %><%--
+<%@ page import="java.sql.Statement" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="Util.CipherEncryptionAndDecryption" %><%--
   Created by IntelliJ IDEA.
   User: M.$edky
   Date: 2019-04-08
-  Time: 10:39 AM
+  Time: 11:54 AM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no, width=device-width">
-    <title>Doctor Registration</title>
-
-    <!------ Include the above in your HEAD tag ---------->
+    <title>Doctor Login</title>
     <link rel="stylesheet" href="../bootstrapv4/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrapv4/animate.css">
     <link rel="stylesheet" href="../fontawesome/css/all.css">
-    <link rel="stylesheet" href="../css/style_signup.css">
+    <link rel="stylesheet" href="../css/style_Login.css">
     <link rel="icon" href="../assets/postgraduate.png">
 </head>
 
@@ -66,60 +62,40 @@
         </ul>
     </div>
 </nav>
+
 <%
-    //session
-
-    String stuffName=request.getParameter("fname");
-    String stuffEmail=request.getParameter("email");
-    String stuffPhone=request.getParameter("phone");
-    String stuffPassword= CipherEncryptionAndDecryption.encrypt(request.getParameter("password"),"nerds");
-
-    Stuff stuff=new Stuff();
-
-    stuff.setStuffName(stuffName);
-    stuff.setStuffEmail(stuffEmail);
-    stuff.setStuffphone(stuffPhone);
-    stuff.setStuffPassword(stuffPassword);
-
-    session.setAttribute("doctor",stuff);
-
-
-%>
-
-<% int flag=0;
-    Connection c =DBConnection.getConnection();
+    String email= request.getParameter("email");
+    String password= CipherEncryptionAndDecryption.encrypt(request.getParameter("password"),"nerds");
+    int flag=0;
+    Connection c = DBConnection.getConnection();
 
     Statement statement = c.createStatement();
-    ResultSet resultSet = statement.executeQuery("select email from staff;");
+    ResultSet resultSet = statement.executeQuery("select email,password from staff;");
     while (resultSet.next()) {
-        if (resultSet.getString("email").equals(stuffEmail)){
+        if (resultSet.getString("email").equals(email)&&resultSet.getString("password").equals(password)){
             flag = 1;
             break;
         }
     }
-    if(flag==0){
-        try {
-            PreparedStatement per=c.prepareStatement("insert into staff (username,email,phone,password) values(?,?,?,?)");
-            per.setString(1,stuffName);
-            per.setString(2,stuffEmail);
-            per.setString(3,stuffPhone);
-            per.setString(4,stuffPassword);
-            per.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+    if(flag==1){
+
         request.getRequestDispatcher("stuff_homePage.jsp").include(request, response);
     }
 
-    else {
-        request.getRequestDispatcher("signup_staff.jsp").include(request, response);
-        request.getRequestDispatcher("../ErrorPages/EmailError.jsp").include(request, response);
-        flag =0;
+    else{
 
+        request.getRequestDispatcher("login_staff.jsp").include(request, response);
+        request.getRequestDispatcher("../ErrorPages/EmailOrPasswordError.jsp").include(request, response);
+        flag =0;
     }
 
 
 %>
+
+
+
+
+
 <footer class="footer">
     <div class="container">
         <div class="subscribe">
