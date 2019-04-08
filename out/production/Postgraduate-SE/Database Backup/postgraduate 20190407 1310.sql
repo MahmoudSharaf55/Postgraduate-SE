@@ -29,18 +29,23 @@ DROP TABLE IF EXISTS `doctor`;
 CREATE TABLE `doctor` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `username` varchar(45) NOT NULL,
-  `phone` varchar(45) NOT NULL,
-  `dept` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
+  `phone` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `doctor`
 --
 
 /*!40000 ALTER TABLE `doctor` DISABLE KEYS */;
+INSERT INTO `doctor` (`id`,`username`,`email`,`phone`,`password`) VALUES 
+ (1,'mohammed','mohammedsedky01147226634@gmail.com','01147226634','aaa'),
+ (2,'mohammedd','mohammedsedky01147226634@gmail.com','01147226634','123'),
+ (3,'mohammed','mohammedsedky01147226634@gmail.com','01147226634','aa'),
+ (4,'mohammed','mohamed.sedky1129@ci.menofia.edu.eg','01147226634','DBj+LXv0JCTK1ag4nxTwXw=='),
+ (5,'mohammed','mohammedsedky047226634@gmail.com','01147226634','jw2b+QU0D98=');
 /*!40000 ALTER TABLE `doctor` ENABLE KEYS */;
 
 
@@ -52,17 +57,19 @@ DROP TABLE IF EXISTS `staff`;
 CREATE TABLE `staff` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `username` varchar(45) NOT NULL,
-  `phone` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
+  `phone` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `staff`
 --
 
 /*!40000 ALTER TABLE `staff` DISABLE KEYS */;
+INSERT INTO `staff` (`id`,`username`,`email`,`phone`,`password`) VALUES 
+ (1,'mohammed','mohammedsedky01147226634@gmail.com','01147226634','fAlGh+jTloE=');
 /*!40000 ALTER TABLE `staff` ENABLE KEYS */;
 
 

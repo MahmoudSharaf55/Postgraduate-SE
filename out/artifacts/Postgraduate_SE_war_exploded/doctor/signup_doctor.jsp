@@ -1,8 +1,8 @@
 <%--
-  Created by IntelliJ IDEA.
-  User: Ma7MOoOD SHaRaF
-  Date: 05/04/2019
-  Time: 12:07 ص
+    Created by IntelliJ IDEA.
+  User: M.$edky
+  Date: 2019-04-08
+  Time: 10:39 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -66,7 +66,7 @@
     <div class="card bg-light">
         <div class="container-login100">
             <div class="wrap-login100">
-                <form class="login100-form needs-validation" novalidate action="implement_sinup.jsp">
+                <form class="login100-form needs-validation" novalidate action="implement_sinup_doctor.jsp">
                 	<span class="login100-form-title">
 						Doctor Registration
 					</span>

@@ -6,9 +6,9 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="Model.Stuff" %><%--
   Created by IntelliJ IDEA.
-  User: Ma7MOoOD SHaRaF
-  Date: 05/04/2019
-  Time: 12:07 ص
+  User: M.$edky
+  Date: 2019-04-08
+  Time: 10:39 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -111,19 +111,27 @@
     }
 
     else {
-        System.out.println("email found");
-        RequestDispatcher requestDispatcher=request.getRequestDispatcher("signup_staff.jsp");
-        requestDispatcher.forward(request,response);
-
-
-
+        request.getRequestDispatcher("signup_staff.jsp").include(request, response);
+        request.getRequestDispatcher("../ErrorPages/EmailError.jsp").include(request, response);
+        flag =0;
 
     }
 
 
 %>
 <article style="height: 500px">
-    wellcom your data sorted in database
+
+    <section class="store-and-continue">
+        <div class="container">
+            <h3>Welcome <%=stuffName%>
+            </h3>
+            <hr>
+            <h4 class="text-center">The Initial page</h4>
+
+        </div>
+    </section>
+
+
 
 </article>
 

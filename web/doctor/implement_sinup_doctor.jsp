@@ -4,10 +4,10 @@
 <%@ page import="java.util.logging.Level" %>
 <%@ page import="Util.CipherEncryptionAndDecryption" %>
 <%@ page import="java.sql.*" %><%--
-  Created by IntelliJ IDEA.
-  User: Ma7MOoOD SHaRaF
-  Date: 05/04/2019
-  Time: 12:07 ص
+    Created by IntelliJ IDEA.
+  User: M.$edky
+  Date: 2019-04-08
+  Time: 10:39 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -96,6 +96,8 @@
         }
     }
     if(flag==0){
+
+
     try {
         PreparedStatement per=c.prepareStatement("insert into doctor (username,email,phone,password) values(?,?,?,?)");
         per.setString(1,fName);
@@ -106,14 +108,18 @@
     } catch (SQLException e) {
         e.printStackTrace();
     }
-    }
-
-else {
-        System.out.println("email found");
-    RequestDispatcher requestDispatcher=request.getRequestDispatcher("signup_doctor.jsp");
-    requestDispatcher.forward(request,response);
 
 
+
+
+
+
+
+}
+else  {
+        request.getRequestDispatcher("signup_doctor.jsp").include(request, response);
+        request.getRequestDispatcher("../ErrorPages/EmailError.jsp").include(request, response);
+        flag =0;
 
 
     }
@@ -121,12 +127,18 @@ else {
 
 %>
 
-
 <article style="height: 500px">
-your data sorted in database
+<section class="store-and-continue">
+    <div class="container">
+        <h3>Welcome <%=fName%>
+        </h3>
+        <hr>
+        <h4 class="text-center">The Initial page</h4>
+
+    </div>
+</section>
+
 </article>
-
-
 
 
 
