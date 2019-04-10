@@ -1,26 +1,28 @@
-<%@ page import="Model.Doctor" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="Util.DBConnection" %>
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.ResultSet" %>
-<%@ page import="Util.CipherEncryptionAndDecryption" %>
 <%@ page import="Model.Stuff" %><%--
   Created by IntelliJ IDEA.
   User: M.$edky
-  Date: 2019-04-08
-  Time: 11:54 AM
+  Date: 2019-04-09
+  Time: 3:25 PM
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no, width=device-width">
-    <title>Doctor Login</title>
+    <title>Stuff Home Page </title>
+
     <link rel="stylesheet" href="../bootstrapv4/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrapv4/animate.css">
     <link rel="stylesheet" href="../fontawesome/css/all.css">
     <link rel="stylesheet" href="../css/style_Login.css">
+    <link rel="stylesheet" href="../css/style_search_icon.css">
     <link rel="icon" href="../assets/postgraduate.png">
 </head>
 
@@ -64,46 +66,73 @@
     </div>
 </nav>
 
-<%
-    String email= request.getParameter("email");
-    String password= CipherEncryptionAndDecryption.encrypt(request.getParameter("password"),"nerds");
-    int flag=0;
-    Connection c = DBConnection.getConnection();
+<form method="post" class="table-form"  style="overflow-y:scroll; height:100%;">
+    <h5 class="text-center" >Data For All Student That Registe In Master</h5>
+    <table  class="table" style="overflow-y:scroll; height:100%;"  >
+        <thead >
+        <tr class="tr">
+            <th scope="col" class="text-center" >ID</th>
+            <th scope="col" class="text-center">NAME</th>
+            <th scope="col" class="text-center">Email</th>
+            <th scope="col" class="text-center">State</th>
+            <th scope="col" class="text-center">paper</th>
 
-    Statement statement = c.createStatement();
-    ResultSet resultSet = statement.executeQuery("select username, email, phone, password from staff;");
-    while (resultSet.next()) {
-        if (resultSet.getString("email").equals(email)&&resultSet.getString("password").equals(password)){
-            flag = 1;
-            break;
-        }
-    }
-    if(flag==1){
-        String encryptPass=CipherEncryptionAndDecryption.encrypt(resultSet.getString("password"),"nerds");
-        Stuff stuff=new Stuff();
-        stuff.setStuffName(resultSet.getString("username"));
-        stuff.setStuffEmail(resultSet.getString("email"));
-        stuff.setStuffphone(resultSet.getString("phone"));
-        stuff.setStuffPassword(encryptPass);
+        </tr>
+        </thead>>
+        <tbody style="overflow-y:scroll; height:100%;">
+        <%
+            try
+            {
+                Connection c = DBConnection.getConnection();
 
-        session.setAttribute("stuff",stuff);
+                Statement statement = c.createStatement();
+                ResultSet resultSet = statement.executeQuery("select id, username, email, status, paper from student where paper='In Reviewing' AND Form=3;");
+                while (resultSet.next()) {
 
-        request.getRequestDispatcher("stuff_homePage.jsp").forward(request, response);
-    }
+        %>
+        <tr class="teColor">
 
-    else{
+            <td scope="row"><%= resultSet.getString("id")%> </td>
+            <td class="text-center" ><%=resultSet.getString("username")%></td>
+            <td class="text-center"><%=resultSet.getString("email")%></td>
+            <td class="text-center"><%=resultSet.getString("status")%></td>
+            <td class="text-center"><%=resultSet.getString("paper")%></td>
+        </tr>
 
-        request.getRequestDispatcher("login_staff.jsp").include(request, response);
-        request.getRequestDispatcher("../ErrorPages/EmailOrPasswordError.jsp").include(request, response);
-        flag =0;
-    }
+        <%
+
+            }
+        %>
+
+        <%
+            }
+            catch(Exception e)
+            {
+                e.printStackTrace();
+            }
+
+        %>
+
+        </tbody>
+    </table>
+
+</form >
+<div>
+    <br>
+    <h5 class="text-center">To Show all Data about Student Please inter the id in search icon </h5><br>
+    <form action="dataFoe_master.jsp" method="post">
+        <div class="container h-100">
+            <div class="d-flex justify-content-center h-100" >
+                <div class="searchbar">
+                    <input class="search_input" type="text" name="ema" placeholder="Search...">
+                    <button type="submit" class="search_icon"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </form>
 
 
-%>
-
-
-
-
+</div><br><br>
 
 <footer class="footer">
     <div class="container">

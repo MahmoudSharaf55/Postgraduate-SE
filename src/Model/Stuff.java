@@ -2,6 +2,16 @@ package Model;
 
 public class Stuff {
     String stuffName,stuffEmail,stuffphone,stuffPassword;
+    String paperstate;
+
+
+    public String getPaperstate() {
+        return paperstate;
+    }
+
+    public void setPaperstate(String paperstate) {
+        this.paperstate = paperstate;
+    }
 
     public String getStuffName() {
         return stuffName;
@@ -10,6 +20,8 @@ public class Stuff {
     public void setStuffName(String stuffName) {
         this.stuffName = stuffName;
     }
+
+
 
     public String getStuffEmail() {
         return stuffEmail;

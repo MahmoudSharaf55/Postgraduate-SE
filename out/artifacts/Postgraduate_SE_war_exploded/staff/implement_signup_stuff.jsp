@@ -80,8 +80,9 @@
     stuff.setStuffEmail(stuffEmail);
     stuff.setStuffphone(stuffPhone);
     stuff.setStuffPassword(stuffPassword);
+   // HttpSession session=request.getSession();
 
-    session.setAttribute("doctor",stuff);
+    session.setAttribute("stuff",stuff);
 
 
 %>

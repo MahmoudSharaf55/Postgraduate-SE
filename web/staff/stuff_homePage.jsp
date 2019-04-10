@@ -1,4 +1,5 @@
-<%@ page import="Model.Doctor" %><%--
+<%@ page import="Model.Doctor" %>
+<%@ page import="Model.Stuff" %><%--
   Created by IntelliJ IDEA.
   User: M.$edky
   Date: 2019-04-08
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="../bootstrapv4/animate.css">
     <link rel="stylesheet" href="../fontawesome/css/all.css">
     <link rel="stylesheet" href="../css/style_Login.css">
+
     <link rel="icon" href="../assets/postgraduate.png">
 </head>
 
@@ -60,98 +62,131 @@
 </nav>
 
 
+<%
+    Stuff stuff=(Stuff)session.getAttribute("stuff");
 
+%>
 
 
 <article style="height: 500px">
+
+
+
     <section class="store-and-continue">
         <div class="container">
-            <h3>Welcome M.$edky
+            <h3>Welcome <%= stuff.getStuffName()%>
             </h3>
             <hr>
-            <h4 class="text-center">The Initial page for stuff</h4>
+            <h4 class="text-center">This Is  The Initial page </h4>
+           <!-- <h5 class="text-center">Search by phone number to show data about Student to confirm it </h5>-->
+            <h5 class="text-center">Chose the buttom to show all data about every student </h5><br><br>
+            <form action="tableFor_diploma.jsp">
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" title="الدبلوما">
+                        Data For Diploma
+                    </button>
+                </div>
+
+            </form ><br>
+
+            <form action="tableFor_Ph-D.jsp">
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" title="الدكتوراه">
+                        Data for Ph-D
+                    </button>
+                </div>
+
+            </form><br>
+            <form action="tableFor_master.jsp">
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" title="الماجستير">
+                        Data for Ph-Magestar
+                    </button>
+                </div>
+            </form>
 
         </div>
     </section>
 
 </article>
 
-
-<footer class="footer">
-    <div class="container">
-        <div class="subscribe">
-            <h3>Subscribe to get latest news</h3>
-            <div class="input">
-                <input type="email" placeholder="Enter Your Email.." id="subscribe-email">
-                <a href="javascript:void(0)" onclick="sendSubscribe('subscribe-email')"><i
-                        class="far fa-paper-plane"></i></a>
-            </div>
-        </div>
-        <div class="links">
-            <div class="services">
-                <h4>Our Services</h4>
-                <span><i class="fas fa-chevron-right"></i><a href="#">Faculty Members Services</a></span>
-                <span><i class="fas fa-chevron-right"></i><a href="#">Bachelor Students Services</a></span>
-                <span><i class="fas fa-chevron-right"></i><a href="#">Postgraduate Students Services</a></span>
-                <span><i class="fas fa-chevron-right"></i><a href="#">Postgraduate Registration</a></span>
-                <span><i class="fas fa-chevron-right"></i><a href="#">Technical Support</a></span>
-                <span><i class="fas fa-chevron-right"></i><a href="#">Suggestions Support</a></span>
-            </div>
-            <div class="information">
-                <h4>information</h4>
-                <span><i class="fas fa-chevron-right"></i><a href="#">About Us</a></span>
-                <span><i class="fas fa-chevron-right"></i><a href="#">Contact Us</a></span>
-                <span><i class="fas fa-chevron-right"></i><a href="#">FAQ?</a></span>
-                <span><i class="fas fa-chevron-right"></i><a href="#">Site Map</a></span>
-                <span><i class="fas fa-chevron-right"></i><a href="#">Advanced Search</a></span>
-                <span><i class="fas fa-chevron-right"></i><a href="#">Get Help</a></span>
-            </div>
-            <div class="contact-info">
-                <h4>contact info</h4>
-                <span><i class="fas fa-home"></i>&nbsp;&nbsp;Shibin El-Kom, Menofia, EG</span>
-                <span><i class="fas fa-phone"></i>&nbsp;&nbsp;+1 720-200-3000</span>
-                <span><i class="fas fa-phone"></i>&nbsp;&nbsp;+1 720-200-4200</span>
-                <span><i class="far fa-envelope"></i>&nbsp;&nbsp;itunit@ci.menofia.edu.eg</span>
-            </div>
-        </div>
-        <article class="copy-rights">
-            <div class="social">
-                <p>&copy; 2019 FCI MU. All Rights Reserved. Developed by Nerds Team.</p>
-                <div class="social-links">
-                    <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://plus.google.com"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="https://www.pinterest.com"><i class="fab fa-pinterest-p"></i></a>
+    <footer class="footer">
+        <div class="container">
+            <div class="subscribe">
+                <h3>Subscribe to get latest news</h3>
+                <div class="input">
+                    <input type="email" placeholder="Enter Your Email.." id="subscribe-email">
+                    <a href="javascript:void(0)" onclick="sendSubscribe('subscribe-email')"><i
+                            class="far fa-paper-plane"></i></a>
                 </div>
             </div>
-        </article>
-        <div id="snackbar"></div>
-    </div>
-</footer>
-<script src="../bootstrapv4/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
-<script src="../bootstrapv4/popper.min.js" type="text/javascript"></script>
-<script src="../bootstrapv4/js/bootstrap.min.js" type="text/javascript"></script>
-<script>
-    (function () {
-        'use strict';
-        window.addEventListener('load', function () {
-            var forms = document.getElementsByClassName('needs-validation');
-            var validation = Array.prototype.filter.call(forms, function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
-</script>
+            <div class="links">
+                <div class="services">
+                    <h4>Our Services</h4>
+                    <span><i class="fas fa-chevron-right"></i><a href="#">Faculty Members Services</a></span>
+                    <span><i class="fas fa-chevron-right"></i><a href="#">Bachelor Students Services</a></span>
+                    <span><i class="fas fa-chevron-right"></i><a href="#">Postgraduate Students Services</a></span>
+                    <span><i class="fas fa-chevron-right"></i><a href="#">Postgraduate Registration</a></span>
+                    <span><i class="fas fa-chevron-right"></i><a href="#">Technical Support</a></span>
+                    <span><i class="fas fa-chevron-right"></i><a href="#">Suggestions Support</a></span>
+                </div>
+                <div class="information">
+                    <h4>information</h4>
+                    <span><i class="fas fa-chevron-right"></i><a href="#">About Us</a></span>
+                    <span><i class="fas fa-chevron-right"></i><a href="#">Contact Us</a></span>
+                    <span><i class="fas fa-chevron-right"></i><a href="#">FAQ?</a></span>
+                    <span><i class="fas fa-chevron-right"></i><a href="#">Site Map</a></span>
+                    <span><i class="fas fa-chevron-right"></i><a href="#">Advanced Search</a></span>
+                    <span><i class="fas fa-chevron-right"></i><a href="#">Get Help</a></span>
+                </div>
+                <div class="contact-info">
+                    <h4>contact info</h4>
+                    <span><i class="fas fa-home"></i>&nbsp;&nbsp;Shibin El-Kom, Menofia, EG</span>
+                    <span><i class="fas fa-phone"></i>&nbsp;&nbsp;+1 720-200-3000</span>
+                    <span><i class="fas fa-phone"></i>&nbsp;&nbsp;+1 720-200-4200</span>
+                    <span><i class="far fa-envelope"></i>&nbsp;&nbsp;itunit@ci.menofia.edu.eg</span>
+                </div>
+            </div>
+            <article class="copy-rights">
+                <div class="social">
+                    <p>&copy; 2019 FCI MU. All Rights Reserved. Developed by Nerds Team.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://plus.google.com"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="https://www.pinterest.com"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </article>
+            <div id="snackbar"></div>
+        </div>
+    </footer>
+    <script src="../bootstrapv4/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
+    <script src="../bootstrapv4/popper.min.js" type="text/javascript"></script>
+    <script src="../bootstrapv4/js/bootstrap.min.js" type="text/javascript"></script>
+    <script>
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 
 
 </body>

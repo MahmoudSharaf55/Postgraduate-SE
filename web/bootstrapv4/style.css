@@ -1,0 +1,19 @@
+.account .container-fluid{
+    padding: 200px;
+}
+.account .container-fluid .row .btn{
+    padding: 50px;
+}
+.form .container-fluid{
+    background: white;
+    border-radius: 10px;
+}
+.form .container-fluid form hr{
+    width: 40%;
+    height: 1px;
+    background-color: #bd2130;
+    margin-left: 0;
+    border-radius: 10px;
+    margin-top: 2px;
+    margin-bottom: 30px;
+}

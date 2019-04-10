@@ -3,7 +3,8 @@
 <%@ page import="Util.DBConnection" %>
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.ResultSet" %>
-<%@ page import="Util.CipherEncryptionAndDecryption" %><%--
+<%@ page import="Util.CipherEncryptionAndDecryption" %>
+<%@ page import="Model.Stuff" %><%--
   Created by IntelliJ IDEA.
   User: M.$edky
   Date: 2019-04-08
@@ -70,7 +71,7 @@
     Connection c = DBConnection.getConnection();
 
     Statement statement = c.createStatement();
-    ResultSet resultSet = statement.executeQuery("select email,password from staff;");
+    ResultSet resultSet = statement.executeQuery("select username, email, phone, password from staff;");
     while (resultSet.next()) {
         if (resultSet.getString("email").equals(email)&&resultSet.getString("password").equals(password)){
             flag = 1;
@@ -78,8 +79,16 @@
         }
     }
     if(flag==1){
+        String encryptPass=CipherEncryptionAndDecryption.encrypt(resultSet.getString("password"),"nerds");
+        Stuff stuff=new Stuff();
+        stuff.setStuffName(resultSet.getString("username"));
+        stuff.setStuffEmail(resultSet.getString("email"));
+        stuff.setStuffphone(resultSet.getString("phone"));
+        stuff.setStuffPassword(encryptPass);
 
-        request.getRequestDispatcher("stuff_homePage.jsp").include(request, response);
+        session.setAttribute("stuff",stuff);
+
+        request.getRequestDispatcher("stuff_homePage.jsp").forward(request, response);
     }
 
     else{

@@ -59,14 +59,17 @@
     </div>
 </nav>
 
+<%
+    Doctor doctor =(Doctor) session.getAttribute("doctor");
 
+%>
 
 
 
 <article style="height: 500px">
     <section class="store-and-continue">
         <div class="container">
-            <h3>Welcome M.$edky
+            <h3>Welcome <%= doctor.getDoctorName()%>
             </h3>
             <hr>
             <h4 class="text-center">The Initial page</h4>
