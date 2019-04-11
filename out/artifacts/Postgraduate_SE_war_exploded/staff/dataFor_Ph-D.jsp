@@ -220,7 +220,7 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
 <div class="colc">
     <br>
     <h5 class="text-center">If Data Correct Write Accept Rr Writ Error Data </h5><br>
-    <form action="sort_state.jsp" method="post" >
+    <form action="S_sort_paperState_Ph-D.jsp" method="post" >
         <div class="otuCenter">
             <input class="idchangestate" type="text" name="id" placeholder="ID" required>
             <input class="btnChangesta1" type="text" name="state" placeholder="Accept or not paper Stat" required>

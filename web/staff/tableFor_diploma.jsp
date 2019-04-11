@@ -67,9 +67,11 @@
 </nav>
 
 <form method="post" class="table-form"  style="overflow-y:scroll; height:100%;">
-    <h5 class="text-center" >Data For All Student That Registe In Diploma</h5>
-<table  class="table" style="overflow-y:scroll; height:100%;"  >
-    <thead >
+    <div class="titalForsertification">
+    <h3 class="text-center" > Data For All Student That Register In Diploma</h3>
+    </div>
+        <table  class="table" style="overflow-y:scroll; height:100%;"  >
+    <thead>
     <tr class="tr">
         <th scope="col" class="text-center" >ID</th>
         <th scope="col" class="text-center">NAME</th>
@@ -78,7 +80,7 @@
         <th scope="col" class="text-center">paper</th>
 
     </tr>
-    </thead>>
+    </thead>
     <tbody style="overflow-y:scroll; height:100%;">
     <%
         try

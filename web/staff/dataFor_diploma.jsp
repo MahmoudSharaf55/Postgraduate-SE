@@ -73,12 +73,27 @@
 String id, dept, id_number, name, dob, country, city, governorate, nationality, religion, national_id, national_source, national_release, recruitment_postion, job, job_address, phone, bachelor_in, b_role, b_overall_rate, b_dept, b_special_rate, b_faculty, b_university, postgraduate_in, p_role, p_special, p_rate, p_faculty, p_university, enroll_dept;
 
 %>
+<%
+    String name;
+String id=request.getParameter("ema");
+int search_id=Integer.parseInt(id);
+    Connection connection = DBConnection.getConnection();
+     PreparedStatement pre=connection.prepareStatement("select id,name  from student_form where id=?");
+     pre.setInt(1,search_id);
+    ResultSet result = pre.executeQuery();
+    while (result.next()) {
+        name=result.getNString("name");
 
-<form method="post" class="table-form"  style="overflow-y:scroll; height:100%;">
-    <table  class="table" style="overflow-y:scroll; "  >
+%>
+
+<form method="post" class="table-form "  style="overflow-y:scroll; height:100%;">
+    <div class="titalForsertification">
+        <h3 class="text-center" > All Data In Deatils  about <%= name %> </h3><%}%>
+    </div>
+    <table  class="table clcrdata" style="overflow-y:scroll; "  >
         <thead >
         <tr class="tr">
-            <th scope="col" class="text-center" >ID</th>
+            <th scope="col" class="text-center" >Department</th>
             <th scope="col" class="text-center">ID_Number</th>
             <th scope="col" class="text-center">Name</th>
             <th scope="col" class="text-center">Date_Of_Bearth</th>
@@ -88,9 +103,7 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
         </tr>
         </thead>
         <tbody style="overflow-y:scroll;">
-        <%String id=request.getParameter("ema");
-            int search_id=Integer.parseInt(id);
-
+        <%
 
             System.out.println("id is eqal  "+search_id);
             try
@@ -105,11 +118,11 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
         %>
         <tr class="teColor">
 
-            <td class="text-center"><%= resultSet.getString("id")%> </td>
-            <td class="text-center" ><%=resultSet.getString("dept")%></td>
-            <td class="text-center"><%=resultSet.getString("id_number")%></td>
+            <td class="text-center"><%= resultSet.getString("dept")%> </td>
+            <td class="text-center" ><%=resultSet.getString("id_number")%></td>
             <td class="text-center"><%=resultSet.getString("name")%></td>
             <td class="text-center"><%=resultSet.getString("dob")%></td>
+            <td class="text-center"><%=resultSet.getString("country")%></td>
             <td class="text-center"><%=resultSet.getString("city")%></td>
         </tr>
         <thead >
@@ -220,7 +233,7 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
 <div class="colc">
     <br>
     <h5 class="text-center">If Data Correct Write Accept Rr Writ Error Data </h5><br>
-    <form action="sort_state.jsp" method="post" >
+    <form action="S_sort_state_diploma.jsp" method="post" >
         <div class="otuCenter">
             <input class="idchangestate" type="text" name="id" placeholder="ID" required>
             <input class="btnChangesta1" type="text" name="state" placeholder="Accept or not paper Stat" required>
@@ -234,7 +247,7 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
             </button>
         </div>
 
-<br><br>
+<br>
     </form>
 </div>
 

@@ -67,7 +67,9 @@
 </nav>
 
 <form method="post" class="table-form"  style="overflow-y:scroll; height:100%;">
-    <h5 class="text-center" >Data For All Student That Registe In Master</h5>
+    <div class="titalForsertification">
+        <h3 class="text-center" > Data For All Student That Register In Master</h3>
+    </div>
     <table  class="table" style="overflow-y:scroll; height:100%;"  >
         <thead >
         <tr class="tr">

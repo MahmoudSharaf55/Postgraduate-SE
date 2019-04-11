@@ -1,14 +1,16 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: M.$edky
+  Date: 2019-04-11
+  Time: 8:26 AM
+  To change this template use File | Settings | File Templates.
+--%>
+
+
 <%@ page import="java.sql.Connection" %>
 <%@ page import="Util.DBConnection" %>
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.ResultSet" %>
-<%@ page import="Model.Stuff" %><%--
-  Created by IntelliJ IDEA.
-  User: M.$edky
-  Date: 2019-04-09
-  Time: 3:25 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!DOCTYPE html>
@@ -66,39 +68,56 @@
     </div>
 </nav>
 
-<form method="post" class="table-form"  style="overflow-y:scroll; height:100%;">
+<form method="post" class="table-form"  style="overflow-y:scroll; height:100%; overflow-x: scroll; width:100%;" >
     <div class="titalForsertification">
-        <h3 class="text-center" > Data For All Student That Register In Master</h3>
+        <br>
+        <h3 class="text-center textcolcr" > Data For All Student That Register In Ph-D And All Paper Accepted By Stuff</h3>
+        <br><br>
     </div>
-    <table  class="table" style="overflow-y:scroll; height:100%;"  >
-        <thead >
-        <tr class="tr">
+    <table  class="table" style="overflow-y:scroll; height:100%; overflow-x: scroll; width:100%;" >
+        <thead>
+        <tr class="tr tableUpdate">
             <th scope="col" class="text-center" >ID</th>
-            <th scope="col" class="text-center">NAME</th>
-            <th scope="col" class="text-center">Email</th>
-            <th scope="col" class="text-center">State</th>
-            <th scope="col" class="text-center">paper</th>
+            <th scope="col" class="text-center" >Full Name</th>
+            <th scope="col" class="text-center">Bachelor In</th>
+            <th scope="col" class="text-center">From Faculty</th>
+            <th scope="col" class="text-center">Address</th>
+            <th scope="col" class="text-center">Year for Graduation</th>
+            <th scope="col" class="text-center">Overall Rate</th>
+            <th scope="col" class="text-center">Specialization Rate</th>
+            <th scope="col" class="text-center">Job</th>
+            <th scope="col" class="text-center">Position of recruitment</th>
+            <th scope="col" class="text-center">Date Of Birth</th>
+
 
         </tr>
-        </thead>>
-        <tbody style="overflow-y:scroll; height:100%;">
+        </thead>
+        <tbody style="overflow-y:scroll; height:100%; overflow-x: scroll; width: 100% ">
+
+
         <%
             try
             {
                 Connection c = DBConnection.getConnection();
-
                 Statement statement = c.createStatement();
-                ResultSet resultSet = statement.executeQuery("select id, username, email, status, paper from student where paper='In Reviewing' AND Form=3;");
+                ResultSet resultSet = statement.executeQuery("select f.id, f.name, f.dob, f.country, f.city, f.governorate, f.job, f.recruitment_postion, f.bachelor_in, f.b_overall_rate, f.b_faculty , s.paper , s.id , s.status, s.form from student_form as f  inner join student as s on s.id=f.id and  s.paper !='In Reviewing' and s.status='Waiting' and s.form=2 ;");
                 while (resultSet.next()) {
 
         %>
         <tr class="teColor">
+            <td class="text-center" ><%=resultSet.getString("id")%></td>
+            <td class="text-center" ><%=resultSet.getString("name")%></td>
+            <td class="text-center"><%=resultSet.getString("bachelor_in")%></td>
+            <td class="text-center"><%=resultSet.getString("b_faculty")%></td>
+            <td class="text-center"><%=resultSet.getString("country")%>//<%=resultSet.getString("city")%>//<%=resultSet.getString("governorate")%> </td>
+            <td class="text-center">null</td>
+            <td class="text-center">null</td>
+            <td class="text-center"><%=resultSet.getString("b_overall_rate")%></td>
+            <td class="text-center"><%=resultSet.getString("job")%></td>
+            <td class="text-center"><%=resultSet.getString("recruitment_postion")%></td>
+            <td class="text-center"><%=resultSet.getString("dob")%></td>
 
-            <td scope="row"><%= resultSet.getString("id")%> </td>
-            <td class="text-center" ><%=resultSet.getString("username")%></td>
-            <td class="text-center"><%=resultSet.getString("email")%></td>
-            <td class="text-center"><%=resultSet.getString("status")%></td>
-            <td class="text-center"><%=resultSet.getString("paper")%></td>
+
         </tr>
 
         <%
@@ -119,23 +138,26 @@
     </table>
 
 </form >
-<div>
+<div class="colc">
     <br>
-    <h5 class="text-center">To Show all Data about Student Please inter the id in search icon </h5><br>
-    <form action="dataFoe_master.jsp" method="post">
-        <div class="container h-100">
-            <div class="d-flex justify-content-center h-100" >
-                <div class="searchbar">
-                    <input class="search_input" type="text" name="ema" placeholder="Search...">
-                    <button type="submit" class="search_icon"><i class="fas fa-search"></i></button>
-                </div>
-            </div>
+    <h5 class="text-center">If Data Correct Write Accept Rr Writ Error Data </h5><br>
+    <form action="D_sort_statFor_Ph-D.jsp" method="post" >
+        <div class="otuCenter">
+            <input class="idchangestate" type="text" name="id" placeholder="ID" required>
+            <input class="btnChangesta1" type="text" name="state" placeholder="Accept or not paper Stat" required>
+
         </div>
+
+
+        <div class="container-login100-form-btn btnChangestat">
+            <button class="login100-form-btn">
+                Change Stutes
+            </button>
+        </div>
+
+        <br>
     </form>
-
-
-</div><br><br>
-
+</div>
 <footer class="footer">
     <div class="container">
         <div class="subscribe">

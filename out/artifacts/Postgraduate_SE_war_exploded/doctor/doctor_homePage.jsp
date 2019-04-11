@@ -64,21 +64,48 @@
 
 %>
 
-
-
 <article style="height: 500px">
+
+
+
     <section class="store-and-continue">
         <div class="container">
             <h3>Welcome <%= doctor.getDoctorName()%>
             </h3>
             <hr>
-            <h4 class="text-center">The Initial page</h4>
+            <h4 class="text-center">This Is  The Initial page </h4>
+            <h5 class="text-center">Chose the buttom to show all data about every student </h5><br><br>
+            <form action="D_tableFor_deploma.jsp">
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" title="الدبلوما">
+                        Data For Diploma
+                    </button>
+                </div>
+
+            </form ><br>
+
+            <form action="D_tableForPh-D.jsp">
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" title="الدكتوراه">
+                        Data for Ph-D
+                    </button>
+                </div>
+
+            </form><br>
+            <form action="D_tableFor_Master.jsp">
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" title="الماجستير">
+                        Data for Ph-Magestar
+                    </button>
+                </div>
+            </form>
 
         </div>
     </section>
 
 </article>
-
 
 <footer class="footer">
     <div class="container">

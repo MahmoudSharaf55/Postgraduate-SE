@@ -92,9 +92,9 @@
     }
 
     else{
-
-        request.getRequestDispatcher("login_staff.jsp").include(request, response);
         request.getRequestDispatcher("../ErrorPages/EmailOrPasswordError.jsp").include(request, response);
+        request.getRequestDispatcher("login_staff.jsp").include(request, response);
+
         flag =0;
     }
 
