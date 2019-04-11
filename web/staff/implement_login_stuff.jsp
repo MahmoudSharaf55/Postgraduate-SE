@@ -87,7 +87,6 @@
         stuff.setStuffPassword(encryptPass);
 
         session.setAttribute("stuff",stuff);
-
         request.getRequestDispatcher("stuff_homePage.jsp").forward(request, response);
     }
 

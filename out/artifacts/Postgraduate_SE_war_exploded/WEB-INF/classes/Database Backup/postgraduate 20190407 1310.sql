@@ -74,7 +74,7 @@ INSERT INTO `staff` (`id`,`username`,`email`,`phone`,`password`) VALUES
 
 
 --
--- Definition of table `student`
+-- Definition of table `Student`
 --
 
 DROP TABLE IF EXISTS `student`;
@@ -90,7 +90,7 @@ CREATE TABLE `student` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `student`
+-- Dumping data for table `Student`
 --
 
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
@@ -98,7 +98,7 @@ CREATE TABLE `student` (
 
 
 --
--- Definition of table `student_form`
+-- Definition of table `StudentForm`
 --
 
 DROP TABLE IF EXISTS `student_form`;
@@ -139,7 +139,7 @@ CREATE TABLE `student_form` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `student_form`
+-- Dumping data for table `StudentForm`
 --
 
 /*!40000 ALTER TABLE `student_form` DISABLE KEYS */;

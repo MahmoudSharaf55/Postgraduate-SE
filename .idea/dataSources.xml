@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-<<<<<<< HEAD
-    <data-source source="LOCAL" name="postgraduate@localhost" uuid="7026c52d-a7ea-4110-9e87-2ff9c143cf5b">
+    <data-source source="LOCAL" name="postgraduate@localhost" uuid="3f6d972c-93bb-4f6c-9b54-e981e45a1675">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/postgraduate</jdbc-url>
-=======
-    <data-source source="LOCAL" name="postgraduate@localhost" uuid="0188a1ed-ba1e-43e4-a2dc-dec16c061f5f">
-      <driver-ref>mariadb</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mariadb://localhost:3306/postgraduate</jdbc-url>
->>>>>>> master
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />

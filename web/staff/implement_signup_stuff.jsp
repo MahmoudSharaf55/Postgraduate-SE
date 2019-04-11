@@ -109,7 +109,7 @@
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        request.getRequestDispatcher("stuff_homePage.jsp").include(request, response);
+        request.getRequestDispatcher("stuff_homePage.jsp").forward(request, response);
     }
 
     else {

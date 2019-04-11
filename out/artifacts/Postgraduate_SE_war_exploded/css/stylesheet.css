@@ -30,6 +30,11 @@ a:hover{
     -ms-transform: translateZ(0);
     transform: translateZ(0);
 }
+.dropdown-item-red:active{
+    color: #fff;
+    text-decoration: none;
+    background-color: #bd2130;
+}
 @-webkit-keyframes load4 {
     0%,
     100% {
@@ -87,12 +92,12 @@ a:hover{
 .navbar{
     background-color: #111B29;
 }
-.navbar .navbar-collapse .navbar-nav li a{
+.navbar .navbar-collapse .navbar-nav li .nav-link{
     color: white;
     border-bottom: 2px solid transparent;
     transition: color 0.3s ease-in-out;
 }
-.navbar .navbar-collapse .navbar-nav li a:hover{
+.navbar .navbar-collapse .navbar-nav li .nav-link:hover{
     color: #bd2130;
     border-bottom: 2px solid #bd2130;
     transition: all 0.3s ease-in-out;

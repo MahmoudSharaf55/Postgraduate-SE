@@ -80,6 +80,7 @@ String password= CipherEncryptionAndDecryption.encrypt(request.getParameter("pas
     if(flag==1){
         // sort data in a sission
 
+<<<<<<< Updated upstream
         String Encryptpassword=CipherEncryptionAndDecryption.encrypt(resultSet.getNString("password"),"nerds");
         Doctor doctor=new Doctor();
         doctor.setDoctorName(resultSet.getString("username"));
@@ -89,6 +90,8 @@ String password= CipherEncryptionAndDecryption.encrypt(request.getParameter("pas
         session.setAttribute("doctor",doctor);
 
 
+=======
+>>>>>>> Stashed changes
         request.getRequestDispatcher("doctor_homePage.jsp").forward(request, response);
     }
 

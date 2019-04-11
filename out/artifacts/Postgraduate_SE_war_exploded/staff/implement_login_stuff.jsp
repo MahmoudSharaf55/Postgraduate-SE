@@ -86,8 +86,11 @@
         stuff.setStuffphone(resultSet.getString("phone"));
         stuff.setStuffPassword(encryptPass);
 
+<<<<<<< Updated upstream
         session.setAttribute("stuff",stuff);
 
+=======
+>>>>>>> Stashed changes
         request.getRequestDispatcher("stuff_homePage.jsp").forward(request, response);
     }
 

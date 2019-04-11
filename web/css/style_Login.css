@@ -13,6 +13,11 @@ body{
     src: url("../fonts/BalooChettan-Regular.ttf");
     font-family: 'Baloo';
 }
+.dropdown-item-red:active{
+    color: #fff;
+    text-decoration: none;
+    background-color: #bd2130;
+}
 .limiter .container-login100 .wrap-login100 .login100-form hr{
     margin: 15px auto;
     width: 25%;
@@ -475,15 +480,20 @@ a:hover{
 .navbar{
     background-color: #111B29;
 }
-.navbar .navbar-collapse .navbar-nav li a{
+.navbar .navbar-collapse .navbar-nav li .nav-link{
     color: white;
     border-bottom: 2px solid transparent;
     transition: color 0.3s ease-in-out;
 }
-.navbar .navbar-collapse .navbar-nav li a:hover{
+.navbar .navbar-collapse .navbar-nav li .nav-link:hover{
     color: #bd2130;
     border-bottom: 2px solid #bd2130;
     transition: all 0.3s ease-in-out;
+}
+.dropdown-item-red:active{
+    color: #fff;
+    text-decoration: none;
+    background-color: #bd2130;
 }
 .form-registration .container h3:first-child{
     font-family: Baloo;

@@ -75,7 +75,7 @@
     String phone=request.getParameter("phone");
     String password= CipherEncryptionAndDecryption.encrypt(request.getParameter("password"),"nerds");
 
-    Doctor doctor=new Doctor();
+    Doctor doctor = new Doctor();
 
     doctor.setDoctorName(fName);
     doctor.setDoctorEmail(email);
@@ -110,7 +110,7 @@
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        request.getRequestDispatcher("doctor_homePage.jsp").include(request, response);
+        request.getRequestDispatcher("doctor_homePage.jsp").forward(request, response);
     }
     else  {
         request.getRequestDispatcher("signup_doctor.jsp").include(request, response);

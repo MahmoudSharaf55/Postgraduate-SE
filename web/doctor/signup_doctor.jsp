@@ -66,7 +66,7 @@
     <div class="card bg-light">
         <div class="container-login100">
             <div class="wrap-login100">
-                <form class="login100-form needs-validation" novalidate action="implement_sinup_doctor.jsp">
+                <form class="login100-form needs-validation" novalidate action="implement_sinup_doctor.jsp" method="post">
                 	<span class="login100-form-title">
 						Doctor Registration
 					</span>

@@ -1,7 +1,7 @@
 package Model;
 
-public class student {
-    public static student currentStudent;
+public class Student {
+    public static Student currentStudent;
     private int id;
     private String username;
     private String email;
@@ -10,15 +10,15 @@ public class student {
     private String status;
     private String paper;
 
-    public student(String username, String email, String password, String form) {
+    public Student(String username, String email, String password, String form) {
         this.username = username;
         this.email = email;
         this.password = password;
         this.form = form;
     }
 
-    public static void setCurrentStudent(student currentStudent) {
-        student.currentStudent = currentStudent;
+    public static void setCurrentStudent(Student currentStudent) {
+        Student.currentStudent = currentStudent;
     }
 
     public int getId() {
