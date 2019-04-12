@@ -4,6 +4,7 @@
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="Util.CipherEncryptionAndDecryption" %>
+<%@ page import="java.sql.SQLException" %>
 <%
 String email= request.getParameter("email");
 String password= CipherEncryptionAndDecryption.encrypt(request.getParameter("password"),"nerds");
@@ -11,7 +12,7 @@ String password= CipherEncryptionAndDecryption.encrypt(request.getParameter("pas
     Connection c = DBConnection.getConnection();
 
     Statement statement = c.createStatement();
-    ResultSet resultSet = statement.executeQuery("select  username, email, phone, password from doctor;");
+    ResultSet resultSet = statement.executeQuery("select  username, email, phone, password,department from doctor;");
     while (resultSet.next()) {
         if (resultSet.getString("email").equals(email)&&resultSet.getString("password").equals(password)){
             flag = 1;
@@ -24,6 +25,7 @@ String password= CipherEncryptionAndDecryption.encrypt(request.getParameter("pas
         doctor.setDoctorName(resultSet.getString("username"));
         doctor.setDoctorEmail(resultSet.getString("email"));
         doctor.setDoctorphone(resultSet.getString("phone"));
+        doctor.setDoctordepartment(resultSet.getString("department"));
         doctor.setDoctorPassword(Encryptpassword);
         session.setAttribute("doctor",doctor);
         session.setAttribute("currentUser","doctor");

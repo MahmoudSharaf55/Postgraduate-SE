@@ -17,6 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no, width=device-width">
     <title>Stuff Home Page </title>
+
     <link rel="stylesheet" href="../bootstrapv4/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrapv4/animate.css">
     <link rel="stylesheet" href="../fontawesome/css/all.css">
@@ -27,41 +28,45 @@
 </head>
 
 <body>
-<%@include file="../header.jsp"%>
-
-<form method="post" class="table-form"  style="overflow-y:scroll; height:100%;">
+<%@include file="../header.jsp" %>
+<form method="post" class="table-form" style="overflow-y:scroll; height:100%;">
     <div class="titalForsertification">
-        <h3 class="text-center" > Data For All Student That Register In Ph-D</h3>
+        <h3 class="text-center"> Data For All Student That Register In Ph-D</h3>
     </div>
-    <table  class="table" style="overflow-y:scroll; height:100%;"  >
-        <thead >
-        <tr class="tr">
-            <th scope="col" class="text-center" >ID</th>
+    <table class="table" style="overflow-y:scroll; height:100%;">
+        <thead>
+        <tr class="tr ">
+            <th scope="col" class="text-center">ID</th>
             <th scope="col" class="text-center">NAME</th>
             <th scope="col" class="text-center">Email</th>
             <th scope="col" class="text-center">State</th>
             <th scope="col" class="text-center">paper</th>
 
         </tr>
-        </thead>>
+        </thead>
         <tbody style="overflow-y:scroll; height:100%;">
         <%
-            try
-            {
+            try {
                 Connection c = DBConnection.getConnection();
 
                 Statement statement = c.createStatement();
-                ResultSet resultSet = statement.executeQuery("select id, username, email, status, paper from student where paper='In Reviewing' AND Form=2;");
+
+                ResultSet resultSet = statement.executeQuery("select s.id, s.username, s.email, f.status, f.paper from student as s inner join student_form as f where paper='In Reviewing' AND form_type=2 and  s.id=f.s_id ;");
                 while (resultSet.next()) {
 
         %>
-        <tr class="teColor">
+        <tr class="teColor updaterow">
 
-            <td scope="row"><%= resultSet.getString("id")%> </td>
-            <td class="text-center" ><%=resultSet.getString("username")%></td>
-            <td class="text-center"><%=resultSet.getString("email")%></td>
-            <td class="text-center"><%=resultSet.getString("status")%></td>
-            <td class="text-center"><%=resultSet.getString("paper")%></td>
+            <td scope="row"><%= resultSet.getString("id")%>
+            </td>
+            <td class="text-center"><%=resultSet.getString("username")%>
+            </td>
+            <td class="text-center"><%=resultSet.getString("email")%>
+            </td>
+            <td class="text-center"><%=resultSet.getString("status")%>
+            </td>
+            <td class="text-center"><%=resultSet.getString("paper")%>
+            </td>
         </tr>
 
         <%
@@ -70,9 +75,7 @@
         %>
 
         <%
-            }
-            catch(Exception e)
-            {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
 
@@ -81,13 +84,13 @@
         </tbody>
     </table>
 
-</form >
+</form>
 <div>
     <br>
     <h5 class="text-center">To Show all Data about Student Please inter the id in search icon </h5><br>
     <form action="dataFor_Ph-D.jsp" method="post">
         <div class="container h-100">
-            <div class="d-flex justify-content-center h-100" >
+            <div class="d-flex justify-content-center h-100">
                 <div class="searchbar">
                     <input class="search_input" type="text" name="ema" placeholder="Search...">
                     <button type="submit" class="search_icon"><i class="fas fa-search"></i></button>
@@ -97,8 +100,9 @@
     </form>
 
 
-</div><br><br>
-<%@include file="../footer.jsp"%>
+</div>
+<br><br>
+<%@include file="../footer.jsp" %>
 <script src="../bootstrapv4/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
 <script src="../bootstrapv4/popper.min.js" type="text/javascript"></script>
 <script src="../bootstrapv4/js/bootstrap.min.js" type="text/javascript"></script>

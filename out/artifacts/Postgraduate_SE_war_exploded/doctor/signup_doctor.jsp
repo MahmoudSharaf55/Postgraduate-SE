@@ -61,6 +61,18 @@
                             <b>&check; Ok</b>
                         </div>
                     </div>
+                    <div class="form-group input-group ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-graduation-cap"></i> </span>
+                        </div>
+                        <input name="department"  class="form-control" placeholder="Department CS or OR" type="text" required>
+                        <div class="invalid-feedback">
+                            <b>&Cross; Empty Field</b>
+                        </div>
+                        <div class="valid-feedback">
+                            <b>&check; Ok</b>
+                        </div>
+                    </div>
 
                     <div class="form-group input-group">
                         <div class="input-group-prepend">

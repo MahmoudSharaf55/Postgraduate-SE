@@ -29,10 +29,9 @@
 
 <body>
 <%@include file="../header.jsp" %>
-
 <form method="post" class="table-form" style="overflow-y:scroll; height:100%;">
     <div class="titalForsertification">
-        <h3 class="text-center"> Data For All Student That Register In Master</h3>
+        <h3 class="text-center"> Data For All Student That Register In Magster</h3>
     </div>
     <table class="table" style="overflow-y:scroll; height:100%;">
         <thead>
@@ -45,18 +44,18 @@
 
         </tr>
         </thead>
-        >
         <tbody style="overflow-y:scroll; height:100%;">
         <%
             try {
                 Connection c = DBConnection.getConnection();
 
                 Statement statement = c.createStatement();
-                ResultSet resultSet = statement.executeQuery("select id, username, email, status, paper from student where paper='In Reviewing' AND Form=3;");
+
+                ResultSet resultSet = statement.executeQuery("select s.id, s.username, s.email, f.status, f.paper from student as s inner join student_form as f where paper='In Reviewing' AND form_type=1 ;");
                 while (resultSet.next()) {
 
         %>
-        <tr class="teColor">
+        <tr class="teColor updaterow">
 
             <td scope="row"><%= resultSet.getString("id")%>
             </td>

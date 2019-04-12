@@ -9,6 +9,7 @@
     String fName=request.getParameter("fname");
     String email=request.getParameter("email");
     String phone=request.getParameter("phone");
+    String department=request.getParameter("department");
     String password= CipherEncryptionAndDecryption.encrypt(request.getParameter("password"),"nerds");
 
 %>
@@ -25,11 +26,12 @@
     }
     if(flag==0){
         try {
-            PreparedStatement per=c.prepareStatement("insert into doctor (username,email,phone,password) values(?,?,?,?)");
+            PreparedStatement per=c.prepareStatement("insert into doctor (username,email,phone,password,department) values(?,?,?,?,?)");
             per.setString(1,fName);
             per.setString(2,email);
             per.setString(3,phone);
             per.setString(4,password);
+            per.setString(5,department);
             per.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -38,6 +40,7 @@
         doctor.setDoctorName(fName);
         doctor.setDoctorEmail(email);
         doctor.setDoctorphone(phone);
+
         doctor.setDoctorPassword(password);
         session.setAttribute("doctor",doctor);
         session.setAttribute("currentUser","doctor");

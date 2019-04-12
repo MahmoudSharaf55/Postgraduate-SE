@@ -113,6 +113,8 @@ body,html{
     overflow: hidden;
 
 }
-.textcolcr{
-
+.updaterow{
+    padding: auto;
+    margin: auto;
+    height: 20%;
 }

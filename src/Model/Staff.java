@@ -2,16 +2,10 @@ package Model;
 
 public class Staff {
     String stuffName,stuffEmail,stuffphone,stuffPassword;
-    String paperstate;
 
 
-    public String getPaperstate() {
-        return paperstate;
-    }
 
-    public void setPaperstate(String paperstate) {
-        this.paperstate = paperstate;
-    }
+
 
     public String getStuffName() {
         return stuffName;

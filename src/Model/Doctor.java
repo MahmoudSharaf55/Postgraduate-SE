@@ -1,10 +1,18 @@
 package Model;
 
 public  class Doctor {
-    String doctorName,doctorEmail,doctorphone,doctorPassword;
+    String doctorName,doctorEmail,doctorphone,doctorPassword,doctordepartment;
 
     public String getDoctorName() {
         return doctorName;
+    }
+
+    public String getDoctordepartment() {
+        return doctordepartment;
+    }
+
+    public void setDoctordepartment(String doctordepartment) {
+        this.doctordepartment = doctordepartment;
     }
 
     public void setDoctorName(String doctorName) {

@@ -11,6 +11,7 @@
 <%@ page import="Util.DBConnection" %>
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.PreparedStatement" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!DOCTYPE html>
@@ -41,11 +42,10 @@
             <th scope="col" class="text-center" >ID</th>
             <th scope="col" class="text-center" >Full Name</th>
             <th scope="col" class="text-center">Bachelor In</th>
-            <th scope="col" class="text-center">From Faculty</th>
-            <th scope="col" class="text-center">Address</th>
-            <th scope="col" class="text-center">Year for Graduation</th>
+            <th scope="col" class="text-center">Graduation Source</th>
+            <th scope="col" class="text-center">Graduation Year</th>
+            <th scope="col" class="text-center">Overall Market</th>
             <th scope="col" class="text-center">Overall Rate</th>
-            <th scope="col" class="text-center">Specialization Rate</th>
             <th scope="col" class="text-center">Job</th>
             <th scope="col" class="text-center">Position of recruitment</th>
             <th scope="col" class="text-center">Date Of Birth</th>
@@ -57,11 +57,16 @@
 
 
         <%
+            Doctor doctor= (Doctor) session.getAttribute("doctor");
+
+           String department= doctor.getDoctordepartment();
+            System.out.println("the value of depa is =" + department);
             try
             {
                 Connection c = DBConnection.getConnection();
-                Statement statement = c.createStatement();
-                ResultSet resultSet = statement.executeQuery("select f.id, f.name, f.dob, f.country, f.city, f.governorate, f.job, f.recruitment_postion, f.bachelor_in, f.b_overall_rate, f.b_faculty , s.paper , s.id , s.status, s.form from student_form as f  inner join student as s on s.id=f.id and  s.paper !='In Reviewing' and s.status='Waiting' and s.form=1 ;");
+                PreparedStatement preparedStatement=c.prepareStatement("select id, name, dob, job,b_graduate_source, recruitment_postion, bachelor_in, b_overall_rate, b_overall_mark, b_graduate_year  from student_form   where  paper !='In Reviewing' and status='Waiting' and form_type=1 and dept=? ;");
+                preparedStatement.setString(1,department);
+                ResultSet resultSet=preparedStatement.executeQuery();
                 while (resultSet.next()) {
 
         %>
@@ -69,10 +74,9 @@
             <td class="text-center" ><%=resultSet.getString("id")%></td>
             <td class="text-center" ><%=resultSet.getString("name")%></td>
             <td class="text-center"><%=resultSet.getString("bachelor_in")%></td>
-            <td class="text-center"><%=resultSet.getString("b_faculty")%></td>
-            <td class="text-center"><%=resultSet.getString("country")%>//<%=resultSet.getString("city")%>//<%=resultSet.getString("governorate")%> </td>
-            <td class="text-center">null</td>
-            <td class="text-center">null</td>
+            <td class="text-center"><%=resultSet.getString("b_graduate_source")%></td>
+            <td class="text-center"><%=resultSet.getString("b_graduate_year")%> </td>
+            <td class="text-center"><%=resultSet.getString("b_overall_mark")%></td>
             <td class="text-center"><%=resultSet.getString("b_overall_rate")%></td>
             <td class="text-center"><%=resultSet.getString("job")%></td>
             <td class="text-center"><%=resultSet.getString("recruitment_postion")%></td>

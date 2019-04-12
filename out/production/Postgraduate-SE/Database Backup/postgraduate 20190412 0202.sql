@@ -40,15 +40,6 @@ CREATE TABLE `doctor` (
 --
 
 /*!40000 ALTER TABLE `doctor` DISABLE KEYS */;
-INSERT INTO `doctor` (`id`,`username`,`email`,`phone`,`password`) VALUES 
- (1,'mohammed','mohammedsedky01147226634@gmail.com','01147226634','aaa'),
- (2,'mohammedd','mohammedsedky01147226634@gmail.com','01147226634','123'),
- (3,'mohammed','mohammedsedky01147226634@gmail.com','01147226634','aa'),
- (4,'mohammed','mohamed.sedky1129@ci.menofia.edu.eg','01147226634','DBj+LXv0JCTK1ag4nxTwXw=='),
- (5,'mohammed','mohammedsedky047226634@gmail.com','01147226634','jw2b+QU0D98='),
- (6,'mahmoud','mahmoud.abdallah1471@ci.menofia.edu.eg','453453453453','CQmZmVDN12o='),
- (7,'mahmoud','mahmoudsharf55@gmail.com','32232323','CQmZmVDN12o='),
- (8,'mahmoud','asas@asdasd','453453453453','CQmZmVDN12o=');
 /*!40000 ALTER TABLE `doctor` ENABLE KEYS */;
 
 
@@ -88,24 +79,13 @@ CREATE TABLE `student` (
   `email` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `student`
 --
 
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` (`id`,`username`,`email`,`password`) VALUES 
- (1,'Mahmoud Sharaf','mahmoudsharf55@gmail.com','CQmZmVDN12o='),
- (2,'asdasd','mahmoudsharf515@gmail.com','CQmZmVDN12o='),
- (3,'Mahmoud Sharaf','mahmoud.abdallah1471@ci.menofia.edu.eg','CQmZmVDN12o='),
- (4,'Mahmoud Sharaf','mahmoudsharf@gmail.com','CQmZmVDN12o='),
- (5,'Mahmoud Sharaf','mahmoudsharf555@gmail.com','CQmZmVDN12o='),
- (6,'Mahmoud Sharaf','mahmoud.abdallah11471@ci.menofia.edu.eg','CQmZmVDN12o='),
- (7,'Mahmoud Sharaf','mahmoud.abdallah145471@ci.menofia.edu.eg','CQmZmVDN12o='),
- (8,'Mahmoud Sharaf','mahmoudsharf455@gmail.com','CQmZmVDN12o='),
- (9,'Mahmoud Sharaf','mahmoudsharf155@gmail.com','CQmZmVDN12o='),
- (10,'mahmoud','mahmoudsharf5556@gmail.com','CQmZmVDN12o=');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 
 

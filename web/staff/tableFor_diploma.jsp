@@ -50,7 +50,8 @@
                 Connection c = DBConnection.getConnection();
 
                 Statement statement = c.createStatement();
-                ResultSet resultSet = statement.executeQuery("select id, username, email, status, paper from student where paper='In Reviewing' AND Form=1;");
+
+                ResultSet resultSet = statement.executeQuery("select s.id, s.username, s.email, f.status, f.paper from student as s inner join student_form as f where paper='In Reviewing' AND form_type=1 and  s.id=f.s_id;");
                 while (resultSet.next()) {
 
         %>
