@@ -64,7 +64,7 @@ CREATE TABLE `staff` (
   `phone` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `staff`
@@ -72,7 +72,8 @@ CREATE TABLE `staff` (
 
 /*!40000 ALTER TABLE `staff` DISABLE KEYS */;
 INSERT INTO `staff` (`id`,`username`,`email`,`phone`,`password`) VALUES 
- (1,'mohammed','mohammedsedky01147226634@gmail.com','01147226634','fAlGh+jTloE=');
+ (1,'mohammed','mohammedsedky01147226634@gmail.com','01147226634','fAlGh+jTloE='),
+ (2,'mahmoud','mahmoudsharf55@gmail.com','453453453453','CQmZmVDN12o=');
 /*!40000 ALTER TABLE `staff` ENABLE KEYS */;
 
 
@@ -117,12 +118,12 @@ CREATE TABLE `student_form` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `s_id` int(10) unsigned NOT NULL,
   `form_type` varchar(5) NOT NULL,
-  `paper` varchar(45) default 'In Reviewing',
-  `status` varchar(45) default 'Waiting',
+  `paper` varchar(30) default 'In Reviewing',
+  `status` varchar(15) default 'Waiting',
   `dept` varchar(45) NOT NULL,
   `round` varchar(45) NOT NULL,
-  `for_year` varchar(5) NOT NULL,
-  `name` varchar(45) NOT NULL,
+  `for_year` varchar(15) NOT NULL,
+  `name` varchar(65) NOT NULL,
   `dob` date NOT NULL,
   `country` varchar(45) NOT NULL,
   `city` varchar(45) NOT NULL,
@@ -141,15 +142,14 @@ CREATE TABLE `student_form` (
   `b_overall_rate` varchar(45) NOT NULL,
   `b_dept` varchar(45) NOT NULL,
   `b_special_rate` varchar(45) NOT NULL,
-  `b_overall_mark` int(10) unsigned NOT NULL,
+  `b_overall_mark` decimal(10,1) NOT NULL,
   `b_graduate_source` varchar(45) NOT NULL,
   `b_graduate_year` varchar(45) NOT NULL,
-  `b_university` varchar(45) NOT NULL,
   `postgraduate_in` varchar(45) default NULL,
   `p_role` varchar(45) default NULL,
   `p_special` varchar(45) default NULL,
   `p_rate` varchar(45) default NULL,
-  `p_overall_mark` varchar(45) default NULL,
+  `p_overall_mark` decimal(10,1) default NULL,
   `p_university` varchar(45) default NULL,
   `enroll_dept` varchar(45) NOT NULL,
   PRIMARY KEY  (`id`),

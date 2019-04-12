@@ -25,12 +25,11 @@
         while (rs.next()) {
             if (rs.getString("email").equals(email) && rs.getString("password").equals(password)) {
                 flag = 1;
-                student = new Student(rs.getString("username"),rs.getString("email"),rs.getString("password"),rs.getString("form"));
+                student = new Student(rs.getString("username"),rs.getString("email"),rs.getString("password"));
                 student.setId(rs.getInt("id"));
-                student.setStatus(rs.getString("status"));
-                student.setPaper(rs.getString("paper"));
                 session.setAttribute("currentStudent",student);
-//                request.getServletContext().setAttribute("profile");
+                session.setAttribute("currentUser","student");
+                request.getServletContext().setAttribute("profile","/student/student_dashboard.jsp");
                 break;
             }
         }

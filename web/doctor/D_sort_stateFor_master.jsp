@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="Model.Stuff" %>
+<%@ page import="Model.Staff" %>
 <%@ page import="Util.DBConnection" %>
 <%@ page import="java.sql.*" %>
 

@@ -1,6 +1,6 @@
 package Model;
 
-public class Stuff {
+public class Staff {
     String stuffName,stuffEmail,stuffphone,stuffPassword;
     String paperstate;
 

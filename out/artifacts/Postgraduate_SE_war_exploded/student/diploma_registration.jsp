@@ -19,7 +19,7 @@
     <link rel="icon" href="../assets/postgraduate.png">
 </head>
 <body>
-<%@include file="../header.jsp"%>
+<%@include file="../header.jsp" %>
 <section class="form-registration">
     <div class="container">
         <h3>Diploma Registration Form</h3>
@@ -54,7 +54,8 @@
                     <div class="form-group">
                         <label for="round">Enroll Round</label>
                         <input id="round" type="text" class="form-control bg-light" required
-                               placeholder="Enroll Round" data-toggle="tooltip" data-placement="bottom" title="دورة القيد">
+                               placeholder="Enroll Round" data-toggle="tooltip" data-placement="bottom"
+                               title="دورة القيد">
                         <div class="invalid-feedback">
                             <b>&Cross; Empty Field</b>
                         </div>
@@ -315,10 +316,10 @@
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label for="Faculty">Faculty</label>
-                            <input id="Faculty" type="text" class="form-control bg-light" required
-                                   placeholder="Faculty" data-toggle="tooltip" data-placement="bottom"
-                                   title="من كلية">
+                            <label for="mark">Overall Mark</label>
+                            <input id="mark" type="number" class="form-control bg-light" required
+                                   placeholder="Overall Mark" data-toggle="tooltip" data-placement="bottom"
+                                   title="المجموع التراكمى">
                             <div class="invalid-feedback">
                                 <b>&Cross; Empty Field</b>
                             </div>
@@ -327,10 +328,10 @@
                             </div>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="University">University</label>
+                            <label for="University">Graduation Source</label>
                             <input id="University" type="text" class="form-control bg-light" required
-                                   placeholder="University" data-toggle="tooltip" data-placement="bottom"
-                                   title="جامعة">
+                                   placeholder="Graduation Source" data-toggle="tooltip" data-placement="bottom"
+                                   title="جهة التخرج">
                             <div class="invalid-feedback">
                                 <b>&Cross; Empty Field</b>
                             </div>
@@ -339,82 +340,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label for="diploma">Postgraduate Diploma In</label>
-                            <input id="diploma" type="text" class="form-control bg-light" required
-                                   placeholder="Postgraduate Diploma In" data-toggle="tooltip" data-placement="bottom"
-                                   title="دبلوم الدراسات العليا فى">
-                            <div class="invalid-feedback">
-                                <b>&Cross; Empty Field</b>
-                            </div>
-                            <div class="valid-feedback">
-                                <b>&check; Ok</b>
-                            </div>
+                    <div class="form-group">
+                        <label for="diploma">Graduation Year</label>
+                        <input id="diploma" type="number" class="form-control bg-light" required
+                               placeholder="Graduation Year" data-toggle="tooltip" data-placement="bottom"
+                               title="سنة التخرج">
+                        <div class="invalid-feedback">
+                            <b>&Cross; Empty Field</b>
                         </div>
-                        <div class="form-group col-md-6">
-                            <label for="d-Role">Role</label>
-                            <input id="d-Role" type="text" class="form-control bg-light" required
-                                   placeholder="Role" data-toggle="tooltip" data-placement="bottom"
-                                   title="دور">
-                            <div class="invalid-feedback">
-                                <b>&Cross; Empty Field</b>
-                            </div>
-                            <div class="valid-feedback">
-                                <b>&check; Ok</b>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label for="d-sp">Specialization</label>
-                            <input id="d-sp" type="text" class="form-control bg-light" required
-                                   placeholder="Specialization Rate" data-toggle="tooltip" data-placement="bottom"
-                                   title="التخصص">
-                            <div class="invalid-feedback">
-                                <b>&Cross; Empty Field</b>
-                            </div>
-                            <div class="valid-feedback">
-                                <b>&check; Ok</b>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="d-gpa">Rating</label>
-                            <input id="d-gpa" type="text" class="form-control bg-light" required
-                                   placeholder="Overall Rate" data-toggle="tooltip" data-placement="bottom"
-                                   title="بتقدير">
-                            <div class="invalid-feedback">
-                                <b>&Cross; Empty Field</b>
-                            </div>
-                            <div class="valid-feedback">
-                                <b>&check; Ok</b>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label for="d-Faculty">Faculty</label>
-                            <input id="d-Faculty" type="text" class="form-control bg-light" required
-                                   placeholder="Faculty" data-toggle="tooltip" data-placement="bottom"
-                                   title="من كلية">
-                            <div class="invalid-feedback">
-                                <b>&Cross; Empty Field</b>
-                            </div>
-                            <div class="valid-feedback">
-                                <b>&check; Ok</b>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="d-University">University</label>
-                            <input id="d-University" type="text" class="form-control bg-light" required
-                                   placeholder="University" data-toggle="tooltip" data-placement="bottom"
-                                   title="جامعة">
-                            <div class="invalid-feedback">
-                                <b>&Cross; Empty Field</b>
-                            </div>
-                            <div class="valid-feedback">
-                                <b>&check; Ok</b>
-                            </div>
+                        <div class="valid-feedback">
+                            <b>&check; Ok</b>
                         </div>
                     </div>
                     <div class="form-group">
@@ -444,7 +379,7 @@
         </form>
     </div>
 </section>
-<%@include file="../footer.jsp"%>
+<%@include file="../footer.jsp" %>
 <script src="../bootstrapv4/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
 <script src="../bootstrapv4/popper.min.js" type="text/javascript"></script>
 <script src="../bootstrapv4/js/bootstrap.min.js" type="text/javascript"></script>

@@ -1,4 +1,4 @@
-<%@ page import="Model.Stuff" %>
+<%@ page import="Model.Staff" %>
 <%@ page import="Util.DBConnection" %>
 <%@ page import="java.sql.*" %>
 

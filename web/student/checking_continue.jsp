@@ -86,17 +86,18 @@
 <%
     password = CipherEncryptionAndDecryption.encrypt(password, "nerds");
     try {
-        PreparedStatement ps = DBConnection.getConnection().prepareStatement("insert into student (username,email,form,password) value (?,?,?,?)");
+        PreparedStatement ps = DBConnection.getConnection().prepareStatement("insert into student (username,email,password) value (?,?,?)");
         ps.setString(1, name);
         ps.setString(2, email);
-        ps.setString(3, certificate);
-        ps.setString(4, password);
+        ps.setString(3, password);
         ps.executeUpdate();
     } catch (SQLException e) {
         e.printStackTrace();
     }
-    student = new Student(name , email , password , certificate);
+    student = new Student(name , email , password);
     session.setAttribute("currentStudent" , student);
+    session.setAttribute("currentUser","student");
+    request.getServletContext().setAttribute("profile","/student/student_dashboard.jsp");
     if (certificate.equals("1")) {
 %>
 <script>
