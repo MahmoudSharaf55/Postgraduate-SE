@@ -17,7 +17,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no, width=device-width">
-    <title>Stuff Home Page </title>
+    <title>Data For Student </title>
 
     <link rel="stylesheet" href="../bootstrapv4/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrapv4/animate.css">
@@ -81,7 +81,7 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
 
         %>
         <tr class="teColor">
-            <td class="text-center" ><%=resultSet.getString("s_id")%></td>
+            <td class="text-center" ><%=search_id%></td>
             <td class="text-center"><%= resultSet.getString("dept")%> </td>
             <td class="text-center"><%= resultSet.getString("round")%> </td>
             <td class="text-center"><%= resultSet.getString("for_year")%> </td>

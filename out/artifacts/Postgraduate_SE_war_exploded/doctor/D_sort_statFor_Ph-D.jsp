@@ -22,7 +22,7 @@
     Connection c =DBConnection.getConnection();
 
     try {
-        PreparedStatement per=c.prepareStatement("update student_form set status= ? where id=? ");
+        PreparedStatement per=c.prepareStatement("update student_form set status= ? where s_id=? ");
         per.setString(1,state);
         per.setInt(2,id);
 

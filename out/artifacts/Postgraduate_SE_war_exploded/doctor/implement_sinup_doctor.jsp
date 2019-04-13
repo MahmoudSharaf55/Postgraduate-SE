@@ -40,7 +40,7 @@
         doctor.setDoctorName(fName);
         doctor.setDoctorEmail(email);
         doctor.setDoctorphone(phone);
-
+        doctor.setDoctordepartment(department);
         doctor.setDoctorPassword(password);
         session.setAttribute("doctor",doctor);
         session.setAttribute("currentUser","doctor");

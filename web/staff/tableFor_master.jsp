@@ -16,7 +16,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no, width=device-width">
-    <title>Stuff Home Page </title>
+    <title>Table For Magestar </title>
 
     <link rel="stylesheet" href="../bootstrapv4/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrapv4/animate.css">
