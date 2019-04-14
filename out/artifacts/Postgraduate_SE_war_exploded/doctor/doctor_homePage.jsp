@@ -1,4 +1,6 @@
-<%@ page import="Model.Doctor" %><%--
+<%@ page import="Model.Doctor" %>
+<%@ page pageEncoding="UTF-8" %>
+<%--
   Created by IntelliJ IDEA.
   User: M.$edky
   Date: 2019-04-08
@@ -17,50 +19,81 @@
     <link rel="stylesheet" href="../fontawesome/css/all.css">
     <link rel="stylesheet" href="../css/style_Login.css">
     <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="stylesheet" href="../css/style_search_icon.css">
     <link rel="icon" href="../assets/postgraduate.png">
 </head>
 
 <body>
 <%@include file="../header.jsp"%>
-<%
+
+<%  request.setCharacterEncoding("UTF-8");
     Doctor doctor =(Doctor) session.getAttribute("doctor");
+    System.out.println("the name is"+doctor.getDoctorName());
 
 %>
 
-<article style="height: 500px">
+<article style="height: 570px">
 
 
 
     <section class="store-and-continue">
         <div class="container">
-            <h3>Welcome <%= doctor.getDoctorName()%>
+            <h3>Welcome <%=doctor.getDoctorName()%>
             </h3>
             <hr>
             <h4 class="text-center">This Is  The Initial page </h4>
-            <h5 class="text-center">Chose the buttom to show all data about every student </h5><br><br>
+            <h5 class="text-center">Chose the buttom to show all data about every student </h5><br>
             <form action="D_tableFor_deploma.jsp">
                 <div class="container-login100-form-btn">
                     <button class="login100-form-btn" title="الدبلوما">
-                        Data For Diploma
+                        Accept Student in Diploma
                     </button>
                 </div>
 
-            </form ><br>
+            </form >
+
+            <form action="ShowDataForDiploma.jsp">
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" title="الدبلوما">
+                        Show Student in Diploma
+                    </button>
+                </div>
+
+            </form >
 
             <form action="D_tableForPh-D.jsp">
 
                 <div class="container-login100-form-btn">
                     <button class="login100-form-btn" title="الدكتوراه">
-                        Data for Ph-D
+                          Accept Student in Ph_D
                     </button>
                 </div>
 
-            </form><br>
+            </form>
+            <form action="ShowDataForPh-D.jsp">
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" title="الدكتوراه">
+                        Show Student in Ph-D
+                    </button>
+                </div>
+
+            </form>
+
             <form action="D_tableFor_Master.jsp">
 
                 <div class="container-login100-form-btn">
                     <button class="login100-form-btn" title="الماجستير">
-                        Data for Ph-Magestar
+                        Accept Student in Ph-Magestar
+                    </button>
+                </div>
+            </form>
+
+            <form action="ShowDataForMagestar.jsp">
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" title="الماجستير">
+                        Show Student in Ph-Magestar
                     </button>
                 </div>
             </form>

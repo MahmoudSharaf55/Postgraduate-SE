@@ -2,10 +2,11 @@
 <%@ page import="Util.DBConnection" %>
 <%@ page import="java.sql.*" %>
 <%@ page import="Util.CipherEncryptionAndDecryption" %>
+<%@ page pageEncoding="UTF-8" %>
 
 <%
     //session
-
+    request.setCharacterEncoding("UTF-8");
     String fName=request.getParameter("fname");
     String email=request.getParameter("email");
     String phone=request.getParameter("phone");

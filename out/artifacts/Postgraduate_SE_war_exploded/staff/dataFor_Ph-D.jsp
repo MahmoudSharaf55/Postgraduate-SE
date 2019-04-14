@@ -29,12 +29,14 @@
 
 <body>
 <%@include file="../header.jsp"%>
+<%@ page pageEncoding="UTF-8" %>
 
 <%!
 String id, dept, id_number, name, dob, country, city, governorate, nationality, religion, national_id, national_source, national_release, recruitment_postion, job, job_address, phone, bachelor_in, b_role, b_overall_rate, b_dept, b_special_rate, b_faculty, b_university, postgraduate_in, p_role, p_special, p_rate, p_faculty, p_university, enroll_dept;
 
 %>
 <%
+    request.setCharacterEncoding("UTF-8");
     String name;
     String id=request.getParameter("ema");
     int search_id=Integer.parseInt(id);

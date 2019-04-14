@@ -49,7 +49,7 @@
                         </div>
                         <input name="email" class="form-control" placeholder="Email address" type="email" required>
                         <div class="invalid-feedback">
-                            <b>&Cross; Empty Field</b>
+                            <b>&Cross; Error in Email</b>
                         </div>
                         <div class="valid-feedback">
                             <b>&check; Ok</b>

@@ -36,7 +36,7 @@
 <%@include file="../header.jsp"%>
 <form method="post" class="table-form"  style="overflow-y:scroll; height:100%; overflow-x: scroll; width:100%;" >
     <div class="titalForsertification">
-        <% request.setCharacterEncoding("UTF-8");
+        <%
             Doctor doctor= (Doctor) session.getAttribute("doctor");
 
             String department= doctor.getDoctordepartment();
@@ -74,7 +74,7 @@
             try
             {
                 Connection c = DBConnection.getConnection();
-                PreparedStatement preparedStatement=c.prepareStatement("select s_id, name, dob, job,b_graduate_source, recruitment_postion, bachelor_in, b_overall_rate, b_overall_mark, b_graduate_year  from student_form   where  paper !='In Reviewing' and status='Waiting' and form_type=1 and dept=? ;");
+                PreparedStatement preparedStatement=c.prepareStatement("select s_id, name, dob, job,b_graduate_source, recruitment_postion, bachelor_in, b_overall_rate, b_overall_mark, b_graduate_year  from student_form   where  paper !='In Reviewing' and status!='Waiting' and form_type=3 and dept=? ;");
                 preparedStatement.setString(1,department);
                 ResultSet resultSet=preparedStatement.executeQuery();
                 while (resultSet.next()) {

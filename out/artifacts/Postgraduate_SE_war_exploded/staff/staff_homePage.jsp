@@ -24,8 +24,10 @@
 
 <body>
 <%@include file="../header.jsp" %>
+<%@ page pageEncoding="UTF-8" %>
 
 <%
+    request.setCharacterEncoding("UTF-8");
     Staff staff = (Staff) session.getAttribute("staff");
 
 %>

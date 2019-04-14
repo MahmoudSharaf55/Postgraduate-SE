@@ -14,6 +14,7 @@
 <%@ page import="java.sql.PreparedStatement" %>
 <%@ page import="java.time.Year" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +36,7 @@
 <%@include file="../header.jsp"%>
 <form method="post" class="table-form"  style="overflow-y:scroll; height:100%; overflow-x: scroll; width:100%;" >
     <div class="titalForsertification">
-        <%
+        <% request.setCharacterEncoding("UTF-8");
             Doctor doctor= (Doctor) session.getAttribute("doctor");
 
             String department= doctor.getDoctordepartment();

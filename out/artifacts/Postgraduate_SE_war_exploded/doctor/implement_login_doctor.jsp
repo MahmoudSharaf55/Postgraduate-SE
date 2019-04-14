@@ -5,7 +5,10 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="Util.CipherEncryptionAndDecryption" %>
 <%@ page import="java.sql.SQLException" %>
+<%@ page pageEncoding="UTF-8" %>
+
 <%
+    request.setCharacterEncoding("UTF-8");
 String email= request.getParameter("email");
 String password= CipherEncryptionAndDecryption.encrypt(request.getParameter("password"),"nerds");
     int flag=0;

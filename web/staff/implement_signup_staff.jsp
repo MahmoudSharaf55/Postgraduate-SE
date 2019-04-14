@@ -5,9 +5,10 @@
 <%@ page import="Util.CipherEncryptionAndDecryption" %>
 <%@ page import="java.sql.*" %>
 <%@ page import="Model.Staff" %>
+<%@ page pageEncoding="UTF-8" %>
 <%
     //session
-
+    request.setCharacterEncoding("UTF-8");
     String stuffName=request.getParameter("fname");
     String stuffEmail=request.getParameter("email");
     String stuffPhone=request.getParameter("phone");

@@ -3,7 +3,10 @@
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="Model.Staff" %>
-<%@ page import="java.sql.PreparedStatement" %><%--
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page pageEncoding="UTF-8" %>
+
+<%--
   Created by IntelliJ IDEA.
   User: M.$edky
   Date: 2019-04-09
@@ -35,6 +38,7 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
 
 %>
 <%
+    request.setCharacterEncoding("UTF-8");
     String name;
 String id=request.getParameter("ema");
 int search_id=Integer.parseInt(id);
