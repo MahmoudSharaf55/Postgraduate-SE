@@ -28,7 +28,7 @@
 </head>
 
 <body>
-<%@include file="../header.jsp"%>
+<%@include file="../header.jsp" %>
 <%!
     String name;
     String email;
@@ -36,6 +36,7 @@
     String password;
     PreparedStatement ps;
     PreparedStatement ps1;
+    PreparedStatement ps2;
     ResultSet resultSet;
     boolean flag = false;
     Student student;
@@ -85,19 +86,25 @@
 </section>
 <%
     password = CipherEncryptionAndDecryption.encrypt(password, "nerds");
+    ResultSet resultSet1;
     try {
         PreparedStatement ps = DBConnection.getConnection().prepareStatement("insert into student (username,email,password) value (?,?,?)");
         ps.setString(1, name);
         ps.setString(2, email);
         ps.setString(3, password);
         ps.executeUpdate();
+        ps2 = DBConnection.getConnection().prepareStatement("select id from student where email = ?");
+        ps2.setString(1,email);
+        resultSet1 = ps2.executeQuery();
+        resultSet1.next();
+        student = new Student(name, email, password);
+        student.setId(resultSet1.getInt("id"));
     } catch (SQLException e) {
         e.printStackTrace();
     }
-    student = new Student(name , email , password);
-    session.setAttribute("currentStudent" , student);
-    session.setAttribute("currentUser","student");
-    request.getServletContext().setAttribute("profile","/student/student_dashboard.jsp");
+    session.setAttribute("currentStudent", student);
+    session.setAttribute("currentUser", "student");
+    request.getServletContext().setAttribute("profile", "/student/student_dashboard.jsp");
     if (certificate.equals("1")) {
 %>
 <script>
@@ -125,7 +132,7 @@
         }
     }
 %>
-<%@include file="../footer.jsp"%>
+<%@include file="../footer.jsp" %>
 <script src="../bootstrapv4/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
 <script src="../bootstrapv4/popper.min.js" type="text/javascript"></script>
 <script src="../bootstrapv4/js/bootstrap.min.js" type="text/javascript"></script>

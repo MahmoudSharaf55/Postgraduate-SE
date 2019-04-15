@@ -22,8 +22,7 @@
 <%@include file="header.jsp"%>
 <article style="height: 500px">
 <%
-    Student s = (Student)session.getAttribute("currentStudent");
-    System.out.println(s);
+    session.setMaxInactiveInterval(-1);
 %>
 </article>
 

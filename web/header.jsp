@@ -66,7 +66,7 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item dropdown-item-red"
                        href="<%=request.getServletContext().getAttribute("profile").toString()%>">Profile</a>
-                    <a class="dropdown-item dropdown-item-red" href="#">Sign out</a>
+                    <a class="dropdown-item dropdown-item-red" href="/signout.jsp">Sign out</a>
                 </div>
             </div>
         </figure>
@@ -83,7 +83,7 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item dropdown-item-red"
                        href="<%=request.getServletContext().getAttribute("profile").toString()%>">Profile</a>
-                    <a class="dropdown-item dropdown-item-red" href="#">Sign out</a>
+                    <a class="dropdown-item dropdown-item-red" href="/signout.jsp">Sign out</a>
                 </div>
             </div>
         </figure>
@@ -100,7 +100,7 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item dropdown-item-red"
                        href="<%=request.getServletContext().getAttribute("profile").toString()%>">Profile</a>
-                    <a class="dropdown-item dropdown-item-red" href="#">Sign out</a>
+                    <a class="dropdown-item dropdown-item-red" href="/signout.jsp">Sign out</a>
                 </div>
             </div>
         </figure>
