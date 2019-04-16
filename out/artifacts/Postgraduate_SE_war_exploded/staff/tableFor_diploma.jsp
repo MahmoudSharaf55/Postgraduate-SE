@@ -2,14 +2,16 @@
 <%@ page import="Util.DBConnection" %>
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.ResultSet" %>
-<%@ page import="Model.Staff" %><%--
+<%@ page import="Model.Staff" %>
+<%@ page pageEncoding="UTF-8" %>
+<%--
   Created by IntelliJ IDEA.
   User: M.$edky
   Date: 2019-04-09
   Time: 3:25 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +31,7 @@
 
 <body>
 <%@include file="../header.jsp" %>
-<%@ page pageEncoding="UTF-8" %>
+
 <form method="post" class="table-form" style="overflow-y:scroll; height:100%;">
     <div class="titalForsertification">
         <h3 class="text-center"> Data For All Student That Register In Diploma</h3>
@@ -47,15 +49,19 @@
         </thead>
         <tbody style="overflow-y:scroll; height:100%;">
         <%
-            request.setCharacterEncoding("UTF-8");
+
             try {
+
                 Connection c = DBConnection.getConnection();
 
                 Statement statement = c.createStatement();
 
-                ResultSet resultSet = statement.executeQuery("select s.id, s.username, s.email, f.status, f.paper from student as s inner join student_form as f where paper='In Reviewing' AND form_type=1 and  s.id=f.s_id;");
+                ResultSet resultSet = statement.executeQuery("select s.id, s.username, s.email, f.status, f.paper from student as s inner join student_form as f where paper='In Reviewing' AND form_type=1 ;");
+
                 while (resultSet.next()) {
 
+
+                    request.setCharacterEncoding("UTF-8");
         %>
         <tr class="teColor">
 

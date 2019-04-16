@@ -29,7 +29,7 @@
 
 <body>
 <%@include file="../header.jsp" %>
-<%@ page pageEncoding="UTF-8" %>    
+<%@ page pageEncoding="UTF-8" %>
 <form method="post" class="table-form" style="overflow-y:scroll; height:100%;">
     <div class="titalForsertification">
         <h3 class="text-center"> Data For All Student That Register In Ph-D</h3>
