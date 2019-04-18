@@ -54,7 +54,7 @@
                         <div class="card mb-3">
                             <h4 class="card-header" style="font-family: Baloo">Your Forms</h4>
                             <%
-                                if (diploma == null && master == null && ph == null){
+                                if (diploma == null && master == null && ph == null) {
                             %>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">No Forms</li>
@@ -64,44 +64,75 @@
                                 if (diploma != null) {
                             %>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Diploma <a href="#"
-                                                                       class="card-link float-right text-danger"><i
-                                        class="fa fa-trash"></i> Delete Form</a></li>
+                                <li class="list-group-item">Diploma
+                                    <form action="refill_form.jsp" method="post" class="float-right form-inline">
+                                        <input type="hidden" value="diploma" name="refill_type">
+                                        <button type="submit"
+                                                class="btn btn-link text-danger"><i
+                                                class="fa fa-edit"></i> Fill Form Again
+                                        </button>
+                                    </form>
+                                </li>
                             </ul>
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-sm-4"><h5 class="text-primary">Paper : </h5><h6><%=diploma.getPaper()%></h6>
+                                    <div class="col-sm-4"><h5 class="text-primary">Paper : </h5>
+                                        <h6><%=diploma.getPaper()%>
+                                        </h6>
                                     </div>
-                                    <div class="col-sm-4"><h5 class="text-primary">Status : </h5><h6><%=diploma.getStatus()%></h6></div>
+                                    <div class="col-sm-4"><h5 class="text-primary">Status : </h5>
+                                        <h6><%=diploma.getStatus()%>
+                                        </h6></div>
                                 </div>
                             </div>
                             <%
-                            } if (master != null) {
+                                }
+                                if (master != null) {
                             %>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Master <a href="#"
-                                                                      class="card-link float-right text-danger"><i
-                                        class="fa fa-trash"></i> Delete Form</a></li>
+                                <li class="list-group-item">Master
+                                    <form action="refill_form.jsp" method="post" class="float-right form-inline">
+                                        <input type="hidden" value="master" name="refill_type">
+                                        <button type="submit"
+                                                class="btn btn-link text-danger"><i
+                                                class="fa fa-edit"></i> Fill Form Again
+                                        </button>
+                                    </form>
+                                </li>
                             </ul>
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-sm-4"><h5 class="text-primary">Paper : </h5><h6><%=master.getPaper()%></h6>
+                                    <div class="col-sm-4"><h5 class="text-primary">Paper : </h5>
+                                        <h6><%=master.getPaper()%>
+                                        </h6>
                                     </div>
-                                    <div class="col-sm-4"><h5 class="text-primary">Status : </h5><h6><%=master.getStatus()%></h6></div>
+                                    <div class="col-sm-4"><h5 class="text-primary">Status : </h5>
+                                        <h6><%=master.getStatus()%>
+                                        </h6></div>
                                 </div>
                             </div>
                             <%
-                            } if (ph != null) {
+                                }
+                                if (ph != null) {
                             %>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">PH.D. <a href="#" class="card-link float-right text-danger"><i
-                                        class="fa fa-trash"></i> Delete Form</a></li>
+                                <li class="list-group-item">PH.D.
+                                    <form action="refill_form.jsp" method="post" class="float-right form-inline">
+                                        <input type="hidden" value="ph" name="refill_type">
+                                        <button type="submit"
+                                                class="btn btn-link text-danger"><i
+                                                class="fa fa-edit"></i> Fill Form Again
+                                        </button>
+                                    </form>
+                                </li>
                             </ul>
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-sm-4"><h5 class="text-primary">Paper : </h5><h6><%=ph.getPaper()%></h6>
+                                    <div class="col-sm-4"><h5 class="text-primary">Paper : </h5><h6><%=ph.getPaper()%>
+                                    </h6>
                                     </div>
-                                    <div class="col-sm-4"><h5 class="text-primary">Status : </h5><h6><%=ph.getStatus()%></h6></div>
+                                    <div class="col-sm-4"><h5 class="text-primary">Status : </h5><h6><%=ph.getStatus()%>
+                                    </h6></div>
                                 </div>
                             </div>
                             <%
@@ -111,18 +142,35 @@
                                 To Register Another Form
                             </div>
                             <div class="card-body text-center">
-                                <a href="diploma_registration.jsp" class="btn btn-outline-primary col-sm-3 py-1">Diploma</a>
-                                <a href="master's_registration.jsp" class="btn btn-outline-primary col-sm-3 py-1">Magister</a>
+                                <%
+                                    if (ph == null) {
+                                %>
                                 <a href="Ph-D_registration.jsp" class="btn btn-outline-primary col-sm-3 py-1">PH.D.</a>
+                                <%
+                                    }
+                                    if (diploma == null) {
+                                %>
+                                <a href="diploma_registration.jsp"
+                                   class="btn btn-outline-primary col-sm-3 py-1">Diploma</a>
+                                <%
+                                    }
+                                    if (master == null) {
+                                %>
+                                <a href="master's_registration.jsp" class="btn btn-outline-primary col-sm-3 py-1">Magister</a>
+                                <%
+                                    }
+                                %>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane" id="edit">
-                        <form action="#" method="post" class="form-control my-2 needs-validation" novalidate>
+                        <form action="edit_profile.jsp" method="post" class="form-control my-2 needs-validation"
+                              novalidate>
                             <div class="form-group">
                                 <div class="col-xs-6">
                                     <label for="name">Username</label>
-                                    <input type="text" class="form-control" name="last_name" id="name" value="<%=student.getUsername()%>"
+                                    <input type="text" class="form-control" name="name" id="name"
+                                           value="<%=student.getUsername()%>"
                                            placeholder="Username" title="enter your last name if any." required>
                                     <div class="invalid-feedback">
                                         <b>&Cross; Empty Field</b>
@@ -135,7 +183,8 @@
                             <div class="form-group">
                                 <div class="col-xs-6">
                                     <label for="email">Email</label>
-                                    <input type="email" class="form-control" name="email" id="email" value="<%=student.getEmail()%>"
+                                    <input type="email" class="form-control" name="email" id="email"
+                                           value="<%=student.getEmail()%>"
                                            placeholder="you@email.com" title="enter your email." required>
                                     <div class="invalid-feedback">
                                         <b>&Cross; Check Syntax</b>

@@ -115,10 +115,13 @@ String dept
     enrolling_dept = request.getParameter("enrolling_dept");
 
     student = (Student) session.getAttribute("currentStudent");
-    session.removeAttribute("ph");
-    session.removeAttribute("diploma");
-    session.removeAttribute("master");
-    if (form_type.equals("1")) {
+    StudentForm diplomaForm = (StudentForm) session.getAttribute("diploma");
+    StudentForm masterForm = (StudentForm) session.getAttribute("master");
+    StudentForm phForm = (StudentForm) session.getAttribute("ph");
+//    session.removeAttribute("ph");
+//    session.removeAttribute("diploma");
+//    session.removeAttribute("master");
+    if (form_type.equals("1") && phForm == null) {
         m_in = request.getParameter("m_in");
         m_role = request.getParameter("m_role");
         m_sp_rate = request.getParameter("m_sp_rate");
@@ -168,7 +171,7 @@ String dept
         studentForm = new StudentForm("In Reviewing","Waiting",dept,round,for_year,name,dob,city,country,governorate,nationality,religion,Integer.valueOf(card_id),card_src,card_date,army,job,job_address,phone,b_in,b_role,b_rate,b_dept,b_sp_rate,Integer.valueOf(b_mark),b_graduation_src,b_graduation_year,enrolling_dept,m_in,m_role,m_sp_rate,m_rate,Integer.valueOf(m_mark),m_src,form_type,student.getId());
         session.setAttribute("ph",studentForm);
         response.sendRedirect("student_dashboard.jsp");
-    } else if (form_type.equals("2") || form_type.equals("3")) {
+    } else if ((form_type.equals("2") && diplomaForm == null) || (form_type.equals("3") && masterForm == null)) {
         try {
             diploma = DBConnection.getConnection().prepareStatement("insert into student_form (s_id, form_type, dept, round, for_year, name, dob, country, city, governorate, nationality, religion, national_id, national_source, national_release, recruitment_postion, job, job_address, phone, bachelor_in, b_role, b_overall_rate, b_dept, b_special_rate, b_overall_mark, b_graduate_source, b_graduate_year, enroll_dept) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
             diploma.setInt(1, student.getId());
@@ -201,13 +204,20 @@ String dept
             diploma.setString(28, enrolling_dept);
             diploma.executeUpdate();
             studentForm = new StudentForm("In Reviewing","Waiting",dept,round,for_year,name,dob,city,country,governorate,nationality,religion,Integer.valueOf(card_id),card_src,card_date,army,job,job_address,phone,b_in,b_role,b_rate,b_dept,b_sp_rate,Integer.valueOf(b_mark),b_graduation_src,b_graduation_year,enrolling_dept,form_type,student.getId());
-            if (form_type.equals("2"))
+            if (form_type.equals("2") && diplomaForm == null)
                 session.setAttribute("diploma",studentForm);
-            else
+            else if (form_type.equals("3") && masterForm == null)
                 session.setAttribute("master",studentForm);
+            else {
+                request.getRequestDispatcher("student_dashboard.jsp").include(request,response);
+                request.getRequestDispatcher("/ErrorPages/FormError.jsp").include(request,response);
+            }
             response.sendRedirect("student_dashboard.jsp");
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    } else {
+        request.getRequestDispatcher("student_dashboard.jsp").include(request,response);
+        request.getRequestDispatcher("/ErrorPages/FormError.jsp").include(request,response);
     }
 %>

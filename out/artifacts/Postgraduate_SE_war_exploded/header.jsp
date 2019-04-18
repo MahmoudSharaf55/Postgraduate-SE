@@ -8,11 +8,26 @@
             aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <%!
+        Student currentStudent;
+        Doctor currentDoctor;
+        Staff currentStaff;
+        String currentUser;
+    %>
+    <%
+        currentStudent = (Student) session.getAttribute("currentStudent");
+        currentDoctor = (Doctor) session.getAttribute("doctor");
+        currentStaff = (Staff) session.getAttribute("staff");
+        currentUser = (String) session.getAttribute("currentUser");
+    %>
     <div class="collapse navbar-collapse" id="navbarColor03">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a class="nav-link" href="/index.jsp">Home</a>
             </li>
+            <%
+                if (currentUser == null){
+            %>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                    aria-expanded="false">Doctor</a>
@@ -40,21 +55,14 @@
                     <a class="dropdown-item dropdown-item-red" href="/staff/login_staff.jsp">Login</a>
                 </div>
             </li>
+            <%
+                }
+            %>
             <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
             </li>
         </ul>
-        <%!
-            Student currentStudent;
-            Doctor currentDoctor;
-            Staff currentStaff;
-            String currentUser;
-        %>
         <%
-            currentStudent = (Student) session.getAttribute("currentStudent");
-            currentDoctor = (Doctor) session.getAttribute("doctor");
-            currentStaff = (Staff) session.getAttribute("staff");
-            currentUser = (String) session.getAttribute("currentUser");
             if (currentUser != null && currentUser.equals("student")) {
         %>
         <figure class="form-inline my-2 my-lg-0 float-right">

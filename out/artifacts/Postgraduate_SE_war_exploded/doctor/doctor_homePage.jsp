@@ -45,7 +45,7 @@
             <h5 class="text-center">Chose the buttom to show all data about every student </h5><br>
             <form action="D_tableFor_deploma.jsp">
                 <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" title="الدبلوما">
+                    <button class="login100-form-btn" title="الطلاب قيد المراجعه فى الدبلوما">
                         Accept Student in Diploma
                     </button>
                 </div>
@@ -54,7 +54,7 @@
 
             <form action="ShowDataForDiploma.jsp">
                 <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" title="الدبلوما">
+                    <button class="login100-form-btn" title="الطلاب المقبولين الدبلوما">
                         Show Student in Diploma
                     </button>
                 </div>
@@ -64,7 +64,7 @@
             <form action="D_tableForPh-D.jsp">
 
                 <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" title="الدكتوراه">
+                    <button class="login100-form-btn" title="الطلاب قيد المراجعه فى الدكتوراه">
                           Accept Student in Ph_D
                     </button>
                 </div>
@@ -73,7 +73,7 @@
             <form action="ShowDataForPh-D.jsp">
 
                 <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" title="الدكتوراه">
+                    <button class="login100-form-btn" title="الطلاب المقبولين فى الدكتوراه">
                         Show Student in Ph-D
                     </button>
                 </div>
@@ -83,7 +83,7 @@
             <form action="D_tableFor_Master.jsp">
 
                 <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" title="الماجستير">
+                    <button class="login100-form-btn" title="الطلاب قيد المراجعه الماجستير">
                         Accept Student in Ph-Magestar
                     </button>
                 </div>
@@ -92,7 +92,7 @@
             <form action="ShowDataForMagestar.jsp">
 
                 <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" title="الماجستير">
+                    <button class="login100-form-btn" title="الطلاب المقبولين فى الماجستير">
                         Show Student in Ph-Magestar
                     </button>
                 </div>
