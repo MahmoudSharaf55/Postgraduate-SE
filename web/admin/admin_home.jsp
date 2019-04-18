@@ -25,8 +25,7 @@
 <body>
 <%@include file="../header.jsp" %>
 <%
-    Doctor doctor=(Doctor) session.getAttribute("doctor");
-
+    Admin admin=(Admin) session.getAttribute("admin");
 
 %>
 <section class="p-2">
@@ -36,7 +35,7 @@
                 <div class="text-center">
                     <figure class="avatar">
                         <img src="/assets/user.png" alt="avatar" class="img-fluid">
-                        <h4 style="overflow-wrap: break-word" class="mt-2"><%=doctor.getDoctorName()%>
+                        <h4 style="overflow-wrap: break-word" class="mt-2"><%=admin.getAdminName()%>
                         </h4>
                     </figure>
                 </div>
@@ -68,15 +67,11 @@
                                 To Make Any Process
                             </div>
                             <div class="card-body text-center">
-                                <a href="D_tableFor_deploma.jsp" class="btn btn-outline-primary col-sm-3 py-1">Accept Diploma</a>
-                                <a href="D_tableFor_Master.jsp" class="btn btn-outline-primary col-sm-3 py-1">Accept Magister</a>
-                                <a href="D_tableForPh-D.jsp" class="btn btn-outline-primary col-sm-3 py-1">Accept PH.D.</a>
+                                <a href="#" class="btn btn-outline-primary col-sm-3 py-1">Accept Diploma</a>
+                                <a href="#" class="btn btn-outline-primary col-sm-3 py-1">Accept Magister</a>
+                                <a href="#" class="btn btn-outline-primary col-sm-3 py-1">Accept PH.D.</a>
                             </div>
-                            <div class="card-body text-center">
-                                <a href="ShowDataForDiploma.jsp" class="btn btn-outline-primary col-sm-3 py-1">Show Diploma</a>
-                                <a href="ShowDataForMagestar.jsp" class="btn btn-outline-primary col-sm-3 py-1">Show Magister</a>
-                                <a href="ShowDataForPh-D.jsp" class="btn btn-outline-primary col-sm-3 py-1">Show PH.D.</a>
-                            </div>
+
                         </div>
                     </div>
                     <div class="tab-pane" id="edit">
@@ -84,7 +79,7 @@
                             <div class="form-group">
                                 <div class="col-xs-6">
                                     <label for="name">Username</label>
-                                    <input type="text" class="form-control" name="name" id="name" value="<%=doctor.getDoctorName()%>"
+                                    <input type="text" class="form-control" name="name" id="name" value="<%=admin.getAdminName()%>"
                                            placeholder="Username" title="enter your last name if any." required>
                                     <div class="invalid-feedback">
                                         <b>&Cross; Empty Field</b>
@@ -97,7 +92,7 @@
                             <div class="form-group">
                                 <div class="col-xs-6">
                                     <label for="email">Email</label>
-                                    <input type="email" class="form-control" name="email" id="email" value="<%=doctor.getDoctorEmail()%>"
+                                    <input type="email" class="form-control" name="email" id="email" value="<%=admin.getAdmainMail()%>"
                                            placeholder="you@email.com" title="enter your email." required>
                                     <div class="invalid-feedback">
                                         <b>&Cross; Check Syntax</b>
