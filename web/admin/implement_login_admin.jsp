@@ -23,7 +23,7 @@
     Connection c = DBConnection.getConnection();
 
     Statement statement = c.createStatement();
-    ResultSet resultSet = statement.executeQuery("select  username, email, phone, password from admin ;");
+    ResultSet resultSet = statement.executeQuery("select * from admin ;");
     while (resultSet.next()) {
         if (resultSet.getString("email").equals(email)&&resultSet.getString("password").equals(password)){
             flag = 1;
@@ -31,15 +31,14 @@
         }
     }
     if(flag==1){
-        String Encryptpassword=CipherEncryptionAndDecryption.encrypt(resultSet.getNString("password"),"nerds");
         Admin admin=new Admin();
         admin.setAdminName(resultSet.getString("username"));
         admin.setAdmainMail(resultSet.getString("email"));
         admin.setAdminPhone(resultSet.getString("phone"));
-        admin.setAdmainPassword(Encryptpassword);
+        admin.setAdmainPassword(resultSet.getNString("password"));
+        admin.setId(resultSet.getInt("id"));
         session.setAttribute("admin",admin);
         session.setAttribute("currentUser","admin");
-        request.getRequestDispatcher("admin_home.jsp");
         request.getServletContext().setAttribute("profile","/admin/admin_home.jsp");
         response.sendRedirect("admin_home.jsp");
     }

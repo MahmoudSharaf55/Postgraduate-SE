@@ -29,53 +29,6 @@
 
 
 %>
-<<<<<<< HEAD
-
-<article style="height: 570px">
-
-
-
-    <section class="store-and-continue">
-        <div class="container">
-            <h3>Welcome <%=doctor.getDoctorName()%>
-            </h3>
-            <hr>
-            <h4 class="text-center">This Is  The Initial page </h4>
-            <h5 class="text-center">Chose the buttom to show all data about every student </h5><br>
-            <form action="D_tableFor_deploma.jsp">
-                <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" title="الطلاب قيد المراجعه فى الدبلوما">
-                        Accept Student in Diploma
-                    </button>
-                </div>
-
-            </form >
-
-            <form action="ShowDataForDiploma.jsp">
-                <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" title="الطلاب المقبولين الدبلوما">
-                        Show Student in Diploma
-                    </button>
-                </div>
-
-            </form >
-
-            <form action="D_tableForPh-D.jsp">
-
-                <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" title="الطلاب قيد المراجعه فى الدكتوراه">
-                          Accept Student in Ph_D
-                    </button>
-                </div>
-
-            </form>
-            <form action="ShowDataForPh-D.jsp">
-
-                <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" title="الطلاب المقبولين فى الدكتوراه">
-                        Show Student in Ph-D
-                    </button>
-=======
 <section class="p-2">
     <div class="container-fluid">
         <div class="row">
@@ -86,7 +39,6 @@
                         <h4 style="overflow-wrap: break-word" class="mt-2"><%=doctor.getDoctorName()%>
                         </h4>
                     </figure>
->>>>>>> master
                 </div>
             </div><!--/col-3-->
             <div class="col-sm-9 card border-primary p-2">
@@ -121,9 +73,9 @@
                                 <a href="D_tableForPh-D.jsp" class="btn btn-outline-primary col-sm-3 py-1">Accept PH.D.</a>
                             </div>
                             <div class="card-body text-center">
-                                <a href="ShowDataForDiploma.jsp" class="btn btn-outline-primary col-sm-3 py-1">Show Diploma</a>
-                                <a href="ShowDataForMagestar.jsp" class="btn btn-outline-primary col-sm-3 py-1">Show Magister</a>
-                                <a href="ShowDataForPh-D.jsp" class="btn btn-outline-primary col-sm-3 py-1">Show PH.D.</a>
+                                <a href="reportForDiploma.jsp" class="btn btn-outline-primary col-sm-3 py-1">Show Diploma</a>
+                                <a href="reportForMagestar.jsp" class="btn btn-outline-primary col-sm-3 py-1">Show Magister</a>
+                                <a href="reportForPh-D.jsp" class="btn btn-outline-primary col-sm-3 py-1">Show PH.D.</a>
                             </div>
                         </div>
                     </div>
@@ -187,26 +139,6 @@
 </section>
 
 
-<<<<<<< HEAD
-            <form action="D_tableFor_Master.jsp">
-
-                <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" title="الطلاب قيد المراجعه الماجستير">
-                        Accept Student in Ph-Magestar
-                    </button>
-                </div>
-            </form>
-
-            <form action="ShowDataForMagestar.jsp">
-
-                <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" title="الطلاب المقبولين فى الماجستير">
-                        Show Student in Ph-Magestar
-                    </button>
-                </div>
-            </form>
-=======
->>>>>>> master
 
 
 <%@include file="../footer.jsp"%>

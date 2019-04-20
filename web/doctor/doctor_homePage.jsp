@@ -73,9 +73,9 @@
                                 <a href="D_tableForPh-D.jsp" class="btn btn-outline-primary col-sm-3 py-1">Accept PH.D.</a>
                             </div>
                             <div class="card-body text-center">
-                                <a href="ShowDataForDiploma.jsp" class="btn btn-outline-primary col-sm-3 py-1">Show Diploma</a>
-                                <a href="ShowDataForMagestar.jsp" class="btn btn-outline-primary col-sm-3 py-1">Show Magister</a>
-                                <a href="ShowDataForPh-D.jsp" class="btn btn-outline-primary col-sm-3 py-1">Show PH.D.</a>
+                                <a href="reportForDiploma.jsp" class="btn btn-outline-primary col-sm-3 py-1">Show Diploma</a>
+                                <a href="reportForMagestar.jsp" class="btn btn-outline-primary col-sm-3 py-1">Show Magister</a>
+                                <a href="reportForPh-D.jsp" class="btn btn-outline-primary col-sm-3 py-1">Show PH.D.</a>
                             </div>
                         </div>
                     </div>

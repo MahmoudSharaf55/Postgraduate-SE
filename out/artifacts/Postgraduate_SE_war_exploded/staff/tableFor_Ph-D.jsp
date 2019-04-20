@@ -52,7 +52,7 @@
 
                 Statement statement = c.createStatement();
 
-                ResultSet resultSet = statement.executeQuery("select s.id, s.username, s.email, f.status, f.paper from student as s inner join student_form as f where paper='In Reviewing' AND form_type=2 and  s.id=f.s_id ;");
+                ResultSet resultSet = statement.executeQuery("select s.id, s.username, s.email, f.status, f.paper from student as s inner join student_form as f where paper='In Reviewing' AND form_type=1 and  s.id=f.s_id ;");
                 while (resultSet.next()) {
 
         %>

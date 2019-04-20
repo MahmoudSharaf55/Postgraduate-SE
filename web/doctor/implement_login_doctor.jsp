@@ -15,7 +15,7 @@ String password= CipherEncryptionAndDecryption.encrypt(request.getParameter("pas
     Connection c = DBConnection.getConnection();
 
     Statement statement = c.createStatement();
-    ResultSet resultSet = statement.executeQuery("select  username, email, phone, password,department from doctor;");
+    ResultSet resultSet = statement.executeQuery("select * from doctor;");
     while (resultSet.next()) {
         if (resultSet.getString("email").equals(email)&&resultSet.getString("password").equals(password)){
             flag = 1;
@@ -29,6 +29,7 @@ String password= CipherEncryptionAndDecryption.encrypt(request.getParameter("pas
         doctor.setDoctorEmail(resultSet.getString("email"));
         doctor.setDoctorphone(resultSet.getString("phone"));
         doctor.setDoctordepartment(resultSet.getString("department"));
+        doctor.setId(resultSet.getInt("id"));
         doctor.setDoctorPassword(Encryptpassword);
         session.setAttribute("doctor",doctor);
         session.setAttribute("currentUser","doctor");

@@ -2,10 +2,15 @@ package Model;
 
 public class Staff {
     String stuffName,stuffEmail,stuffphone,stuffPassword;
+    int id;
 
+    public int getId() {
+        return id;
+    }
 
-
-
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getStuffName() {
         return stuffName;

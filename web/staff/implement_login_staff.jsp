@@ -15,7 +15,7 @@
     Connection c = DBConnection.getConnection();
 
     Statement statement = c.createStatement();
-    ResultSet resultSet = statement.executeQuery("select username, email, phone, password from staff;");
+    ResultSet resultSet = statement.executeQuery("select * from staff;");
     while (resultSet.next()) {
         if (resultSet.getString("email").equals(email)&&resultSet.getString("password").equals(password)){
             flag = 1;
@@ -23,12 +23,12 @@
         }
     }
     if(flag==1){
-        String encryptPass=CipherEncryptionAndDecryption.encrypt(resultSet.getString("password"),"nerds");
         Staff staff =new Staff();
         staff.setStuffName(resultSet.getString("username"));
         staff.setStuffEmail(resultSet.getString("email"));
         staff.setStuffphone(resultSet.getString("phone"));
-        staff.setStuffPassword(encryptPass);
+        staff.setStuffPassword(resultSet.getString("password"));
+        staff.setId(resultSet.getInt("id"));
         session.setAttribute("staff", staff);
         session.setAttribute("currentUser","staff");
         request.getServletContext().setAttribute("profile","/staff/staff_homePage.jsp");
@@ -38,7 +38,6 @@
     else{
         request.getRequestDispatcher("../ErrorPages/EmailOrPasswordError.jsp").include(request, response);
         request.getRequestDispatcher("login_staff.jsp").include(request, response);
-
         flag =0;
     }
 

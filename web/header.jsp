@@ -10,12 +10,14 @@
         Student currentStudent;
         Doctor currentDoctor;
         Staff currentStaff;
+        Admin currentadmin;
         String currentUser;
     %>
     <%
         currentStudent = (Student) session.getAttribute("currentStudent");
         currentDoctor = (Doctor) session.getAttribute("doctor");
         currentStaff = (Staff) session.getAttribute("staff");
+        currentadmin=(Admin) session.getAttribute("admin");
         currentUser = (String) session.getAttribute("currentUser");
     %>
     <div class="collapse navbar-collapse" id="navbarColor03">
@@ -71,17 +73,7 @@
                 <a class="nav-link" href="#">About</a>
             </li>
         </ul>
-        <%!
-            Student currentStudent;
-            Doctor currentDoctor;
-            Staff currentStaff;
-            String currentUser;
-        %>
         <%
-            currentStudent = (Student) session.getAttribute("currentStudent");
-            currentDoctor = (Doctor) session.getAttribute("doctor");
-            currentStaff = (Staff) session.getAttribute("staff");
-            currentUser = (String) session.getAttribute("currentUser");
             if (currentUser != null && currentUser.equals("student")) {
         %>
         <figure class="form-inline my-2 my-lg-0 float-right">

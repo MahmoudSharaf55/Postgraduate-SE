@@ -2,6 +2,15 @@ package Model;
 
 public  class Doctor {
     String doctorName,doctorEmail,doctorphone,doctorPassword,doctordepartment;
+    int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getDoctorName() {
         return doctorName;

@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     <div class="tab-pane" id="edit">
-                        <form action="Update_doctor_information.jsp" method="post" class="form-control my-2 needs-validation" novalidate>
+                        <form action="update_admin_information.jsp" method="post" class="form-control my-2 needs-validation" novalidate>
                             <div class="form-group">
                                 <div class="col-xs-6">
                                     <label for="name">Username</label>

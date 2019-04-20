@@ -26,7 +26,6 @@
 <%@include file="../header.jsp" %>
 <%
     Staff staff=(Staff) session.getAttribute("staff");
-
 %>
 <section class="p-2">
     <div class="container-fluid">
@@ -57,7 +56,7 @@
 
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-sm-4"><h5 class="text-primary">Number of Student : </h5><h4>Waite</h4>
+                                    <div class="col-sm-4"><h5 class="text-primary">Number of Student : </h5><h4>Wait</h4>
                                     </div>
 
                                 </div>

@@ -2,6 +2,15 @@ package Model;
 
 public class Admin {
     String AdminName,AdmainMail,AdminPhone,AdmainPassword;
+    int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getAdminName() {
         return AdminName;

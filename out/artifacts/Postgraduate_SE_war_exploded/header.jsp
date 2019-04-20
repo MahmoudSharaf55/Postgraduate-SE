@@ -10,12 +10,14 @@
         Student currentStudent;
         Doctor currentDoctor;
         Staff currentStaff;
+        Admin currentadmin;
         String currentUser;
     %>
     <%
         currentStudent = (Student) session.getAttribute("currentStudent");
         currentDoctor = (Doctor) session.getAttribute("doctor");
         currentStaff = (Staff) session.getAttribute("staff");
+        currentadmin=(Admin) session.getAttribute("admin");
         currentUser = (String) session.getAttribute("currentUser");
     %>
     <div class="collapse navbar-collapse" id="navbarColor03">
@@ -23,12 +25,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/index.jsp">Home</a>
             </li>
-<<<<<<< HEAD
             <%
                 if (currentUser == null){
             %>
-=======
-
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                    aria-expanded="false">Admin</a>
@@ -40,7 +39,6 @@
             </li>
 
 
->>>>>>> master
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                    aria-expanded="false">Doctor</a>
@@ -75,23 +73,7 @@
                 <a class="nav-link" href="#">About</a>
             </li>
         </ul>
-<<<<<<< HEAD
         <%
-=======
-        <%!
-            Student currentStudent;
-            Doctor currentDoctor;
-            Staff currentStaff;
-            String currentUser;
-            Admin currentadmin;
-        %>
-        <%
-            currentStudent = (Student) session.getAttribute("currentStudent");
-            currentadmin=(Admin) session.getAttribute("admin");
-            currentDoctor = (Doctor) session.getAttribute("doctor");
-            currentStaff = (Staff) session.getAttribute("staff");
-            currentUser = (String) session.getAttribute("currentUser");
->>>>>>> master
             if (currentUser != null && currentUser.equals("student")) {
         %>
         <figure class="form-inline my-2 my-lg-0 float-right">

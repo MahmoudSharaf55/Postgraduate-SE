@@ -45,6 +45,11 @@
         staff.setStuffEmail(stuffEmail);
         staff.setStuffphone(stuffPhone);
         staff.setStuffPassword(stuffPassword);
+        PreparedStatement ps2 = DBConnection.getConnection().prepareStatement("select id from staff where email = ?");
+        ps2.setString(1,stuffEmail);
+        ResultSet resultSet1 = ps2.executeQuery();
+        resultSet1.next();
+        staff.setId(resultSet1.getInt("id"));
 
         session.setAttribute("staff", staff);
         session.setAttribute("currentUser","staff");

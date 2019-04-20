@@ -43,6 +43,11 @@
         doctor.setDoctorphone(phone);
         doctor.setDoctordepartment(department);
         doctor.setDoctorPassword(password);
+        PreparedStatement ps2 = DBConnection.getConnection().prepareStatement("select id from doctor where email = ?");
+        ps2.setString(1,email);
+        ResultSet resultSet1 = ps2.executeQuery();
+        resultSet1.next();
+        doctor.setId(resultSet1.getInt("id"));
         session.setAttribute("doctor",doctor);
         session.setAttribute("currentUser","doctor");
         request.getServletContext().setAttribute("profile","/doctor/doctor_homePage.jsp");

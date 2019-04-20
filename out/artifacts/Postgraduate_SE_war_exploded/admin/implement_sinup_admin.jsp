@@ -48,6 +48,11 @@
         admin.setAdmainMail(email);
         admin.setAdminPhone(phone);
         admin.setAdmainPassword(password);
+        PreparedStatement ps2 = DBConnection.getConnection().prepareStatement("select id from admin where email = ?");
+        ps2.setString(1,email);
+        ResultSet resultSet1 = ps2.executeQuery();
+        resultSet1.next();
+        admin.setId(resultSet1.getInt("id"));
         session.setAttribute("admin",admin);
         session.setAttribute("currentUser","admin");
         request.getRequestDispatcher("admin_home.jsp");
