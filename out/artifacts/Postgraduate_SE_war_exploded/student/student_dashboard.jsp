@@ -163,6 +163,15 @@
                             </div>
                         </div>
                     </div>
+                    <%--
+                    TODO:Micheal
+                    هتضيف جدول فيه كود المقرر + اسم المقرر + عدد الساعات للمقرر
+                    وهتربط الطالب بالجدول دا ب foreignkey
+                    هتعمل زرار ف الداش بورد يخلى الطالب يختار 3 مرات بحيث ميكونش عدا ال 3 مرات سقوط فيها
+                    لو عدا ال 3 مرات متظهرلوش
+                    ويختار عدد مواد بحسب مجموع ساعتهم
+                    يعنى 5 مواد بس عدد الساعات يكون من 70 ل 120
+                    --%>
                     <div class="tab-pane" id="edit">
                         <form action="edit_profile.jsp" method="post" class="form-control my-2 needs-validation"
                               novalidate>
