@@ -15,7 +15,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no, width=device-width">
-    <title>Student Dashboard</title>
+    <title>Doctor Dashboard</title>
     <link rel="stylesheet" href="../bootstrapv4/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrapv4/animate.css">
     <link rel="stylesheet" href="../fontawesome/css/all.css">

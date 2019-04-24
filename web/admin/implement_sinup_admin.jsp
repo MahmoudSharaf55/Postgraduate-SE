@@ -43,18 +43,18 @@
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        Admin admin=new Admin();
-        admin.setAdminName(fName);
-        admin.setAdmainMail(email);
-        admin.setAdminPhone(phone);
-        admin.setAdmainPassword(password);
-        PreparedStatement ps2 = DBConnection.getConnection().prepareStatement("select id from admin where email = ?");
-        ps2.setString(1,email);
-        ResultSet resultSet1 = ps2.executeQuery();
-        resultSet1.next();
-        admin.setId(resultSet1.getInt("id"));
-        session.setAttribute("admin",admin);
-        session.setAttribute("currentUser","admin");
+//        Admin admin=new Admin();
+//        admin.setAdminName(fName);
+//        admin.setAdmainMail(email);
+//        admin.setAdminPhone(phone);
+//        admin.setAdmainPassword(password);
+//        PreparedStatement ps2 = DBConnection.getConnection().prepareStatement("select id from admin where email = ?");
+//        ps2.setString(1,email);
+//        ResultSet resultSet1 = ps2.executeQuery();
+//        resultSet1.next();
+//        admin.setId(resultSet1.getInt("id"));
+//        session.setAttribute("admin",admin);
+//        session.setAttribute("currentUser","admin");
         request.getRequestDispatcher("admin_home.jsp");
         request.getServletContext().setAttribute("profile","/admin/admin_home.jsp");
         response.sendRedirect("admin_home.jsp");

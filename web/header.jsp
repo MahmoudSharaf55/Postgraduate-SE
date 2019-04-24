@@ -33,7 +33,7 @@
                    aria-expanded="false">Admin</a>
                 <div class="dropdown-menu" x-placement="bottom-start"
                      style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);">
-                    <a class="dropdown-item dropdown-item-red" href="/admin/admin_sinup.jsp">Register</a>
+
                     <a class="dropdown-item dropdown-item-red" href="/admin/admin_login.jsp">Login</a>
                 </div>
             </li>

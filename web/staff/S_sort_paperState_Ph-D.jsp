@@ -17,15 +17,17 @@
     String idform=request.getParameter("id");
     int id=Integer.valueOf(idform);
     String state=request.getParameter("state");
-    System.out.println("the id is =="+id+"    the stat is =="+state);
+    String doctormail=request.getParameter("email");
+    System.out.println("the id is =="+id+"    the stat is =="+state +"     the email is eqal=="+doctormail);
 
     Connection c =DBConnection.getConnection();
 
     try {
-        PreparedStatement per=c.prepareStatement("update student_form set paper= ? where s_id=? and form_type = ?");
+        PreparedStatement per=c.prepareStatement("update student_form set paper= ? , doctor_mail=? where s_id=? and form_type = ?");
         per.setString(1,state);
-        per.setString(3,"1");
-        per.setInt(2,id);
+        per.setString(2,doctormail);
+        per.setInt(3,id);
+        per.setString(4,"1");
 
         per.executeUpdate();
     } catch (SQLException e) {

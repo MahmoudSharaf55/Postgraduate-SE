@@ -39,7 +39,7 @@
         <%
             request.setCharacterEncoding("UTF-8");
             Doctor doctor= (Doctor) session.getAttribute("doctor");
-
+            String email=doctor.getDoctorEmail();
             String department= doctor.getDoctordepartment();
             System.out.println("the value of depa is =" + department);
 
@@ -76,7 +76,8 @@
             try
             {
                 Connection c = DBConnection.getConnection();
-                PreparedStatement preparedStatement=c.prepareStatement("select s_id, name, dob, job,b_graduate_source, recruitment_postion, bachelor_in, b_overall_rate, b_overall_mark, b_graduate_year  from student_form   where  paper !='In Reviewing' and status='Waiting' and form_type=1  ;");
+                PreparedStatement preparedStatement=c.prepareStatement("select s_id, name, dob, job,b_graduate_source, recruitment_postion, bachelor_in, b_overall_rate, b_overall_mark, b_graduate_year  from student_form   where  paper !='In Reviewing' and status='Waiting' and form_type=3 and doctor_mail=?");
+                preparedStatement.setString(1,email);
                 ResultSet resultSet=preparedStatement.executeQuery();
                 while (resultSet.next()) {
 

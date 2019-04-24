@@ -33,7 +33,7 @@ CREATE TABLE `admin` (
   `phone` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `admin`
@@ -43,7 +43,8 @@ CREATE TABLE `admin` (
 INSERT INTO `admin` (`id`,`username`,`email`,`phone`,`password`) VALUES 
  (1,'mohammed','mohammedsedky01147226634@gmail.com','01147226634','7JCPGCuEdte7bjDvou6i0A=='),
  (2,'mmmmm','mmm@gmail.com','01147226634','7JCPGCuEdte7bjDvou6i0A=='),
- (3,'ahmed','ahmed@gmail.com','01147226634','7JCPGCuEdte7bjDvou6i0A==');
+ (3,'ahmed','ahmed@gmail.com','01147226634','7JCPGCuEdte7bjDvou6i0A=='),
+ (4,'mohammed','mohammedsedky0dd1147226634@gmail.com','01147226634','7JCPGCuEdtdptqlkLg+T+g==');
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 
 
@@ -60,7 +61,7 @@ CREATE TABLE `doctor` (
   `password` varchar(45) NOT NULL,
   `department` varchar(45) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `doctor`
@@ -68,8 +69,7 @@ CREATE TABLE `doctor` (
 
 /*!40000 ALTER TABLE `doctor` DISABLE KEYS */;
 INSERT INTO `doctor` (`id`,`username`,`email`,`phone`,`password`,`department`) VALUES 
- (1,'mohammed Sedky','ahmed@gmail.com','01147226634','7JCPGCuEdte7bjDvou6i0A==','cs'),
- (2,'mahmoud','mahmoudsharf55@gmail.com','45456','CQmZmVDN12o=','cs');
+ (1,'mohammed Sedky','ahmed@gmail.com','01147226634','7JCPGCuEdte7bjDvou6i0A==','cs');
 /*!40000 ALTER TABLE `doctor` ENABLE KEYS */;
 
 
@@ -85,7 +85,7 @@ CREATE TABLE `staff` (
   `phone` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `staff`
@@ -96,7 +96,8 @@ INSERT INTO `staff` (`id`,`username`,`email`,`phone`,`password`) VALUES
  (1,'mohammed','mohammedsedky01147226634@gmail.com','01147226634','fAlGh+jTloE='),
  (2,'mahmoud','mahmoudsharf55@gmail.com','453453453453','CQmZmVDN12o='),
  (3,'mohammed sedky','mohammed@gmail.com','01147226634','7JCPGCuEdte7bjDvou6i0A=='),
- (4,' mohammed s','moh@gmail.com','01147226634','7JCPGCuEdte7bjDvou6i0A==');
+ (4,' mohammed s','moh@gmail.com','01147226634','7JCPGCuEdte7bjDvou6i0A=='),
+ (5,'mohammed','ahmed@gmail.com','01147226634','7JCPGCuEdte7bjDvou6i0A==');
 /*!40000 ALTER TABLE `staff` ENABLE KEYS */;
 
 
@@ -175,6 +176,7 @@ CREATE TABLE `student_form` (
   `p_overall_mark` int(10) unsigned default NULL,
   `p_university` varchar(45) default NULL,
   `enroll_dept` varchar(45) NOT NULL,
+  `doctor_mail` varchar(45) NOT NULL default 'Waite',
   PRIMARY KEY  (`id`),
   KEY `student_id` (`s_id`),
   CONSTRAINT `student_id` FOREIGN KEY (`s_id`) REFERENCES `student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -185,9 +187,9 @@ CREATE TABLE `student_form` (
 --
 
 /*!40000 ALTER TABLE `student_form` DISABLE KEYS */;
-INSERT INTO `student_form` (`id`,`s_id`,`form_type`,`paper`,`status`,`dept`,`round`,`for_year`,`name`,`dob`,`country`,`city`,`governorate`,`nationality`,`religion`,`national_id`,`national_source`,`national_release`,`recruitment_postion`,`job`,`job_address`,`phone`,`bachelor_in`,`b_role`,`b_overall_rate`,`b_dept`,`b_special_rate`,`b_overall_mark`,`b_graduate_source`,`b_graduate_year`,`postgraduate_in`,`p_role`,`p_special`,`p_rate`,`p_overall_mark`,`p_university`,`enroll_dept`) VALUES 
- (20,8,'1','accepted','accepted','cs','ياناير','2017','محمد صدقى ','2019-04-25','الباجور','الباجور','المنوفيه','مصري','مسلم',147852369,'الباجور','2019-04-25','اعفاء','لا يوجد','لا يوجد','01245786544','البكلريوس','الله اعلم ','20202','الحلاوه','امتياز',4870,'المنوفيه','2015','تالبلاى','محمحمح','موم','201',50640,'المنوفيه','المرقعه'),
- (21,9,'2','accepted','Accepted','cs','2017','2014','mmmmmmmmmm','2019-04-10','sssssss','sssss','sss','ssss','sssss',111,'kjhgfdfg','2019-04-03','lutn','b','b','b','قسم علوم الحاسب','2014','جيد جدا','cs','741',1,'المنوفيه','4444',NULL,NULL,NULL,NULL,NULL,NULL,'lkjhgf');
+INSERT INTO `student_form` (`id`,`s_id`,`form_type`,`paper`,`status`,`dept`,`round`,`for_year`,`name`,`dob`,`country`,`city`,`governorate`,`nationality`,`religion`,`national_id`,`national_source`,`national_release`,`recruitment_postion`,`job`,`job_address`,`phone`,`bachelor_in`,`b_role`,`b_overall_rate`,`b_dept`,`b_special_rate`,`b_overall_mark`,`b_graduate_source`,`b_graduate_year`,`postgraduate_in`,`p_role`,`p_special`,`p_rate`,`p_overall_mark`,`p_university`,`enroll_dept`,`doctor_mail`) VALUES 
+ (20,8,'2','In Reviewing','Waiting','cs','ياناير','2017','محمد صدقى ','2019-04-25','الباجور','الباجور','المنوفيه','مصري','مسلم',147852369,'الباجور','2019-04-25','اعفاء','لا يوجد','لا يوجد','01245786544','البكلريوس','الله اعلم ','20202','الحلاوه','امتياز',4870,'المنوفيه','2015','تالبلاى','محمحمح','موم','201',50640,'المنوفيه','المرقعه','ahmed@gmail.com'),
+ (21,9,'3','accepted','accepted','cs','2017','2014','mmmmmmmmmm','2019-04-10','sssssss','sssss','sss','ssss','sssss',111,'kjhgfdfg','2019-04-03','lutn','b','b','b','قسم علوم الحاسب','2014','جيد جدا','cs','741',1,'المنوفيه','4444',NULL,NULL,NULL,NULL,NULL,NULL,'lkjhgf','ahmed@gmail.com');
 /*!40000 ALTER TABLE `student_form` ENABLE KEYS */;
 
 

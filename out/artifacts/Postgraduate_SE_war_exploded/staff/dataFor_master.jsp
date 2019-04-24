@@ -53,7 +53,7 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
     <div class="titalForsertification">
         <h3 class="text-center" > All Data In Deatils  about <%= name %> </h3><%}%>
     </div>
-    <table  class="table clcrdata" style="overflow-y:scroll; "  >
+    <table  class="table clcrdata updaterow tablebackground" style="overflow-y:scroll; "  >
         <thead >
         <tr class="tr">
             <th scope="col" class="text-center" >ID</th>
@@ -76,12 +76,15 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
                 Connection c = DBConnection.getConnection();
 
 
-                PreparedStatement preparedStatement=c.prepareStatement("select s_id, dept,round ,for_year ,name, dob, country, city, governorate, nationality, religion, national_id, national_source, national_release, recruitment_postion, job, job_address, phone, bachelor_in, b_role, b_overall_rate, b_dept, b_special_rate, b_overall_mark, b_graduate_source, b_graduate_year, postgraduate_in, p_role, p_special, p_rate, p_overall_mark, p_university, enroll_dept from student_form where id=?");
+                PreparedStatement preparedStatement=c.prepareStatement("select s_id, dept,round ,for_year ,name, dob, country, city, governorate, nationality, religion, national_id, national_source, national_release, recruitment_postion, job, job_address, phone, bachelor_in, b_role, b_overall_rate, b_dept, b_special_rate, b_overall_mark, b_graduate_source, b_graduate_year, postgraduate_in, p_role, p_special, p_rate, p_overall_mark, p_university, enroll_dept from student_form where s_id=?");
                 preparedStatement.setInt(1,search_id);
                 ResultSet resultSet = preparedStatement.executeQuery();
+
                 while (resultSet.next()) {
 
         %>
+            <% System.out.println("the aq ="+search_id); %>
+
         <tr class="teColor">
             <td class="text-center" ><%=search_id%></td>
             <td class="text-center"><%= resultSet.getString("dept")%> </td>
@@ -210,6 +213,10 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
         <div class="otuCenter">
             <input class="idchangestate" type="text" name="id" placeholder="ID" required>
             <input class="btnChangesta1" type="text" name="state" placeholder="Accept or not paper Stat" required>
+
+        </div><br>
+        <div class="doctormail" data-validate="Valid email is required: ex@abc.xyz">
+            <input class="input100 doctormail" type="text" name="email" placeholder="Email FOR Doctor" required>
 
         </div>
 

@@ -124,3 +124,8 @@ body,html{
 .table td, .table th , .table thead th {
     border-top: 1px solid #2e3338;
 }
+.doctormail{
+    width: 70%;
+    alignment: center;
+    margin: auto;
+}

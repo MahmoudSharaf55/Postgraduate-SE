@@ -34,7 +34,37 @@
 <%@include file="../header.jsp"%>
 
 <%!
-String id, dept, id_number, name, dob, country, city, governorate, nationality, religion, national_id, national_source, national_release, recruitment_postion, job, job_address, phone, bachelor_in, b_role, b_overall_rate, b_dept, b_special_rate, b_faculty, b_university, postgraduate_in, p_role, p_special, p_rate, p_faculty, p_university, enroll_dept;
+String id,
+        dept,
+        id_number,
+        name,
+        dob,
+        country,
+        city,
+        governorate,
+        nationality,
+        religion,
+        national_id,
+        national_source,
+        national_release,
+        recruitment_postion,
+        job,
+        job_address,
+        phone,
+        bachelor_in,
+        b_role,
+        b_overall_rate,
+        b_dept,
+        b_special_rate,
+        b_faculty,
+        b_university,
+        postgraduate_in,
+        p_role,
+        p_special,
+        p_rate,
+        p_faculty,
+        p_university,
+        enroll_dept;
 
 %>
 <%
@@ -210,14 +240,16 @@ int search_id=Integer.parseInt(id);
 </form >
 <div class="colc">
     <br>
-    <h5 class="text-center">If Data Correct Write Accept Rr Writ Error Data </h5><br>
+    <h5 class="text-center">If Data Correct Write Accept OR Writ Error Data </h5><br>
     <form action="S_sort_state_diploma.jsp" method="post" >
         <div class="otuCenter">
             <input class="idchangestate" type="text" name="id" placeholder="ID" required>
             <input class="btnChangesta1" type="text" name="state" placeholder="Accept or not paper Stat" required>
+        </div><br>
+        <div class="doctormail" data-validate="Valid email is required: ex@abc.xyz">
+            <input class="input100 doctormail" type="text" name="email" placeholder="Email FOR Doctor" required>
 
         </div>
-
 
         <div class="container-login100-form-btn btnChangestat">
             <button class="login100-form-btn">

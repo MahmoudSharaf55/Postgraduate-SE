@@ -48,6 +48,9 @@
                     <li class="nav-item bg-light">
                         <a class="nav-link" data-toggle="tab" href="#edit">Edit Profile</a>
                     </li>
+                    <li class="nav-item bg-light">
+                        <a class="nav-link" data-toggle="tab" href="#add">Add New Admin</a>
+                    </li>
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="home">
@@ -125,7 +128,83 @@
                                 </div>
                             </div>
                         </form>
-                    </div><!--/tab-pane-->
+                    </div>
+
+
+
+                    <div class="tab-pane" id="add">
+                        <form action="implement_sinup_admin.jsp" method="post" class="form-control my-2 needs-validation" novalidate>
+                            <div class="form-group">
+                                <div class="col-xs-6">
+                                    <label for="name">Username</label>
+                                    <input type="text" class="form-control" name="fname"  value=""
+                                           placeholder="Username" title="enter your last name if any." required>
+                                    <div class="invalid-feedback">
+                                        <b>&Cross; Empty Field</b>
+                                    </div>
+                                    <div class="valid-feedback">
+                                        <b>&check; Ok</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-6">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" name="email"  value=""
+                                           placeholder="you@email.com" title="enter your email." required>
+                                    <div class="invalid-feedback">
+                                        <b>&Cross; Check Syntax</b>
+                                    </div>
+                                    <div class="valid-feedback">
+                                        <b>&check; Ok</b>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-xs-6">
+                                    <label for="email">Phone</label>
+                                    <input type="text" class="form-control" name="phone"  value=""
+                                           placeholder="Phone" title="enter your email." required>
+                                    <div class="invalid-feedback">
+                                        <b>&Cross; Check Syntax</b>
+                                    </div>
+                                    <div class="valid-feedback">
+                                        <b>&check; Ok</b>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-xs-6">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" name="password"
+                                           placeholder="New Password" title="enter your password." required
+                                           minlength="6">
+                                    <div class="invalid-feedback">
+                                        <b>&Cross; Password must be at least 6 character</b>
+                                    </div>
+                                    <div class="valid-feedback">
+                                        <b>&check; Ok</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <br>
+                                    <button class="btn btn-outline-primary w-100" type="submit"><i
+                                            class="fa fa-check"></i> Save
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+
+
+
+                    <!--/tab-pane-->
                 </div><!--/tab-pane-->
             </div><!--/tab-content-->
 
