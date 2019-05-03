@@ -96,6 +96,7 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="5" />
+<<<<<<< Updated upstream
           <entry key="project.open.time.57" value="2" />
           <entry key="project.open.time.70" value="1" />
           <entry key="project.open.time.73" value="1" />
@@ -146,6 +147,13 @@
           <entry key="CSS" value="14" />
           <entry key="JSP" value="511" />
           <entry key="PLAIN_TEXT" value="12" />
+=======
+          <entry key="project.open.time.57" value="1" />
+          <entry key="project.open.time.63" value="1" />
+          <entry key="project.open.time.70" value="1" />
+          <entry key="project.open.time.76" value="1" />
+          <entry key="project.opened" value="4" />
+>>>>>>> Stashed changes
         </counts>
       </usages-collector>
     </session>
@@ -155,26 +163,46 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/doctor/D_tableFor_deploma.jsp">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="106">
               <caret line="96" selection-start-line="96" selection-end-line="96" />
+=======
+            <state relative-caret-position="867">
+              <caret line="51" column="38" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="38" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/doctor/D_tableFor_Master.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="731">
               <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="13" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/doctor/view_diploma_report.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="311" column="25" selection-start-line="311" selection-start-column="25" selection-end-line="311" selection-end-column="25" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< Updated upstream
         <entry file="file://$PROJECT_DIR$/web/doctor/D_tableForPh-D.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="697">
               <caret line="41" selection-start-line="41" selection-end-line="41" />
+=======
+        <entry file="file://$PROJECT_DIR$/web/student/student_dashboard.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2822">
+              <caret line="166" column="20" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -348,6 +376,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+<<<<<<< Updated upstream
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -403,6 +432,8 @@
           <select />
         </subPane>
       </pane>
+=======
+>>>>>>> Stashed changes
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -454,6 +485,67 @@
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="student" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="ErrorPages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="staff" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -575,6 +667,7 @@
       <workItem from="1555587617127" duration="904000" />
       <workItem from="1555617184621" duration="7554000" />
       <workItem from="1555704404540" duration="9606000" />
+<<<<<<< Updated upstream
       <workItem from="1555785175960" duration="11535000" />
       <workItem from="1555879798896" duration="1858000" />
       <workItem from="1555923310498" duration="483000" />
@@ -583,11 +676,20 @@
       <workItem from="1556494611438" duration="218000" />
       <workItem from="1556616088714" duration="765000" />
       <workItem from="1556719520161" duration="86000" />
+=======
+      <workItem from="1555785175960" duration="11822000" />
+      <workItem from="1555844036022" duration="359000" />
+      <workItem from="1555924691714" duration="707000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="36751000" />
+=======
+    <option name="totallyTimeSpent" value="23915000" />
+>>>>>>> Stashed changes
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -606,7 +708,11 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="4" />
+<<<<<<< Updated upstream
       <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49878347" visible="true" weight="0.204236" />
+=======
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49878347" visible="true" weight="0.19213313" />
+>>>>>>> Stashed changes
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Learn" order="7" weight="0.32980332" />
       <window_info id="Web" order="8" sideWeight="0.50121653" side_tool="true" weight="0.22390318" />
@@ -618,6 +724,7 @@
       <window_info anchor="bottom" id="Version Control" order="5" />
       <window_info anchor="bottom" id="Application Servers" order="6" weight="0.32786885" />
       <window_info anchor="bottom" id="Message" order="7" />
+<<<<<<< Updated upstream
       <window_info anchor="bottom" id="Find" order="8" weight="0.32923076" />
       <window_info anchor="bottom" id="Run" order="9" weight="0.3967213" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
@@ -625,6 +732,15 @@
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.3276923" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.29076922" />
+=======
+      <window_info anchor="bottom" id="Find" order="8" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.32786885" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="13" weight="0.3295082" />
+      <window_info anchor="bottom" id="Database Console" order="14" weight="0.32911393" />
+>>>>>>> Stashed changes
       <window_info anchor="bottom" id="SQL Generator" order="15" weight="0.3295082" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Maven Projects" order="1" weight="0.32980332" />
@@ -885,6 +1001,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/web/staff/tableFor_diploma.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -893,12 +1010,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/staff/dataFor_master.jsp">
+=======
+    <entry file="file://$PROJECT_DIR$/web/js/select2.min.css" />
+    <entry file="file://$PROJECT_DIR$/web/js/main.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/select2.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student/form_filter.jsp">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
           <caret line="205" column="12" lean-forward="true" selection-start-line="205" selection-start-column="12" selection-end-line="205" selection-end-column="12" />
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/web/staff/dataFor_Ph-D.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -907,6 +1035,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/staff/S_sort_paperState_Ph-D.jsp">
+=======
+    <entry file="file://$PROJECT_DIR$/web/css/main.css">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="25" column="132" selection-start-line="25" selection-start-column="132" selection-end-line="25" selection-end-column="132" />
@@ -942,17 +1073,39 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/web/doctor/D_tableFor_Master.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
           <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/Database Backup/postgraduate 20190421 0041.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/doctor/reportForDiploma.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="38" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="38" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/doctor/D_tableForPh-D.jsp">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="697">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
+=======
+        <state relative-caret-position="2822">
+          <caret line="166" column="20" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
+>>>>>>> Stashed changes
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/doctor/view_diploma_report.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="311" column="25" selection-start-line="311" selection-start-column="25" selection-end-line="311" selection-end-column="25" />
         </state>
       </provider>
     </entry>
