@@ -70,9 +70,9 @@
                                 To Make Any Process
                             </div>
                             <div class="card-body text-center">
-                                <a href="#" class="btn btn-outline-primary col-sm-3 py-1">Accept Diploma</a>
-                                <a href="#" class="btn btn-outline-primary col-sm-3 py-1">Accept Magister</a>
-                                <a href="#" class="btn btn-outline-primary col-sm-3 py-1">Accept PH.D.</a>
+                                <a href="general_table_diploma.jsp" class="btn btn-outline-primary col-sm-3 py-1">But Doctor For Diploma</a>
+                                <a href="general_table_master.jsp" class="btn btn-outline-primary col-sm-3 py-1">But Doctor For Magister</a>
+                                <a href="general_table_ph.d.jsp" class="btn btn-outline-primary col-sm-3 py-1">But Doctor For PH.D.</a>
                             </div>
 
                         </div>

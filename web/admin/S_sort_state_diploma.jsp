@@ -15,8 +15,9 @@
     Connection c =DBConnection.getConnection();
 
         try {
-            PreparedStatement per=c.prepareStatement("update student_form set paper= ?  where s_id=? and form_type=?");
-            per.setString(1,state);
+            PreparedStatement per=c.prepareStatement("update student_form set  doctor_mail=? where s_id=? and form_type=?");
+
+            per.setString(1,doctormail);
             per.setInt(2,id);
             per.setString(3,"2");
 
@@ -24,7 +25,7 @@
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        request.getRequestDispatcher("tableFor_diploma.jsp").forward(request, response);
+        request.getRequestDispatcher("general_table_diploma.jsp").forward(request, response);
 
 
 %>

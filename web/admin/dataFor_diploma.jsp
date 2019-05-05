@@ -3,7 +3,10 @@
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="Model.Staff" %>
-<%@ page import="java.sql.PreparedStatement" %><%--
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page pageEncoding="UTF-8" %>
+
+<%--
   Created by IntelliJ IDEA.
   User: M.$edky
   Date: 2019-04-09
@@ -29,20 +32,49 @@
 
 <body>
 <%@include file="../header.jsp"%>
-<%@ page pageEncoding="UTF-8" %>
 
 <%!
-String id, dept, id_number, name, dob, country, city, governorate, nationality, religion, national_id, national_source, national_release, recruitment_postion, job, job_address, phone, bachelor_in, b_role, b_overall_rate, b_dept, b_special_rate, b_faculty, b_university, postgraduate_in, p_role, p_special, p_rate, p_faculty, p_university, enroll_dept;
+String id,
+        dept,
+        id_number,
+        name,
+        dob,
+        country,
+        city,
+        governorate,
+        nationality,
+        religion,
+        national_id,
+        national_source,
+        national_release,
+        recruitment_postion,
+        job,
+        job_address,
+        phone,
+        bachelor_in,
+        b_role,
+        b_overall_rate,
+        b_dept,
+        b_special_rate,
+        b_faculty,
+        b_university,
+        postgraduate_in,
+        p_role,
+        p_special,
+        p_rate,
+        p_faculty,
+        p_university,
+        enroll_dept;
 
 %>
 <%
     request.setCharacterEncoding("UTF-8");
     String name;
-    String id=request.getParameter("ema");
-    int search_id=Integer.parseInt(id);
+String id=request.getParameter("ema");
+int search_id=Integer.parseInt(id);
     Connection connection = DBConnection.getConnection();
-    PreparedStatement pre=connection.prepareStatement("select id,name  from student_form where id=?");
-    pre.setInt(1,search_id);
+     PreparedStatement pre=connection.prepareStatement("select s_id,name  from student_form where id=?");
+     pre.setInt(1,search_id);
     ResultSet result = pre.executeQuery();
     while (result.next()) {
         name=result.getNString("name");
@@ -68,7 +100,7 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
         </tr>
         </thead>
         <tbody style="overflow-y:scroll;">
-            <%
+        <%
 
             System.out.println("id is eqal  "+search_id);
             try
@@ -83,7 +115,7 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
                 while (resultSet.next()) {
 
         %>
-            <% System.out.println("the aq ="+search_id); %>
+        <% System.out.println("the aq ="+search_id); %>
 
         <tr class="teColor">
             <td class="text-center" ><%=search_id%></td>
@@ -208,15 +240,12 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
 </form >
 <div class="colc">
     <br>
-    <h5 class="text-center">If Data Correct Write Accept Rr Writ Error Data </h5><br>
-    <form action="S_sort_paperState_master.jsp" method="post" >
+    <h5 class="text-center">If Data Correct Write Email for Doctor That Help The Student </h5><br>
+    <form action="S_sort_state_diploma.jsp" method="post" >
         <div class="otuCenter">
             <input class="idchangestate" type="text" name="id" placeholder="ID" required>
-            <input class="btnChangesta1" type="text" name="state" placeholder="Accept or not paper Stat" required>
-
+            <input class="btnChangesta1" type="text" name="email" placeholder="Email FOR Doctor" required>
         </div><br>
-
-
 
         <div class="container-login100-form-btn btnChangestat">
             <button class="login100-form-btn">
@@ -224,7 +253,7 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
             </button>
         </div>
 
-        <br>
+<br>
     </form>
 </div>
 <%@include file="../footer.jsp"%>

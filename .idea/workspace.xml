@@ -1,34 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="Postgraduate-SE:war exploded" />
-    </artifacts-to-build>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3224b68-522c-4bf1-91dc-61cb2fb88ec8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="d8cd2f45-fc27-4eaf-9e5c-352cbed9b418" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/admin/admin_home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/admin/admin_home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/admin/admin_sinup.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/admin/implement_sinup_admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/admin/implement_sinup_admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/css/style_search_icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/css/style_search_icon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/D_tableFor_deploma.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/D_tableFor_deploma.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/doctor_homePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/doctor_homePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/S_sort_state_diploma.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/S_sort_state_diploma.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/dataFor_diploma.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/dataFor_diploma.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database Backup/postgraduate 20190421 0041.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/ErrorPages/EmailError.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/ErrorPages/EmailOrPasswordError.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/ErrorPages/EmptyFieldError.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/ErrorPages/FormError.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/ErrorPages/updateProfile.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Database Backup/postgraduate 20190413 2045.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Database Backup/postgraduate 20190413 2045.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Database Backup/postgraduate 20190413 2045.sql~Stashed changes" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Database Backup/postgraduate 20190413 2045.sql~Stashed changes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Database Backup/postgraduate 20190421 0041.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Database Backup/postgraduate 20190421 0041.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Database Backup/postgraduate 20190424 1952.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Database Backup/postgraduate 20190424 1952.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Libs/mysql-connector-java-5.1.23-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Libs/servlet-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Model/Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Model/Staff.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Model/StudentForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Model/doctor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Model/student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Requirement/Postgraduate.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Requirement/sprint.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Util/CipherEncryptionAndDecryption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/classes/Util/DBConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.23-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/admin/admin_home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/admin/admin_login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/admin/implement_login_admin.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/admin/implement_sinup_admin.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/admin/update_admin_information.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/assets/avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/assets/postgraduate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/assets/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/assets/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/css/bootstrabtable.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/jquery-3.3.1.slim.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/js/table1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/bootstrapv4/sweetalert.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/css/perfect-scrollbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/css/style_Login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/css/style_checkbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/css/style_search_icon.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/css/style_signup.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/css/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/css/util.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/D_sort_statFor_Ph-D.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/D_sort_stateFor_diploma.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/D_sort_stateFor_master.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/D_tableForPh-D.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/D_tableFor_Master.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/D_tableFor_deploma.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/Update_doctor_information.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/doctor_homePage.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/implement_login_doctor.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/implement_sinup_doctor.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/login_doctor.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/reportForDiploma.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/reportForMagestar.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/reportForPh-D.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/signup_doctor.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/view_Magestar_report.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/view_Ph-Dreport.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/doctor/view_diploma_report.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/css/all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/css/brands.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/css/fontawesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/css/regular.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/css/solid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/css/svg-with-js.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/css/v4-shims.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/css/v4-shims.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fontawesome/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fonts/BalooChettan-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fonts/Montserrat-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fonts/OpenSans/OpenSans-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fonts/OpenSans/OpenSans-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fonts/OpenSans/OpenSans-ExtraBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fonts/OpenSans/OpenSans-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fonts/OpenSans/OpenSans-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fonts/OpenSans/OpenSans-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fonts/OpenSans/OpenSans-Regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fonts/OpenSans/OpenSans-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fonts/OpenSans/OpenSans-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/fonts/OpenSans/OpenSans-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/footer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/js/dataTables.editor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/js/dataTables.editor.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/js/editor.bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/js/editor.bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/js/editor.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/js/editor.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/js/editor.foundation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/js/editor.foundation.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/js/editor.jqueryui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/js/editor.jqueryui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/js/editor.semanticui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/js/editor.semanticui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/js/select2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/js_plugin/bootstable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/signout.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/S_sort_paperState_Ph-D.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/S_sort_paperState_Ph-D.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/S_sort_paperState_master.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/S_sort_paperState_master.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/S_sort_state_diploma.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/S_sort_state_diploma.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/dataFor_Ph-D.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/dataFor_Ph-D.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/dataFor_diploma.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/dataFor_diploma.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/dataFor_master.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/dataFor_master.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/implement_login_staff.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/implement_signup_staff.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/login_staff.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/signup_staff.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/staff_homePage.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/tableFor_Ph-D.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/general_table_ph.d.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/tableFor_diploma.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/general_table_diploma.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/tableFor_master.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/general_table_master.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/staff/update_stuff_information.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/student/Ph-D_registration.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/student/checking_continue.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/student/diploma_registration.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/student/edit_profile.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/student/form_filter.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/student/login_Student.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/student/login_filter.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/student/master's_registration.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/student/refill_form.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/student/signup_student.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Postgraduate_SE_war_exploded/student/student_dashboard.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Postgraduate-SE/Database Backup/postgraduate 20190421 0041.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Postgraduate-SE/Database Backup/postgraduate 20190421 0041.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Postgraduate-SE/Database Backup/postgraduate 20190424 1952.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Postgraduate-SE/Database Backup/postgraduate 20190424 1952.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Postgraduate-SE/Libs/mysql-connector-java-5.1.23-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Postgraduate-SE/Libs/servlet-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Postgraduate-SE/Model/Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Postgraduate-SE/Model/Staff.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Postgraduate-SE/Model/StudentForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Postgraduate-SE/Requirement/Postgraduate.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Postgraduate-SE/Requirement/sprint.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Postgraduate-SE/Util/CipherEncryptionAndDecryption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Postgraduate-SE/Util/DBConnection.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/admin/admin_home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/admin_home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/admin_sinup.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/implement_sinup_admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/implement_sinup_admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style_search_icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style_search_icon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/doctor/D_tableForPh-D.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/doctor/D_tableForPh-D.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/doctor/D_tableFor_Master.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/doctor/D_tableFor_Master.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/doctor/D_tableFor_deploma.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/doctor/D_tableFor_deploma.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/doctor/doctor_homePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/doctor/doctor_homePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/staff/S_sort_paperState_Ph-D.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/staff/S_sort_paperState_Ph-D.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/staff/S_sort_paperState_master.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/staff/S_sort_paperState_master.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/staff/S_sort_state_diploma.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/staff/S_sort_state_diploma.jsp" afterDir="false" />
@@ -36,311 +187,67 @@
       <change beforePath="$PROJECT_DIR$/web/staff/dataFor_diploma.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/staff/dataFor_diploma.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/staff/dataFor_master.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/staff/dataFor_master.jsp" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="postgraduate@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="postgraduate@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="postgraduate: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="postgraduate@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="postgraduate: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="student_form: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-    </expand>
-    <select />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-358498637">
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="38" />
-          <entry key="JAVA" value="27" />
-          <entry key="JSP" value="1729" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="11" />
-          <entry key="Database Element" value="4" />
-          <entry key="JAVA" value="3" />
-          <entry key="JSP" value="49" />
-          <entry key="JavaScript" value="4" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="SQL" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="5" />
-<<<<<<< Updated upstream
-          <entry key="project.open.time.57" value="2" />
-          <entry key="project.open.time.70" value="1" />
-          <entry key="project.open.time.73" value="1" />
-          <entry key="project.open.time.82" value="1" />
-          <entry key="project.opened" value="5" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="766358318">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.184" value="1" />
-          <entry key="project.open.time.56" value="1" />
-          <entry key="project.open.time.66" value="1" />
-          <entry key="project.open.time.79" value="1" />
-          <entry key="project.opened" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="css" value="1" />
-          <entry key="java" value="2" />
-          <entry key="jsp" value="39" />
-          <entry key="sql" value="2" />
-          <entry key="student_form" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="1" />
-          <entry key="Database Element" value="2" />
-          <entry key="JAVA" value="2" />
-          <entry key="JSP" value="39" />
-          <entry key="SQL" value="1" />
-          <entry key="Scratch" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="css" value="14" />
-          <entry key="jsp" value="511" />
-          <entry key="txt" value="12" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="14" />
-          <entry key="JSP" value="511" />
-          <entry key="PLAIN_TEXT" value="12" />
-=======
-          <entry key="project.open.time.57" value="1" />
-          <entry key="project.open.time.63" value="1" />
-          <entry key="project.open.time.70" value="1" />
-          <entry key="project.open.time.76" value="1" />
-          <entry key="project.opened" value="4" />
->>>>>>> Stashed changes
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/doctor/D_tableFor_deploma.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-            <state relative-caret-position="106">
-              <caret line="96" selection-start-line="96" selection-end-line="96" />
-=======
-            <state relative-caret-position="867">
-              <caret line="51" column="38" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="38" />
->>>>>>> Stashed changes
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< Updated upstream
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/doctor/D_tableFor_Master.jsp">
+        <entry file="file://$PROJECT_DIR$/web/staff/dataFor_diploma.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="13" />
-=======
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/doctor/view_diploma_report.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="311" column="25" selection-start-line="311" selection-start-column="25" selection-end-line="311" selection-end-column="25" />
->>>>>>> Stashed changes
+            <state relative-caret-position="213">
+              <caret line="247" column="18" selection-start-line="247" selection-start-column="18" selection-end-line="247" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< Updated upstream
-        <entry file="file://$PROJECT_DIR$/web/doctor/D_tableForPh-D.jsp">
+        <entry file="file://$PROJECT_DIR$/web/staff/dataFor_master.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
-=======
-        <entry file="file://$PROJECT_DIR$/web/student/student_dashboard.jsp">
+            <state relative-caret-position="122">
+              <caret line="217" selection-start-line="217" selection-end-line="217" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/staff/S_sort_state_diploma.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2822">
-              <caret line="166" column="20" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
->>>>>>> Stashed changes
+            <state relative-caret-position="286">
+              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/staff/S_sort_paperState_Ph-D.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/staff/dataFor_Ph-D.jsp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/staff/S_sort_paperState_master.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Jsp File" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>من كلي</find>
-      <find>المجموع التر</find>
-      <find>inpu</find>
-      <find>graduation_src</find>
-      <find>decode</find>
-      <find>encode</find>
-      <find>,&quot;UTF-8&quot;)</find>
-      <find>ph_d</find>
-      <find>المجمو</find>
-      <find>s.</find>
-      <find>card_id</find>
-      <find>b_graduation_year</find>
-      <find>delete</find>
-      <find>Update</find>
-      <find>&lt;span class=&quot;badge&quot;&gt;&amp;check;&lt;/span&gt;</find>
-      <find>class=&quot;btn btn-primary wid&quot;</find>
-      <find>Enroll Round</find>
-      <find>primary2</find>
-      <find>font</find>
-      <find>form</find>
-      <find>!</find>
-      <find>null||</find>
-      <find>= null</find>
-      <find>== null</find>
-      <find>sql.append</find>
-      <find>name=&quot;name&quot;</find>
-      <find>value</find>
-      <find>name</find>
-      <find>sql.toString()</find>
-      <find>input</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>b_graduate_year</replace>
-      <replace>primary3</replace>
-      <replace>primary4</replace>
-      <replace>primary5</replace>
-      <replace>primary6</replace>
-      <replace>primary7</replace>
-      <replace>primary8</replace>
-      <replace>primary9</replace>
-      <replace>primary10</replace>
-      <replace>primary11</replace>
-      <replace>primary12</replace>
-      <replace>primary13</replace>
-      <replace>primary14</replace>
-      <replace>primary15</replace>
-      <replace>primary16</replace>
-      <replace>primary17</replace>
-      <replace>primary18</replace>
-      <replace>primary19</replace>
-      <replace>primary20</replace>
-      <replace>primary21</replace>
-      <replace>primary22</replace>
-      <replace>primary23</replace>
-      <replace>primary24</replace>
-      <replace>primary25</replace>
-      <replace>primary26</replace>
-      <replace>null ||</replace>
-      <replace>== null</replace>
-      <replace>!= null</replace>
-      <replace>System.out.println(sql.toString()+&quot; &quot; + count);</replace>
-      <replace>sql.toString()+&quot; &quot; + count</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/Model/StudentForm.java" />
-        <option value="$PROJECT_DIR$/web/student/login_filter.jsp" />
-        <option value="$PROJECT_DIR$/web/signout.jsp" />
-        <option value="$PROJECT_DIR$/web/student/edit_profile.jsp" />
-        <option value="$PROJECT_DIR$/web/ErrorPages/FormError.jsp" />
-        <option value="$PROJECT_DIR$/web/student/form_filter.jsp" />
-        <option value="$PROJECT_DIR$/web/student/refill_form.jsp" />
-        <option value="$PROJECT_DIR$/src/Model/Staff.java" />
-        <option value="$PROJECT_DIR$/web/staff/implement_login_staff.jsp" />
-        <option value="$PROJECT_DIR$/web/staff/update_stuff_information.jsp" />
-        <option value="$PROJECT_DIR$/web/staff/staff_homePage.jsp" />
-        <option value="$PROJECT_DIR$/web/staff/tableFor_diploma.jsp" />
-        <option value="$PROJECT_DIR$/web/staff/tableFor_Ph-D.jsp" />
-        <option value="$PROJECT_DIR$/src/Model/Doctor.java" />
-        <option value="$PROJECT_DIR$/web/staff/implement_signup_staff.jsp" />
-        <option value="$PROJECT_DIR$/web/doctor/implement_sinup_doctor.jsp" />
-        <option value="$PROJECT_DIR$/web/doctor/implement_login_doctor.jsp" />
-        <option value="$PROJECT_DIR$/web/doctor/Update_doctor_information.jsp" />
-        <option value="$PROJECT_DIR$/src/Model/Admin.java" />
-        <option value="$PROJECT_DIR$/web/doctor/D_sort_stateFor_master.jsp" />
-        <option value="$PROJECT_DIR$/web/doctor/D_sort_statFor_Ph-D.jsp" />
-        <option value="$PROJECT_DIR$/web/admin/implement_login_admin.jsp" />
-        <option value="$PROJECT_DIR$/web/doctor/ShowDataForDiploma.jsp" />
-        <option value="$PROJECT_DIR$/web/css/style_checkbox.css" />
-        <option value="$PROJECT_DIR$/web/doctor/reportForDiploma.jsp" />
-        <option value="$PROJECT_DIR$/web/css/main.css" />
-        <option value="$PROJECT_DIR$/web/doctor/view_diploma_report.jsp" />
-        <option value="$PROJECT_DIR$/web/bootstrapv4/js/bootstrap.bundle.js" />
-        <option value="$PROJECT_DIR$/web/bootstrapv4/js/bootstrap.js" />
-        <option value="$PROJECT_DIR$/web/css/style_Login.css" />
-        <option value="$PROJECT_DIR$/web/css/style_signup.css" />
-        <option value="$PROJECT_DIR$/web/student/student_dashboard.jsp" />
-        <option value="$PROJECT_DIR$/web/doctor/view_Magestar_report.jsp" />
-        <option value="$PROJECT_DIR$/web/doctor/view_Ph-Dreport.jsp" />
-        <option value="$PROJECT_DIR$/web/doctor/reportForMagestar.jsp" />
-        <option value="$PROJECT_DIR$/web/doctor/reportForPh-D.jsp" />
-        <option value="$PROJECT_DIR$/web/doctor/doctor_homePage.jsp" />
-        <option value="$PROJECT_DIR$/web/header.jsp" />
-        <option value="$PROJECT_DIR$/web/admin/implement_sinup_admin.jsp" />
-        <option value="$PROJECT_DIR$/web/admin/admin_home.jsp" />
-        <option value="$PROJECT_DIR$/web/css/style_search_icon.css" />
-        <option value="$PROJECT_DIR$/web/doctor/D_sort_stateFor_diploma.jsp" />
-        <option value="$PROJECT_DIR$/web/staff/S_sort_state_diploma.jsp" />
-        <option value="$PROJECT_DIR$/web/staff/S_sort_paperState_master.jsp" />
-        <option value="$PROJECT_DIR$/web/staff/dataFor_diploma.jsp" />
-        <option value="$PROJECT_DIR$/web/staff/dataFor_master.jsp" />
-        <option value="$PROJECT_DIR$/web/staff/dataFor_Ph-D.jsp" />
-        <option value="$PROJECT_DIR$/web/staff/S_sort_paperState_Ph-D.jsp" />
-        <option value="$PROJECT_DIR$/web/doctor/D_tableFor_deploma.jsp" />
-        <option value="$PROJECT_DIR$/web/doctor/D_tableFor_Master.jsp" />
-        <option value="$PROJECT_DIR$/web/doctor/D_tableForPh-D.jsp" />
-      </list>
-    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -355,18 +262,6 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
-  </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -375,65 +270,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-<<<<<<< Updated upstream
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="doctor" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-=======
->>>>>>> Stashed changes
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -505,18 +341,7 @@
             <path>
               <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
               <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
@@ -533,7 +358,7 @@
               <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
               <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="ErrorPages" type="462c0819:PsiDirectoryNode" />
+              <item name="doctor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
@@ -541,40 +366,12 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="staff" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Postgraduate-SE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Postgraduate-SE" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="student" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555881684423" />
-    <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="H:/AI-Project" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="H:\Postgraduate-SE\web\css" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="H:\Postgraduate-SE\src\Database Backup" />
-      <recent name="H:\Postgraduate-SE\web\js" />
-      <recent name="H:\Postgraduate-SE\web\fonts" />
-      <recent name="H:\Postgraduate-SE\web\css" />
-      <recent name="H:\Postgraduate-SE\web\ErrorPages" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -591,15 +388,9 @@
   <component name="RunManager">
     <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.17" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="Postgraduate-SE:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
+      <deployment />
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Postgraduate-SE_2" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Postgraduate-SE_4" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -607,8 +398,23 @@
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="61931" />
+        <option name="DEBUG_PORT" value="65059" />
       </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -640,9 +446,69 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method v="2">
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="Postgraduate-SE:war exploded" />
-        </option>
+        <option name="BuildArtifacts" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_Postgraduate-SE" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="65062" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -667,52 +533,30 @@
       <workItem from="1555587617127" duration="904000" />
       <workItem from="1555617184621" duration="7554000" />
       <workItem from="1555704404540" duration="9606000" />
-<<<<<<< Updated upstream
       <workItem from="1555785175960" duration="11535000" />
       <workItem from="1555879798896" duration="1858000" />
       <workItem from="1555923310498" duration="483000" />
       <workItem from="1556051593089" duration="926000" />
-      <workItem from="1556117219696" duration="9853000" />
-      <workItem from="1556494611438" duration="218000" />
-      <workItem from="1556616088714" duration="765000" />
-      <workItem from="1556719520161" duration="86000" />
-=======
-      <workItem from="1555785175960" duration="11822000" />
-      <workItem from="1555844036022" duration="359000" />
-      <workItem from="1555924691714" duration="707000" />
->>>>>>> Stashed changes
+      <workItem from="1556117219696" duration="10571000" />
+      <workItem from="1556366778058" duration="635000" />
+      <workItem from="1556710429684" duration="589000" />
+      <workItem from="1556995820391" duration="2655000" />
+      <workItem from="1557072350494" duration="9619000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< Updated upstream
-    <option name="totallyTimeSpent" value="36751000" />
-=======
-    <option name="totallyTimeSpent" value="23915000" />
->>>>>>> Stashed changes
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="268000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="4" />
-<<<<<<< Updated upstream
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49878347" visible="true" weight="0.204236" />
-=======
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49878347" visible="true" weight="0.19213313" />
->>>>>>> Stashed changes
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49878347" visible="true" weight="0.20726173" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Learn" order="7" weight="0.32980332" />
       <window_info id="Web" order="8" sideWeight="0.50121653" side_tool="true" weight="0.22390318" />
@@ -722,25 +566,15 @@
       <window_info anchor="bottom" id="Messages" order="3" weight="0.3262295" />
       <window_info anchor="bottom" id="Database Changes" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info anchor="bottom" id="Application Servers" order="6" weight="0.32786885" />
+      <window_info anchor="bottom" id="Application Servers" order="6" weight="0.3276923" />
       <window_info anchor="bottom" id="Message" order="7" />
-<<<<<<< Updated upstream
       <window_info anchor="bottom" id="Find" order="8" weight="0.32923076" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.3967213" />
+      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.35538462" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.3276923" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.29076922" />
-=======
-      <window_info anchor="bottom" id="Find" order="8" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.32786885" />
-      <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="13" weight="0.3295082" />
-      <window_info anchor="bottom" id="Database Console" order="14" weight="0.32911393" />
->>>>>>> Stashed changes
       <window_info anchor="bottom" id="SQL Generator" order="15" weight="0.3295082" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Maven Projects" order="1" weight="0.32980332" />
@@ -754,437 +588,16 @@
       <window_info anchor="right" id="Codota" order="9" weight="0.32980332" />
     </layout>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/staff/implement_login_staff.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="29" column="60" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/update_admin_information.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/implement_login_admin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="40" column="52" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/doctor/implement_sinup_doctor.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="49" column="46" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="49" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/stylesheet.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/style_checkbox.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student/diploma_registration.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1158">
-          <caret line="321" column="48" selection-start-line="321" selection-start-column="42" selection-end-line="321" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/select2.min.css" />
-    <entry file="file://$PROJECT_DIR$/web/js/main.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/select2.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student/form_filter.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="114" column="60" lean-forward="true" selection-start-line="89" selection-start-column="4" selection-end-line="114" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="163" column="17" selection-start-line="163" selection-start-column="17" selection-end-line="163" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrapv4/js/bootstrap.bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5951" selection-start-line="5951" selection-end-line="5951" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrapv4/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="3434" selection-start-line="3434" selection-end-line="3434" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/style_Login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/style_signup.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database Backup/postgraduate 20190421 0041.sql" />
-    <entry file="file://$PROJECT_DIR$/web/student/student_dashboard.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="216" column="13" lean-forward="true" selection-start-line="216" selection-start-column="13" selection-end-line="216" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/doctor/reportForDiploma.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2431">
-          <caret line="143" selection-end-line="188" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/doctor/view_diploma_report.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5372">
-          <caret line="316" column="18" selection-end-line="349" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/doctor/reportForMagestar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="42" column="79" selection-start-line="42" selection-start-column="79" selection-end-line="42" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/doctor/reportForPh-D.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-53">
-          <caret line="42" column="75" selection-start-line="42" selection-start-column="75" selection-end-line="42" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/doctor/view_Magestar_report.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2414">
-          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/doctor/view_Ph-Dreport.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="306" column="26" selection-start-line="306" selection-start-column="26" selection-end-line="306" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/admin_login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-491" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/admin_sinup.jsp" />
-    <entry file="file://$PROJECT_DIR$/web/doctor/doctor_homePage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/admin_home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="51" column="87" selection-start-line="51" selection-start-column="87" selection-end-line="51" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/implement_sinup_admin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="57" column="55" lean-forward="true" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/doctor/login_doctor.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="41" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3f6d972c-93bb-4f6c-9b54-e981e45a1675/schema/postgraduate/table/student_form">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7150f23c-2e74-46a0-8ea5-282e149b21cb/console.sql" />
-    <entry file="file://$PROJECT_DIR$/web/doctor/D_sort_statFor_Ph-D.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/doctor/D_sort_stateFor_master.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/doctor/D_sort_stateFor_diploma.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/style_search_icon.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="120" column="17" lean-forward="true" selection-start-line="120" selection-start-column="17" selection-end-line="120" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/sql/ResultSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="3293" column="11" selection-start-line="3293" selection-start-column="11" selection-end-line="3293" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/staff/tableFor_master.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="776">
-          <caret line="92" column="30" lean-forward="true" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< Updated upstream
-    <entry file="file://$PROJECT_DIR$/web/staff/tableFor_diploma.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="58" column="203" selection-start-line="58" selection-start-column="203" selection-end-line="58" selection-end-column="203" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/staff/dataFor_master.jsp">
-=======
-    <entry file="file://$PROJECT_DIR$/web/js/select2.min.css" />
-    <entry file="file://$PROJECT_DIR$/web/js/main.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/select2.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student/form_filter.jsp">
->>>>>>> Stashed changes
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="205" column="12" lean-forward="true" selection-start-line="205" selection-start-column="12" selection-end-line="205" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< Updated upstream
-    <entry file="file://$PROJECT_DIR$/web/staff/dataFor_Ph-D.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="221" column="14" selection-start-line="221" selection-start-column="14" selection-end-line="221" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/staff/S_sort_paperState_Ph-D.jsp">
-=======
-    <entry file="file://$PROJECT_DIR$/web/css/main.css">
->>>>>>> Stashed changes
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="25" column="132" selection-start-line="25" selection-start-column="132" selection-end-line="25" selection-end-column="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/staff/S_sort_state_diploma.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="21" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/staff/dataFor_diploma.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="247" column="14" selection-start-line="247" selection-start-column="14" selection-end-line="251" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/staff/S_sort_paperState_master.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="25" column="98" selection-start-line="25" selection-start-column="85" selection-end-line="25" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database Backup/postgraduate 20190424 1952.sql" />
-    <entry file="file://$PROJECT_DIR$/web/doctor/D_tableFor_deploma.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< Updated upstream
-    <entry file="file://$PROJECT_DIR$/web/doctor/D_tableFor_Master.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="13" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/Database Backup/postgraduate 20190421 0041.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/doctor/reportForDiploma.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="38" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="38" />
->>>>>>> Stashed changes
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/doctor/D_tableForPh-D.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-        <state relative-caret-position="697">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-=======
-        <state relative-caret-position="2822">
-          <caret line="166" column="20" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
->>>>>>> Stashed changes
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/doctor/view_diploma_report.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="311" column="25" selection-start-line="311" selection-start-column="25" selection-end-line="311" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>Postgraduate-SE:war exploded</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Web</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>opencv-401</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Postgraduate-SE</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/admin/general_table_diploma.jsp</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

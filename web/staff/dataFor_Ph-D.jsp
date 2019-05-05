@@ -216,10 +216,6 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
             <input class="btnChangesta1" type="text" name="state" placeholder="Accept or not paper Stat" required>
 
         </div><br>
-        <div class="doctormail" data-validate="Valid email is required: ex@abc.xyz">
-            <input class="input100 doctormail" type="text" name="email" placeholder="Email FOR Doctor" required>
-
-        </div>
 
 
         <div class="container-login100-form-btn btnChangestat">

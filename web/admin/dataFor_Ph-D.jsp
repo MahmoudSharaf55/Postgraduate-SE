@@ -49,6 +49,7 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
 
 %>
 
+
 <form method="post" class="table-form "  style="overflow-y:scroll; height:100%;">
     <div class="titalForsertification">
         <h3 class="text-center" > All Data In Deatils  about <%= name %> </h3><%}%>
@@ -208,11 +209,11 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
 </form >
 <div class="colc">
     <br>
-    <h5 class="text-center">If Data Correct Write Accept Rr Writ Error Data </h5><br>
-    <form action="S_sort_paperState_master.jsp" method="post" >
+    <h5 class="text-center">If Data Correct Write Email for Doctor That Help The Student </h5><br>
+    <form action="S_sort_paperState_Ph-D.jsp" method="post" >
         <div class="otuCenter">
             <input class="idchangestate" type="text" name="id" placeholder="ID" required>
-            <input class="btnChangesta1" type="text" name="state" placeholder="Accept or not paper Stat" required>
+            <input class="btnChangesta1" type="text" name="email" placeholder="Email FOr Doctor" required>
 
         </div><br>
 

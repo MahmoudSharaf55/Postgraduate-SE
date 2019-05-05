@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="Model.Staff" %>
+
 <%@ page import="Util.DBConnection" %>
 <%@ page import="java.sql.*" %>
 <%@ page pageEncoding="UTF-8" %>
@@ -23,8 +23,8 @@
     Connection c =DBConnection.getConnection();
 
     try {
-        PreparedStatement per=c.prepareStatement("update student_form set paper= ?  where s_id=? and form_type = ?");
-        per.setString(1,state);
+        PreparedStatement per=c.prepareStatement("update student_form set  doctor_mail=? where s_id=? and form_type = ?");
+        per.setString(1,doctormail);
         per.setInt(2,id);
         per.setString(3,"1");
 
@@ -32,7 +32,7 @@
     } catch (SQLException e) {
         e.printStackTrace();
     }
-    request.getRequestDispatcher("tableFor_Ph-D.jsp").forward(request, response);
+    request.getRequestDispatcher("general_table_ph.d.jsp").forward(request, response);
 
 
 %>
