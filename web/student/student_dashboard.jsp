@@ -1,4 +1,7 @@
-<%@ page import="Model.*" %><%--
+<%@ page import="Model.*" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="Util.DBConnection" %>
+<%@ page import="java.sql.ResultSet" %><%--
   Created by IntelliJ IDEA.
   User: Ma7MOoOD SHaRaF
   Date: 10/04/2019
@@ -16,6 +19,7 @@
     <link rel="stylesheet" href="../bootstrapv4/animate.css">
     <link rel="stylesheet" href="../fontawesome/css/all.css">
     <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="stylesheet" href="../css/tablestyle.css">
     <link rel="icon" href="../assets/postgraduate.png">
 </head>
 <body>
@@ -25,7 +29,7 @@
     StudentForm diploma = (StudentForm) session.getAttribute("diploma");
     StudentForm master = (StudentForm) session.getAttribute("master");
     StudentForm ph = (StudentForm) session.getAttribute("ph");
-    System.out.println(student + " " + diploma);
+//    System.out.println(student + " " + diploma);
     if (student != null || (diploma != null || master != null || ph != null)) {
 %>
 <section class="p-2">
@@ -47,6 +51,9 @@
                     </li>
                     <li class="nav-item bg-light">
                         <a class="nav-link" data-toggle="tab" href="#edit">Edit Profile</a>
+                    </li>
+                    <li class="nav-item bg-light">
+                        <a class="nav-link" data-toggle="tab" href="#subjects">Subjects</a>
                     </li>
                 </ul>
                 <div class="tab-content">
@@ -227,6 +234,74 @@
                             </div>
                         </form>
                     </div><!--/tab-pane-->
+                    <div class="tab-pane" id="subjects">
+                        <form action="register_subjects.jsp" method="post" class="my-2 needs-validation"
+                              novalidate>
+                            <div class="form-group">
+                                <main>
+                                    <table>
+                                        <thead>
+                                        <%
+                                            PreparedStatement subStatement = DBConnection.getConnection().prepareStatement("select * from subject s left join stu_sub ss ON s.id = ss.sub_id where ss.id is null || (ss.success = 0 && ss.count <= 3)");
+                                            ResultSet rs = subStatement.executeQuery();
+                                        %>
+                                        <tr>
+                                            <th>
+                                                Subject Code
+                                            </th>
+                                            <th>
+                                                Subject Name
+                                            </th>
+                                            <th>
+                                                Subject Hours
+                                            </th>
+                                            <th></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <%
+                                            while (rs.next()){
+                                        %>
+                                        <tr>
+                                            <td>
+                                                <%=rs.getString("s.code")%>
+                                            </td>
+                                            <td>
+                                                <%=rs.getString("s.name")%>
+                                            </td>
+                                            <td>
+                                                <%=rs.getString("s.hours")%>
+                                            </td>
+                                            <td>
+                                                <%
+                                                    if (rs.getString("ss.stu_id") != null){
+                                                %>
+                                                <div class="boxes">
+                                                    <input type="checkbox" name="<%=rs.getString("s.id")%>" id="<%=rs.getString("s.code")%>" value="<%=rs.getString("s.id")%>" checked>
+                                                    <label for="<%=rs.getString("s.code")%>"></label>
+                                                </div>
+                                                <%
+                                                    }else{
+                                                %>
+                                                <div class="boxes">
+                                                    <input type="checkbox" name="<%=rs.getString("s.id")%>" id="<%=rs.getString("s.code")%>" value="<%=rs.getString("s.id")%>">
+                                                    <label for="<%=rs.getString("s.code")%>"></label>
+                                                </div>
+                                                <%
+                                                    }
+                                                %>
+                                            </td>
+                                        </tr>
+                                        <%
+                                            }
+                                        %>
+                                        </tbody>
+                                    </table>
+                                </main>
+                                <input type="submit" value="Confirm" class="btn btn-outline-primary w-100 mt-2">
+                            </div>
+                        </form>
+                    </div>
                 </div><!--/tab-pane-->
             </div><!--/tab-content-->
 
@@ -256,6 +331,10 @@
             });
         }, false);
     })();
+    $('.button, .close').on('click', function(e) {
+        e.preventDefault();
+        $('.detail, html, body').toggleClass('open');
+    });
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
