@@ -15,7 +15,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no, width=device-width">
-    <title>Doctor Dashboard</title>
+    <title>Student Dashboard</title>
     <link rel="stylesheet" href="../bootstrapv4/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrapv4/animate.css">
     <link rel="stylesheet" href="../fontawesome/css/all.css">
@@ -25,9 +25,7 @@
 <body>
 <%@include file="../header.jsp" %>
 <%
-    Doctor doctor=(Doctor) session.getAttribute("doctor");
-
-
+    Staff staff=(Staff) session.getAttribute("staff");
 %>
 <section class="p-2">
     <div class="container-fluid">
@@ -36,7 +34,7 @@
                 <div class="text-center">
                     <figure class="avatar">
                         <img src="/assets/user.png" alt="avatar" class="img-fluid">
-                        <h4 style="overflow-wrap: break-word" class="mt-2"><%=doctor.getDoctorName()%>
+                        <h4 style="overflow-wrap: break-word" class="mt-2"><%=staff.getStuffName()%>
                         </h4>
                     </figure>
                 </div>
@@ -58,7 +56,7 @@
 
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-sm-4"><h5 class="text-primary">Number of Student : </h5><h4>Waite</h4>
+                                    <div class="col-sm-4"><h5 class="text-primary">Number of Student : </h5><h4>Wait</h4>
                                     </div>
 
                                 </div>
@@ -68,25 +66,10 @@
                                 To Make Any Process
                             </div>
                             <div class="card-body text-center">
-                                <a href="D_tableFor_deploma.jsp" class="btn btn-outline-primary col-sm-3 py-1">Accept Diploma</a>
-                                <a href="D_tableFor_Master.jsp" class="btn btn-outline-primary col-sm-3 py-1">Accept Magister</a>
-                                <a href="D_tableForPh-D.jsp" class="btn btn-outline-primary col-sm-3 py-1">Accept PH.D.</a>
+                                <a href="tableFor_diploma.jsp" class="btn btn-outline-primary col-sm-3 py-1">Accept Diploma</a>
+                                <a href="tableFor_master.jsp" class="btn btn-outline-primary col-sm-3 py-1">Accept Magister</a>
+                                <a href="tableFor_Ph-D.jsp" class="btn btn-outline-primary col-sm-3 py-1">Accept PH.D.</a>
                             </div>
-                            <div class="card-body text-center">
-                                <a href="reportForDiploma.jsp" class="btn btn-outline-primary col-sm-3 py-1">generate Diploma Report </a>
-                                <a href="reportForMagestar.jsp" class="btn btn-outline-primary col-sm-3 py-1">generate Magestar Report</a>
-                                <a href="reportForPh-D.jsp" class="btn btn-outline-primary col-sm-3 py-1">generate PH.D Report</a>
-                            </div>
-
-                            <div class="card-footer text-muted">
-                                Accept Subjects For Student
-                            </div>
-                            <div class="card-body text-center">
-                                <a href="subject_table_for_diploma.jsp" class="btn btn-outline-primary col-sm-3 py-1">Subjects For Diploma </a>
-                                <a href="subject_table_master.jsp" class="btn btn-outline-primary col-sm-3 py-1">Subjects For Magestar</a>
-                                <a href="subject_table_ph-d.jsp" class="btn btn-outline-primary col-sm-3 py-1">Subjects For PH.D </a>
-                            </div>
-
 
                         </div>
                     </div>
@@ -95,7 +78,7 @@
                             <div class="form-group">
                                 <div class="col-xs-6">
                                     <label for="name">Username</label>
-                                    <input type="text" class="form-control" name="name" id="name" value="<%=doctor.getDoctorName()%>"
+                                    <input type="text" class="form-control" name="name" id="name" value="<%=staff.getStuffName()%>"
                                            placeholder="Username" title="enter your last name if any." required>
                                     <div class="invalid-feedback">
                                         <b>&Cross; Empty Field</b>
@@ -108,7 +91,7 @@
                             <div class="form-group">
                                 <div class="col-xs-6">
                                     <label for="email">Email</label>
-                                    <input type="email" class="form-control" name="email" id="email" value="<%=doctor.getDoctorEmail()%>"
+                                    <input type="email" class="form-control" name="email" id="email" value="<%=staff.getStuffEmail()%>"
                                            placeholder="you@email.com" title="enter your email." required>
                                     <div class="invalid-feedback">
                                         <b>&Cross; Check Syntax</b>
