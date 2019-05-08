@@ -23,11 +23,10 @@
     Connection c =DBConnection.getConnection();
 
     try {
-        PreparedStatement per=c.prepareStatement("update student_form set paper= ? , doctor_mail=? where s_id=? and form_type = ?");
-        per.setString(1,state);
-        per.setString(2,doctormail);
-        per.setInt(3,id);
-        per.setString(4,"3");
+        PreparedStatement per=c.prepareStatement("update student_form set  doctor_mail=? where s_id=? and form_type = ?");
+        per.setString(1,doctormail);
+        per.setInt(2,id);
+        per.setString(3,"3");
 
         per.executeUpdate();
     } catch (SQLException e) {

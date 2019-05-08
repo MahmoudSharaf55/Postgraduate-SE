@@ -111,24 +111,24 @@ CREATE TABLE `stu_sub` (
   `sub_id` int(10) unsigned NOT NULL,
   `count` int(10) unsigned default '1',
   `success` int(10) unsigned default '0',
+  `admin_success` int(10) unsigned default '0',
   PRIMARY KEY  (`id`),
   KEY `FK_stu_sub_1` (`stu_id`),
   KEY `FK_stu_sub_2` (`sub_id`),
   CONSTRAINT `FK_stu_sub_1` FOREIGN KEY (`stu_id`) REFERENCES `student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_stu_sub_2` FOREIGN KEY (`sub_id`) REFERENCES `subject` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `stu_sub`
 --
 
 /*!40000 ALTER TABLE `stu_sub` DISABLE KEYS */;
-INSERT INTO `stu_sub` (`id`,`stu_id`,`sub_id`,`count`,`success`) VALUES 
- (1,5,1,2,0),
- (6,5,3,3,0),
- (7,5,4,3,0),
- (8,5,5,3,0),
- (9,5,2,1,0);
+INSERT INTO `stu_sub` (`id`,`stu_id`,`sub_id`,`count`,`success`,`admin_success`) VALUES 
+ (1,5,1,1,0,0),
+ (2,5,2,1,0,0),
+ (3,5,3,1,0,0),
+ (4,5,3,1,0,0);
 /*!40000 ALTER TABLE `stu_sub` ENABLE KEYS */;
 
 
@@ -206,7 +206,7 @@ CREATE TABLE `student_form` (
   `p_overall_mark` int(10) unsigned default NULL,
   `p_university` varchar(45) default NULL,
   `enroll_dept` varchar(45) NOT NULL,
-  `doctor_mail` varchar(45) default NULL,
+  `doctor_mail` varchar(45) default 'Waiting',
   PRIMARY KEY  (`id`),
   KEY `student_id` (`s_id`),
   CONSTRAINT `student_id` FOREIGN KEY (`s_id`) REFERENCES `student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -218,9 +218,9 @@ CREATE TABLE `student_form` (
 
 /*!40000 ALTER TABLE `student_form` DISABLE KEYS */;
 INSERT INTO `student_form` (`id`,`s_id`,`form_type`,`paper`,`status`,`dept`,`round`,`for_year`,`name`,`dob`,`country`,`city`,`governorate`,`nationality`,`religion`,`national_id`,`national_source`,`national_release`,`recruitment_postion`,`job`,`job_address`,`phone`,`bachelor_in`,`b_role`,`b_overall_rate`,`b_dept`,`b_special_rate`,`b_overall_mark`,`b_graduate_source`,`b_graduate_year`,`postgraduate_in`,`p_role`,`p_special`,`p_rate`,`p_overall_mark`,`p_university`,`enroll_dept`,`doctor_mail`) VALUES 
- (20,8,'1','accepted','accepted','cs','ياناير','2017','محمد صدقى ','2019-04-25','الباجور','الباجور','المنوفيه','مصري','مسلم',147852369,'الباجور','2019-04-25','اعفاء','لا يوجد','لا يوجد','01245786544','البكلريوس','الله اعلم ','20202','الحلاوه','امتياز',4870,'المنوفيه','2015','تالبلاى','محمحمح','موم','201',50640,'المنوفيه','المرقعه',NULL),
- (21,9,'2','accepted','Accepted','cs','2017','2014','mmmmmmmmmm','2019-04-10','sssssss','sssss','sss','ssss','sssss',111,'kjhgfdfg','2019-04-03','lutn','b','b','b','قسم علوم الحاسب','2014','جيد جدا','cs','741',1,'المنوفيه','4444',NULL,NULL,NULL,NULL,NULL,NULL,'lkjhgf',NULL),
- (22,5,'2','In Reviewing','Waiting','cs','ertyu','1234','Mahmoud Sharaf','2019-04-02','لا','dfghj','dfg','مصري','مسلم',33,'23','6666-01-04','اعفاء','dfgh','ertyu','3456789','المرقعه','xcvzcvx','امتياز','asdfdcv','ewrwre',6,'weqr','5',NULL,NULL,NULL,NULL,NULL,NULL,'شسطيكمكشسطي',NULL);
+ (20,8,'1','accepted','accepted','cs','ياناير','2017','محمد صدقى ','2019-04-25','الباجور','الباجور','المنوفيه','مصري','مسلم',147852369,'الباجور','2019-04-25','اعفاء','لا يوجد','لا يوجد','01245786544','البكلريوس','الله اعلم ','20202','الحلاوه','امتياز',4870,'المنوفيه','2015','تالبلاى','محمحمح','موم','201',50640,'المنوفيه','المرقعه','ahmed@gmail.com'),
+ (21,9,'2','accepted','Accepted','cs','2017','2014','mmmmmmmmmm','2019-04-10','sssssss','sssss','sss','ssss','sssss',111,'kjhgfdfg','2019-04-03','lutn','b','b','b','قسم علوم الحاسب','2014','جيد جدا','cs','741',1,'المنوفيه','4444',NULL,NULL,NULL,NULL,NULL,NULL,'lkjhgf','ahmed@gmail.com'),
+ (22,5,'2','accepted',NULL,'cs','ertyu','1234','Mahmoud Sharaf','2019-04-02','لا','dfghj','dfg','مصري','مسلم',33,'23','6666-01-04','اعفاء','dfgh','ertyu','3456789','المرقعه','xcvzcvx','امتياز','asdfdcv','ewrwre',6,'weqr','5',NULL,NULL,NULL,NULL,NULL,NULL,'شسطيكمكشسطي','ahmed@gmail.com');
 /*!40000 ALTER TABLE `student_form` ENABLE KEYS */;
 
 

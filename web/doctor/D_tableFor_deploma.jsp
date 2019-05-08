@@ -76,8 +76,7 @@
             try
             {
                 Connection c = DBConnection.getConnection();
-                PreparedStatement preparedStatement=c.prepareStatement("select s_id, name, dob, job,b_graduate_source, recruitment_postion, bachelor_in, b_overall_rate, b_overall_mark, b_graduate_year  from student_form   where  paper !='In Reviewing' and status='Waiting' and form_type=2 and doctor_mail=?");
-                preparedStatement.setString(1,email);
+                PreparedStatement preparedStatement=c.prepareStatement("select s_id, name, dob, job,b_graduate_source, recruitment_postion, bachelor_in, b_overall_rate, b_overall_mark, b_graduate_year  from student_form   where  paper !='In Reviewing' and status='Waiting' and form_type=2 ");
                 ResultSet resultSet=preparedStatement.executeQuery();
                 while (resultSet.next()) {
 
@@ -128,7 +127,7 @@
 
         <div class="container-login100-form-btn btnChangestat">
             <button class="login100-form-btn">
-                Change Stutes
+                Change Status
             </button>
         </div>
 

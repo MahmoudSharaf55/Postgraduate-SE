@@ -242,14 +242,14 @@ int search_id=Integer.parseInt(id);
     <br>
     <h5 class="text-center">If Data Correct Write Email for Doctor That Help The Student </h5><br>
     <form action="S_sort_state_diploma.jsp" method="post" >
-        <div class="otuCenter">
+        <div class="">
             <input class="idchangestate" type="text" name="id" placeholder="ID" required>
             <input class="btnChangesta1" type="text" name="email" placeholder="Email FOR Doctor" required>
         </div><br>
 
         <div class="container-login100-form-btn btnChangestat">
             <button class="login100-form-btn">
-                Change Stutes
+                Change Status
             </button>
         </div>
 

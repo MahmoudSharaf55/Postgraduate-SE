@@ -221,7 +221,7 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
 
         <div class="container-login100-form-btn btnChangestat">
             <button class="login100-form-btn">
-                Change Stutes
+                Change Status
             </button>
         </div>
 

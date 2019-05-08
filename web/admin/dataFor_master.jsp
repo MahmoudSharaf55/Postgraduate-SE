@@ -212,13 +212,13 @@ String id, dept, id_number, name, dob, country, city, governorate, nationality, 
     <form action="S_sort_paperState_master.jsp" method="post" >
         <div class="otuCenter">
             <input class="idchangestate" type="text" name="id" placeholder="ID" required>
-            <input class="btnChangesta1" type="text" name="email" placeholder="Accept or not paper Stat" required>
+            <input class="btnChangesta1" type="text" name="email" placeholder="Email FOR Doctor" required>
 
         </div><br>
 
         <div class="container-login100-form-btn btnChangestat">
             <button class="login100-form-btn">
-                Change Stutes
+                Change Status
             </button>
         </div>
 

@@ -249,7 +249,7 @@ int search_id=Integer.parseInt(id);
 
         <div class="container-login100-form-btn btnChangestat">
             <button class="login100-form-btn">
-                Change Stutes
+                Change Status
             </button>
         </div>
 
