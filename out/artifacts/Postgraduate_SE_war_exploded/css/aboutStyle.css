@@ -1,0 +1,411 @@
+article{
+    display: inline-block;
+}
+article .client1{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin-left: 20%;
+    margin-top: 100px;
+    float: left;
+}
+article .client1 .img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    transition: all 0.35s ease-in-out;
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+article .client1 .img img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+article .client1 .info{
+    width: 250px;
+    height: 250px;
+    background-color: #4a4646;
+    transition: all 0.35s ease-in-out;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.5);
+}
+article .client1 .info h3{
+    margin-top: 50px;
+    font-family: Muli;
+    font-size: 30px;
+    color: white;
+}
+article .client1 .info hr{
+    width: 40%;
+    margin: auto;
+    height: 2px;
+    background: white;
+    border: none;
+    margin-top: 10px;
+}
+article .client1 .info p{
+    margin-top: 25px;
+    color: #03b7bc;
+    width: 75%;
+    margin-left: 30px;
+}
+article .client1:hover .img{
+    opacity: 0;
+    transform: scale(1.5);
+}
+article .client1:hover .info{
+    opacity: 1;
+    transform: scale(1);
+}
+article .client2{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin-left: 250px;
+    margin-top: 100px;
+    float: left;
+}
+article .client2 .img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    transition: all 0.35s ease-in-out;
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+article .client2 .img img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+article .client2 .info{
+    width: 250px;
+    height: 250px;
+    background-color: #4a4646;
+    transition: all 0.35s ease-in-out;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.5);
+}
+article .client2 .info h3{
+    margin-top: 50px;
+    font-family: Muli;
+    font-size: 30px;
+    color: white;
+}
+article .client2 .info hr{
+    width: 40%;
+    margin: auto;
+    height: 2px;
+    background: white;
+    border: none;
+    margin-top: 10px;
+}
+article .client2 .info p{
+    margin-top: 25px;
+    color: #03b7bc;
+    width: 75%;
+    margin-left: 30px;
+}
+article .client2:hover .img{
+    opacity: 0;
+    transform: scale(1.5);
+}
+article .client2:hover .info{
+    opacity: 1;
+    transform: scale(1);
+}
+article .client3{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin-left: 20%;
+    margin-top: 100px;
+    float: left;
+}
+article .client3 .img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    transition: all 0.35s ease-in-out;
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+article .client3 .img img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+article .client3 .info{
+    width: 250px;
+    height: 250px;
+    background-color: #4a4646;
+    transition: all 0.35s ease-in-out;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.5);
+}
+article .client3 .info h3{
+    margin-top: 50px;
+    font-family: Muli;
+    font-size: 30px;
+    color: white;
+}
+article .client3 .info hr{
+    width: 40%;
+    margin: auto;
+    height: 2px;
+    background: white;
+    border: none;
+    margin-top: 10px;
+}
+article .client3 .info p{
+    margin-top: 25px;
+    color: #03b7bc;
+    width: 75%;
+    margin-left: 30px;
+}
+article .client3:hover .img{
+    opacity: 0;
+    transform: scale(1.5);
+}
+article .client3:hover .info{
+    opacity: 1;
+    transform: scale(1);
+}
+article .client4{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin-left: 250px;
+    margin-top: 100px;
+    float: left;
+}
+article .client4 .img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    transition: all 0.35s ease-in-out;
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+article .client4 .img img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+article .client4 .info{
+    width: 250px;
+    height: 250px;
+    background-color: #4a4646;
+    transition: all 0.35s ease-in-out;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.5);
+}
+article .client4 .info h3{
+    margin-top: 50px;
+    font-family: Muli;
+    font-size: 30px;
+    color: white;
+}
+article .client4 .info hr{
+    width: 40%;
+    margin: auto;
+    height: 2px;
+    background: white;
+    border: none;
+    margin-top: 10px;
+}
+article .client4 .info p{
+    margin-top: 25px;
+    color: #03b7bc;
+    width: 75%;
+    margin-left: 30px;
+}
+article .client4:hover .img{
+    opacity: 0;
+    transform: scale(1.5);
+}
+article .client4:hover .info{
+    opacity: 1;
+    transform: scale(1);
+}
+article .client5{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin-left: 20%;
+    margin-top: 100px;
+    float: left;
+}
+article .client5 .img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    transition: all 0.35s ease-in-out;
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+article .client5 .img img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+article .client5 .info{
+    width: 250px;
+    height: 250px;
+    background-color: #4a4646;
+    transition: all 0.35s ease-in-out;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.5);
+}
+article .client5 .info h3{
+    margin-top: 50px;
+    font-family: Muli;
+    font-size: 30px;
+    color: white;
+}
+article .client5 .info hr{
+    width: 40%;
+    margin: auto;
+    height: 2px;
+    background: white;
+    border: none;
+    margin-top: 10px;
+}
+article .client5 .info p{
+    margin-top: 25px;
+    color: #03b7bc;
+    width: 75%;
+    margin-left: 30px;
+}
+article .client6{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin-left: 250px;
+    margin-top: 100px;
+    float: left;
+}
+article .client6 .img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    transition: all 0.35s ease-in-out;
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+article .client6 .img img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+article .client6 .info{
+    width: 250px;
+    height: 250px;
+    background-color: #4a4646;
+    transition: all 0.35s ease-in-out;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.5);
+}
+article .client6 .info h3{
+    margin-top: 50px;
+    font-family: Muli;
+    font-size: 30px;
+    color: white;
+}
+article .client6 .info hr{
+    width: 40%;
+    margin: auto;
+    height: 2px;
+    background: white;
+    border: none;
+    margin-top: 10px;
+}
+article .client6 .info p{
+    margin-top: 25px;
+    color: #03b7bc;
+    width: 75%;
+    margin-left: 30px;
+}
+article .client6:hover .img{
+    opacity: 0;
+    transform: scale(1.5);
+}
+article .client6:hover .info{
+    opacity: 1;
+    transform: scale(1);
+}
+article .client5:hover .img{
+    opacity: 0;
+    transform: scale(1.5);
+}
+article .client5:hover .info{
+    opacity: 1;
+    transform: scale(1);
+}
+@media (max-width:767px) {
+    article .client1,article .client2,
+    article .client1,article .client4,
+    article .client1,article .client6{
+        margin-left: 25%;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+    article .client1,article .client3,article .client5{
+        margin-left: 250px;
+        margin-top: 100px;
+    }
+}
+@media (min-width:992px) and  (max-width:1199px){
+    article .client1,article .client3,article .client5{
+        margin-left: 10%;
+    }
+}
